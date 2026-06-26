@@ -219,7 +219,7 @@ a verified knowledge graph, and a verification pipeline that catches every struc
 error. Given these three, "natural language → working program" reduces from sampling tokens
 in an unbounded space to traversing edges in a finite typed graph.
 
-LLM-based code generation (Copilot, Cursor, Devin, Claude Code, GPT-4) is a sampling process.
+LLM-based code generation is a sampling process.
 Sampling produces *plausible* outputs — outputs that look correct token-by-token to the model
 that produced them. *Plausible* is not *correct*. This is the hallucination wall, and it is
 structural to the sampling architecture, not a property of model size or training data.
