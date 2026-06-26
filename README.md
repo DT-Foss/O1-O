@@ -411,7 +411,7 @@ Loading a `.causal` graph builds four lookup structures over the triplet set:
 The dual `trigger_index` / `outcome_index` design enables O(1) bridge-entity detection:
 *an entity is a bridge between two triplets if and only if it appears as both an outcome
 and a trigger*, found by the set intersection
-$\text{trigger\_index.keys()} \cap \text{outcome\_index.keys()}$. This intersection is the
+$\text{trigger_index.keys()} \cap \text{outcome_index.keys()}$. This intersection is the
 search space of the exact-chaining pass (Pass 1) — a one-line set operation rather than a
 full-graph traversal.
 
@@ -470,7 +470,7 @@ $$
 \frac{
   (h_1, r_1, b, c_1) \in \mathcal{G} \quad\text{and}\quad (b, r_2, t_2, c_2) \in \mathcal{G}
 }{
-  (h_1, \text{chains\_to}, t_2, c_1 \cdot c_2 \cdot 0.85) \in \mathcal{G}
+  (h_1, \text{chains_to}, t_2, c_1 \cdot c_2 \cdot 0.85) \in \mathcal{G}
 }
 $$
 
@@ -650,7 +650,7 @@ N(e) = \{\,e' : \exists r. (e, r, e') \in \mathcal{G} \lor (e', r, e) \in \mathc
 $$
 
 For each pair $(e_1, e_2)$ with $|N(e_1) \cap N(e_2)| \geq 2$, emit
-$(e_1, \text{contextually\_linked\_to}, e_2)$ with
+$(e_1, \text{contextually_linked_to}, e_2)$ with
 
 $$
 c = \min(0.70,\; |N(e_1) \cap N(e_2)| \cdot 0.15)
@@ -675,7 +675,7 @@ $$
 \frac{
   (h_a, r_a, b, c_a) \in T_{g_a} \quad\text{and}\quad (b, r_b, t_b, c_b) \in T_{g_b}
 }{
-  (h_a, \text{recombines\_with}, t_b, c_a \cdot c_b \cdot 0.5) \in \mathcal{G}
+  (h_a, \text{recombines_with}, t_b, c_a \cdot c_b \cdot 0.5) \in \mathcal{G}
 }
 $$
 
@@ -2108,7 +2108,7 @@ class PatternExtractor:
 Each extracted idiom is paired with the task's intent to produce a **new triplet**:
 
 $$
-(\text{intent\_token}, \text{uses\_idiom}, \text{idiom\_type})
+(\text{intent_token}, \text{uses_idiom}, \text{idiom_type})
 $$
 
 For instance: `("download", uses_idiom, "context_manager")` means "downloads tend to use
@@ -2159,7 +2159,7 @@ the cached fix strategy is applied directly, bypassing the full auto-fix decisio
 Two updates after each application:
 
 $$
-\text{tried\_count} \mathrel{+}= 1, \qquad \text{success\_count} \mathrel{+}= [\text{fix worked}]
+\text{tried_count} \mathrel{+}= 1, \qquad \text{success_count} \mathrel{+}= [\text{fix worked}]
 $$
 
 If a strategy's success rate falls below a threshold $\rho = 0.40$ over $\geq 10$ trials,
@@ -2480,7 +2480,7 @@ included.
 The discovered services drive automatic tool selection. The naïve mapping is
 
 $$
-\text{service} \xrightarrow{\text{auto\_configure}} \{\text{candidate tools}\}
+\text{service} \xrightarrow{\text{auto_configure}} \{\text{candidate tools}\}
 $$
 
 For instance, `ssh` open ⇒ `{ssh_brute_force, ssh_key_harvester, ssh_credential_tester}`;
@@ -2850,7 +2850,7 @@ phase='lateral' AND status='success'`) without re-keying.
 Per-operation key derivation:
 
 $$
-K \;=\; \text{PBKDF2-HMAC-SHA256}\!\bigl(\,\text{passphrase},\; \text{salt} = \text{op\_id},\; n = 600{,}000,\; \text{dklen} = 32\,\bigr)
+K \;=\; \text{PBKDF2-HMAC-SHA256}\!\bigl(\,\text{passphrase},\; \text{salt} = \text{op_id},\; n = 600{,}000,\; \text{dklen} = 32\,\bigr)
 $$
 
 Mechanically:
@@ -3684,7 +3684,7 @@ any tuning budget — the architecture forbids it.
 Each external dependency multiplies supply-chain risk. The exposure model is multiplicative:
 
 $$
-\text{Trust\_required}(\text{system}) = \prod_{d \in \text{Dependencies}} \text{Trust}(d)
+\text{Trust_required}(\text{system}) = \prod_{d \in \text{Dependencies}} \text{Trust}(d)
 $$
 
 where each $\text{Trust}(d) \in [0, 1]$ is the operator's confidence in dependency $d$.
