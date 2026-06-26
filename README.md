@@ -42,14 +42,6 @@ out there is worried about being left behind by whichever lab gates whichever mo
 next, here's one whole working system that runs on your own hardware and doesn't care
 what the rate-limit table at the API gateway says today.
 
-> *"This was intendet for the german Bundeswehr kommando CIR Demo, aber im Gespräch
-> stellte sich dann raus, dass die Person keinerlei Ahnung von allem hatte und mir anbot,
-> eine FISI Ausbildung zu machen stattdessen. Außerdem sitzt das Projekt seit anfang
-> des Jahres auf meiner Platte, erweitert es gerne, forked es, baut es aus, testet es,
-> habt spaß, ich denke, es ist zu weitaus mehr in der Lage als offensive tooling"*
->
-> — David Tom Foss, 2026-06-26
-
 ---
 
 ### A note on availability
