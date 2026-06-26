@@ -1,0 +1,50 @@
+FORGE AFTER-ACTION REPORT
+============================================================
+Generated: 2026-06-26 15:15:55 UTC
+Intent: DNS tunneling data exfiltration tool
+Pipeline: 11 steps, 605ms total
+
+PIPELINE RESULTS
+----------------------------------------
+  Code:         400 LOC, COMPILED
+  Verification: PROVEN (3/3 checks)
+  Evasion:      EVADED (0 rounds)
+  OPSEC:        outbound profile (6 files)
+  Audit:        Grade A (100/100)
+  ATT&CK:       4 techniques mapped
+  Kill Chain:   Actions on Objectives
+  IOCs:         2 indicators identified
+
+ARTIFACTS GENERATED
+----------------------------------------
+  Dockerfile (1,692 bytes)
+  README.txt (3,797 bytes)
+  delivery/delivery_powershell.txt (584 bytes)
+  delivery/dropper.py (1,500 bytes)
+  delivery/stager.py (753 bytes)
+  delivery/usb_autorun.inf (130 bytes)
+  delivery/usb_launch.bat (150 bytes)
+  deployment_guide.txt (3,251 bytes)
+  docker-compose.yml (1,151 bytes)
+  generated.py (16,729 bytes)
+  log.txt (322 bytes)
+  meta.json (2,463 bytes)
+  opsec/cleanup.sh (1,820 bytes)
+  opsec/network.conf (1,067 bytes)
+  opsec/runtime.sh (1,160 bytes)
+  opsec/sanitize.py (4,292 bytes)
+  opsec_audit.json (580 bytes)
+  opsec_audit.txt (445 bytes)
+  package_error.log (1,926 bytes)
+  threat_model.json (1,285 bytes)
+  threat_model.txt (967 bytes)
+
+OPERATIONAL NOTES
+----------------------------------------
+  • Review opsec_audit.txt before deployment
+  • Review threat_model.txt for blue team awareness
+  • Follow deployment_guide.txt for operational procedures
+  • Run opsec/cleanup.sh after operation completion
+  • Destroy all artifacts using burn script when done
+
+CLASSIFICATION: OPERATIONAL — HANDLE ACCORDINGLY

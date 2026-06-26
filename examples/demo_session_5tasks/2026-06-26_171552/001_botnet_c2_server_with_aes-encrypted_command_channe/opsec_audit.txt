@@ -1,0 +1,20 @@
+FORGE OPSEC AUDIT REPORT
+============================================================
+Score: 100/100 (Grade: A)
+Findings: 4 (0 critical, 0 high, 1 medium, 3 low)
+
+[MEDIUM] FORGE engine attribution markers
+  Category: ATTRIBUTION
+  Remediation: Run opsec/sanitize.py to strip FORGE markers
+
+[LOW] Timestamp generation may leak timezone/locale
+  Category: TIMING
+  Remediation: Use UTC only: datetime.utcnow() or time.gmtime()
+
+[LOW] Exception traces leak internal structure
+  Category: ARTIFACTS
+  Remediation: Catch and suppress exceptions silently in production
+
+[LOW] Environment variable access — may leak host info
+  Category: EXECUTION
+  Remediation: Sanitize environment before execution (see opsec/runtime.sh)

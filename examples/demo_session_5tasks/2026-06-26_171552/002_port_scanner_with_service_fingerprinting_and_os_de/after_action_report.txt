@@ -1,0 +1,50 @@
+FORGE AFTER-ACTION REPORT
+============================================================
+Generated: 2026-06-26 15:15:53 UTC
+Intent: port scanner with service fingerprinting and OS detection
+Pipeline: 11 steps, 567ms total
+
+PIPELINE RESULTS
+----------------------------------------
+  Code:         309 LOC, COMPILED
+  Verification: PROVEN (4/4 checks)
+  Evasion:      EVADED (0 rounds)
+  OPSEC:        raw_socket profile (6 files)
+  Audit:        Grade A (100/100)
+  ATT&CK:       2 techniques mapped
+  Kill Chain:   Reconnaissance
+  IOCs:         2 indicators identified
+
+ARTIFACTS GENERATED
+----------------------------------------
+  Dockerfile (1,769 bytes)
+  README.txt (3,716 bytes)
+  delivery/delivery_powershell.txt (584 bytes)
+  delivery/dropper.py (1,504 bytes)
+  delivery/stager.py (753 bytes)
+  delivery/usb_autorun.inf (130 bytes)
+  delivery/usb_launch.bat (150 bytes)
+  deployment_guide.txt (3,413 bytes)
+  docker-compose.yml (805 bytes)
+  generated.py (12,523 bytes)
+  log.txt (343 bytes)
+  meta.json (2,474 bytes)
+  opsec/cleanup.sh (1,820 bytes)
+  opsec/network.conf (1,069 bytes)
+  opsec/runtime.sh (1,304 bytes)
+  opsec/sanitize.py (4,292 bytes)
+  opsec_audit.json (804 bytes)
+  opsec_audit.txt (598 bytes)
+  package_error.log (1,926 bytes)
+  threat_model.json (812 bytes)
+  threat_model.txt (650 bytes)
+
+OPERATIONAL NOTES
+----------------------------------------
+  • Review opsec_audit.txt before deployment
+  • Review threat_model.txt for blue team awareness
+  • Follow deployment_guide.txt for operational procedures
+  • Run opsec/cleanup.sh after operation completion
+  • Destroy all artifacts using burn script when done
+
+CLASSIFICATION: OPERATIONAL — HANDLE ACCORDINGLY

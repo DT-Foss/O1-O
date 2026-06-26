@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+build/
+dist/
+.eggs/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# O1-O runtime artifacts (sessions are local-only, never committed)
+sessions/
+audit_logs/
+debug_deploys/
+output_chains/
+output_sota_audit/
+native_builds/
+.o1o_session.json
+.forge_session.json
+operations.db
+
+# Editor/tooling
+.claude/
+.cursorrules
+
+# Logs
+*.log
+
+# Local config
+.env
+*.local
+
+# Coverage / profiling
+.profile_*
+*.prof

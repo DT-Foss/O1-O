@@ -1,0 +1,16 @@
+FORGE OPSEC AUDIT REPORT
+============================================================
+Score: 100/100 (Grade: A)
+Findings: 3 (0 critical, 0 high, 1 medium, 2 low)
+
+[MEDIUM] FORGE engine attribution markers
+  Category: ATTRIBUTION
+  Remediation: Run opsec/sanitize.py to strip FORGE markers
+
+[LOW] Raw socket without setsockopt — OS TCP stack fingerprint
+  Category: FINGERPRINT
+  Remediation: Set TTL, window size to match target OS profile
+
+[LOW] Environment variable access — may leak host info
+  Category: EXECUTION
+  Remediation: Sanitize environment before execution (see opsec/runtime.sh)

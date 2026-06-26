@@ -1,0 +1,56 @@
+[
+    {
+        "trigger": "flask",
+        "mechanism": "creates",
+        "outcome": "web app",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "flask",
+        "mechanism": "defines",
+        "outcome": "routes",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "flask",
+        "mechanism": "uses",
+        "outcome": "blueprints",
+        "confidence": 0.90
+    },
+    {
+        "trigger": "fastapi",
+        "mechanism": "creates",
+        "outcome": "api server",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "fastapi",
+        "mechanism": "uses",
+        "outcome": "pydantic",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "django",
+        "mechanism": "implements",
+        "outcome": "mvt",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "jinja2",
+        "mechanism": "renders",
+        "outcome": "templates",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "rest api",
+        "mechanism": "implemented_via",
+        "outcome": "flask",
+        "confidence": 0.90
+    },
+    {
+        "trigger": "rest api",
+        "mechanism": "implemented_via",
+        "outcome": "fastapi",
+        "confidence": 0.95
+    }
+]

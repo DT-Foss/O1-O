@@ -1,0 +1,25 @@
+FORGE OPSEC AUDIT REPORT
+============================================================
+Score: 98/100 (Grade: A)
+Findings: 4 (0 critical, 0 high, 2 medium, 2 low)
+
+[MEDIUM] File write to persistent path: ) as f:
+                plaintext = f.read()
+
+            encrypted = aes_enc(plaintext, file_key)
+
+            encrypted_path = filepath + 
+  Category: FORENSICS
+  Remediation: Write to tmpfs only (/tmp/ or memory-backed fs)
+
+[MEDIUM] FORGE engine attribution markers
+  Category: ATTRIBUTION
+  Remediation: Run opsec/sanitize.py to strip FORGE markers
+
+[LOW] Exception traces leak internal structure
+  Category: ARTIFACTS
+  Remediation: Catch and suppress exceptions silently in production
+
+[LOW] Environment variable access — may leak host info
+  Category: EXECUTION
+  Remediation: Sanitize environment before execution (see opsec/runtime.sh)

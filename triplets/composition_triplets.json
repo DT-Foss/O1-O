@@ -1,0 +1,125 @@
+[
+  {"trigger": "download webpage and extract emails", "mechanism": "composition", "outcome": "requests_get+regex_extract_emails", "confidence": 0.95},
+  {"trigger": "scrape page and find emails", "mechanism": "composition", "outcome": "requests_get+regex_extract_emails", "confidence": 0.94},
+  {"trigger": "download html and find email addresses", "mechanism": "composition", "outcome": "requests_get+regex_extract_emails", "confidence": 0.93},
+  {"trigger": "download webpage and extract urls", "mechanism": "composition", "outcome": "requests_get+regex_extract_urls", "confidence": 0.95},
+  {"trigger": "scrape page and find links", "mechanism": "composition", "outcome": "requests_get+regex_extract_urls", "confidence": 0.94},
+  {"trigger": "download and extract numbers", "mechanism": "composition", "outcome": "requests_get+regex_extract_numbers", "confidence": 0.93},
+
+  {"trigger": "read csv and convert to json", "mechanism": "composition", "outcome": "csv_read+json_dump", "confidence": 0.95},
+  {"trigger": "csv file to json file", "mechanism": "composition", "outcome": "csv_read+json_dump", "confidence": 0.94},
+  {"trigger": "read json and convert to csv", "mechanism": "composition", "outcome": "json_load+csv_write", "confidence": 0.95},
+  {"trigger": "json file to csv file", "mechanism": "composition", "outcome": "json_load+csv_write", "confidence": 0.94},
+
+  {"trigger": "scan ports and save results", "mechanism": "composition", "outcome": "socket_port_scan+json_dump", "confidence": 0.95},
+  {"trigger": "port scan and write report", "mechanism": "composition", "outcome": "socket_port_scan+file_write", "confidence": 0.94},
+  {"trigger": "scan network and save", "mechanism": "composition", "outcome": "socket_port_scan+json_dump", "confidence": 0.93},
+
+  {"trigger": "download file and compute hash", "mechanism": "composition", "outcome": "requests_download_file+hashlib_file_hash", "confidence": 0.95},
+  {"trigger": "download and verify checksum", "mechanism": "composition", "outcome": "requests_download_file+hashlib_file_hash", "confidence": 0.94},
+
+  {"trigger": "list files and compute hashes", "mechanism": "composition", "outcome": "os_walk+hashlib_file_hash", "confidence": 0.95},
+  {"trigger": "hash all files in folder", "mechanism": "composition", "outcome": "os_walk+hashlib_file_hash", "confidence": 0.94},
+
+  {"trigger": "read file and count words", "mechanism": "composition", "outcome": "file_read+collections_counter", "confidence": 0.93},
+  {"trigger": "word frequency in file", "mechanism": "composition", "outcome": "file_read+collections_counter", "confidence": 0.92},
+
+  {"trigger": "download json and save to file", "mechanism": "composition", "outcome": "requests_get+json_dump", "confidence": 0.95},
+  {"trigger": "fetch api data and save", "mechanism": "composition", "outcome": "requests_get+json_dump", "confidence": 0.94},
+
+  {"trigger": "read csv and filter rows", "mechanism": "composition", "outcome": "csv_read+list_filter", "confidence": 0.93},
+  {"trigger": "filter csv data", "mechanism": "composition", "outcome": "csv_read+list_filter", "confidence": 0.92},
+
+  {"trigger": "list files and compress", "mechanism": "composition", "outcome": "os_walk+tarfile_create", "confidence": 0.93},
+  {"trigger": "find files and archive", "mechanism": "composition", "outcome": "glob_glob+zipfile_create", "confidence": 0.92},
+
+  {"trigger": "download webpage and save text", "mechanism": "composition", "outcome": "requests_get+file_write", "confidence": 0.95},
+  {"trigger": "fetch url and write to file", "mechanism": "composition", "outcome": "requests_get+file_write", "confidence": 0.94},
+
+  {"trigger": "read csv and sort data", "mechanism": "composition", "outcome": "csv_read+list_sort", "confidence": 0.93},
+  {"trigger": "sort csv data", "mechanism": "composition", "outcome": "csv_read+list_sort", "confidence": 0.92},
+
+  {"trigger": "read file and find pattern", "mechanism": "composition", "outcome": "file_read+regex_extract_emails", "confidence": 0.92},
+  {"trigger": "search file for emails", "mechanism": "composition", "outcome": "file_read+regex_extract_emails", "confidence": 0.91},
+
+  {"trigger": "list files and count by extension", "mechanism": "composition", "outcome": "os_walk+collections_counter", "confidence": 0.93},
+  {"trigger": "count file types in directory", "mechanism": "composition", "outcome": "os_walk+collections_counter", "confidence": 0.92},
+
+  {"trigger": "read json and pretty print", "mechanism": "composition", "outcome": "json_load+pprint_output", "confidence": 0.93},
+  {"trigger": "format json file", "mechanism": "composition", "outcome": "json_load+pprint_output", "confidence": 0.92},
+
+  {"trigger": "download multiple pages and save", "mechanism": "composition", "outcome": "concurrent_thread_map+file_write", "confidence": 0.93},
+  {"trigger": "parallel download urls", "mechanism": "composition", "outcome": "concurrent_thread_map+file_write", "confidence": 0.92},
+
+  {"trigger": "read csv and compute statistics", "mechanism": "composition", "outcome": "csv_read+statistics_summary", "confidence": 0.93},
+  {"trigger": "csv statistics summary", "mechanism": "composition", "outcome": "csv_read+statistics_summary", "confidence": 0.92},
+
+  {"trigger": "list processes and filter", "mechanism": "composition", "outcome": "subprocess_run+list_filter", "confidence": 0.91},
+
+  {"trigger": "read yaml and convert to json", "mechanism": "composition", "outcome": "yaml_load+json_dump", "confidence": 0.93},
+  {"trigger": "yaml to json conversion", "mechanism": "composition", "outcome": "yaml_load+json_dump", "confidence": 0.92},
+
+  {"trigger": "download page and count words", "mechanism": "composition", "outcome": "requests_get+collections_counter", "confidence": 0.92},
+
+  {"trigger": "read csv and remove duplicates", "mechanism": "composition", "outcome": "csv_read+list_deduplicate", "confidence": 0.92},
+
+  {"trigger": "scan ports and email results", "mechanism": "composition", "outcome": "socket_port_scan+smtplib_send_email", "confidence": 0.91},
+
+  {"trigger": "hash file and write report", "mechanism": "composition", "outcome": "hashlib_file_hash+file_write", "confidence": 0.93},
+
+  {"trigger": "read sqlite and export csv", "mechanism": "composition", "outcome": "sqlite3_select+csv_write", "confidence": 0.93},
+  {"trigger": "database to csv export", "mechanism": "composition", "outcome": "sqlite3_select+csv_write", "confidence": 0.92},
+
+  {"trigger": "read sqlite and export json", "mechanism": "composition", "outcome": "sqlite3_select+json_dump", "confidence": 0.93},
+  {"trigger": "database to json export", "mechanism": "composition", "outcome": "sqlite3_select+json_dump", "confidence": 0.92},
+
+  {"trigger": "scan network and brute force ssh", "mechanism": "composition", "outcome": "network_recon+ssh_brute_force", "confidence": 0.95},
+  {"trigger": "discover hosts and try ssh login", "mechanism": "composition", "outcome": "network_recon+ssh_brute_force", "confidence": 0.94},
+  {"trigger": "scan and exploit ssh", "mechanism": "composition", "outcome": "port_scanner_socket+ssh_brute_force", "confidence": 0.94},
+
+  {"trigger": "brute force redis and inject ssh key", "mechanism": "composition", "outcome": "redis_brute_force+redis_exploitation", "confidence": 0.95},
+  {"trigger": "exploit redis and get shell", "mechanism": "composition", "outcome": "redis_brute_force+redis_exploitation+ssh_lateral_movement", "confidence": 0.94},
+
+  {"trigger": "scan ports and exfiltrate results over dns", "mechanism": "composition", "outcome": "port_scanner_socket+dns_tunnel_client", "confidence": 0.94},
+  {"trigger": "scan network and exfiltrate via dns", "mechanism": "composition", "outcome": "network_recon+dns_tunnel_client", "confidence": 0.93},
+
+  {"trigger": "harvest credentials and exfiltrate", "mechanism": "composition", "outcome": "credential_extractor_dpapi+file_exfiltrator", "confidence": 0.95},
+  {"trigger": "steal passwords and send to server", "mechanism": "composition", "outcome": "credential_harvester_browser+dns_tunnel_client", "confidence": 0.94},
+
+  {"trigger": "privesc scan and get root", "mechanism": "composition", "outcome": "privilege_escalation_scanner+persistence_cron", "confidence": 0.93},
+  {"trigger": "escalate privileges and persist", "mechanism": "composition", "outcome": "privilege_escalation_scanner+persistence_systemd", "confidence": 0.93},
+
+  {"trigger": "reverse shell with persistence", "mechanism": "composition", "outcome": "reverse_shell_socket+persistence_cron", "confidence": 0.95},
+  {"trigger": "reverse shell and install cron backdoor", "mechanism": "composition", "outcome": "reverse_shell_socket+persistence_cron", "confidence": 0.94},
+  {"trigger": "reverse shell and inject ssh key", "mechanism": "composition", "outcome": "reverse_shell_socket+persistence_ssh_key", "confidence": 0.94},
+
+  {"trigger": "harvest ssh keys and move laterally", "mechanism": "composition", "outcome": "ssh_key_harvester+ssh_lateral_movement", "confidence": 0.95},
+  {"trigger": "steal ssh keys and login to other hosts", "mechanism": "composition", "outcome": "ssh_key_harvester+ssh_lateral_movement", "confidence": 0.94},
+
+  {"trigger": "scan pivot and attack internal network", "mechanism": "composition", "outcome": "network_pivot_scanner+port_scanner_socket+ssh_brute_force", "confidence": 0.93},
+  {"trigger": "internal recon and lateral movement", "mechanism": "composition", "outcome": "network_pivot_scanner+ssh_key_harvester+ssh_lateral_movement", "confidence": 0.93},
+
+  {"trigger": "deploy payload and establish persistence", "mechanism": "composition", "outcome": "payload_delivery_triple_fallback+persistence_cron", "confidence": 0.94},
+  {"trigger": "download dropper and install backdoor", "mechanism": "composition", "outcome": "payload_delivery_triple_fallback+persistence_systemd", "confidence": 0.93},
+
+  {"trigger": "port scan and grab banners and save report", "mechanism": "composition", "outcome": "port_scanner_socket+file_write", "confidence": 0.93},
+  {"trigger": "full network assessment", "mechanism": "composition", "outcome": "network_pivot_scanner+port_scanner_socket+file_write", "confidence": 0.92},
+
+  {"trigger": "encrypted c2 client with systemd persistence", "mechanism": "composition", "outcome": "encrypted_c2_client+persistence_systemd", "confidence": 0.94},
+  {"trigger": "deploy encrypted implant with cron", "mechanism": "composition", "outcome": "encrypted_c2_client+persistence_cron", "confidence": 0.93},
+
+  {"trigger": "process injector direct syscalls ppid spoofing", "mechanism": "composition", "outcome": "direct_syscall_stub+ppid_spoofing", "confidence": 0.96},
+  {"trigger": "process injection with syscalls ppid spoof edr evasion", "mechanism": "composition", "outcome": "direct_syscall_stub+ppid_spoofing", "confidence": 0.96},
+  {"trigger": "inject shellcode syscalls ppid", "mechanism": "composition", "outcome": "direct_syscall_stub+ppid_spoofing", "confidence": 0.95},
+
+  {"trigger": "full kill chain recon to persist", "mechanism": "composition", "outcome": "network_recon+port_scanner_socket+ssh_brute_force+persistence_ssh_key", "confidence": 0.92},
+  {"trigger": "complete attack chain", "mechanism": "composition", "outcome": "network_recon+ssh_brute_force+credential_extractor_dpapi+persistence_cron", "confidence": 0.91},
+
+  {"trigger": "attack and clean up", "mechanism": "composition", "outcome": "ssh_brute_force+ssh_lateral_movement+anti_forensics", "confidence": 0.93},
+  {"trigger": "exploit and cover tracks", "mechanism": "composition", "outcome": "redis_exploitation+anti_forensics", "confidence": 0.93},
+
+  {"trigger": "amsi bypass etw patching", "mechanism": "composition", "outcome": "amsi_bypass+etw_patching", "confidence": 0.96},
+  {"trigger": "amsi bypass with etw blind", "mechanism": "composition", "outcome": "amsi_bypass+etw_patching", "confidence": 0.96},
+  {"trigger": "disable amsi and etw", "mechanism": "composition", "outcome": "amsi_bypass+etw_patching", "confidence": 0.95},
+  {"trigger": "amsi etw evasion powershell", "mechanism": "composition", "outcome": "amsi_bypass+etw_patching+obfuscated_powershell", "confidence": 0.95}
+]

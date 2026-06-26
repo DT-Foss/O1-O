@@ -1,0 +1,52 @@
+{
+  "mitre_techniques": [
+    {
+      "id": "T1041",
+      "name": "Exfiltration Over C2 Channel",
+      "keyword": "exfil"
+    },
+    {
+      "id": "T1048",
+      "name": "Exfiltration Over Alternative Protocol",
+      "keyword": "exfil"
+    },
+    {
+      "id": "T1071.004",
+      "name": "DNS",
+      "keyword": "dns tunnel"
+    },
+    {
+      "id": "T1572",
+      "name": "Protocol Tunneling",
+      "keyword": "dns tunnel"
+    }
+  ],
+  "kill_chain_phase": "Actions on Objectives",
+  "iocs": [
+    {
+      "type": "network",
+      "indicator": "DNS queries to C2/exfil domain",
+      "persistence": "DNS logs, passive DNS"
+    },
+    {
+      "type": "behavioral",
+      "indicator": "Encryption activity (potential ransomware)",
+      "persistence": "entropy analysis, file monitoring"
+    }
+  ],
+  "detection_methods": [
+    "DLP solutions",
+    "Egress filtering",
+    "Data volume anomaly detection",
+    "Network traffic analysis",
+    "TLS inspection",
+    "DNS monitoring",
+    "JA3/JA3S fingerprinting"
+  ],
+  "countermeasures": [
+    "Deploy EDR with behavior-based detection",
+    "Enable detailed process logging (Sysmon, auditd)",
+    "Implement TLS inspection at network boundary",
+    "Monitor for anomalous outbound connections (frequency, volume, destination)"
+  ]
+}

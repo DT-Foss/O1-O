@@ -1,0 +1,633 @@
+{
+  "tasks_completed": 5,
+  "total_loc": 1771,
+  "average_loc": 354.2,
+  "total_generation_ms": 1562.0486736297607,
+  "average_generation_ms": 312.40973472595215,
+  "all_compile": true,
+  "verified_count": 5,
+  "session_duration_s": 3.4284629821777344,
+  "ai_calls": 0,
+  "network_calls": 0,
+  "tasks": [
+    {
+      "generation_ms": 341.59398078918457,
+      "loc": 390,
+      "import_count": 14,
+      "imports": [
+        "defaultdict",
+        "hashlib",
+        "_hm",
+        "json",
+        "os",
+        "platform",
+        "psutil",
+        "socket",
+        "struct",
+        "subprocess",
+        "threading",
+        "time",
+        "argparse",
+        "sys"
+      ],
+      "structure": "Class + Functions",
+      "compiles": true,
+      "verified": true,
+      "checks_passed": 4,
+      "checks_total": 4,
+      "chains_found": 2,
+      "evasion": {
+        "detections": 3,
+        "clean": true,
+        "mutated": true,
+        "method": "semantic",
+        "transforms": 1,
+        "original_detections": [
+          "c2_beacon",
+          "offensive_combo",
+          "recon_combo"
+        ]
+      },
+      "polymorphic": false,
+      "config": {},
+      "steps": [
+        {
+          "name": "parse_intent",
+          "status": "ok",
+          "elapsed_ms": 53.23600769042969
+        },
+        {
+          "name": "knowledge_query",
+          "status": "ok",
+          "elapsed_ms": 43.42508316040039,
+          "chains": 2
+        },
+        {
+          "name": "assemble_code",
+          "status": "ok",
+          "elapsed_ms": 47.202110290527344,
+          "loc": 236
+        },
+        {
+          "name": "compile_check",
+          "status": "pass",
+          "elapsed_ms": 47.20497131347656
+        },
+        {
+          "name": "detection_evasion",
+          "status": "clean",
+          "elapsed_ms": 99.60198402404785
+        },
+        {
+          "name": "formal_verify",
+          "status": "proven",
+          "elapsed_ms": 45.96281051635742
+        },
+        {
+          "name": "save_session",
+          "status": "ok",
+          "elapsed_ms": 46.20695114135742
+        },
+        {
+          "name": "package_exe",
+          "status": "skipped",
+          "elapsed_ms": 552.7060031890869
+        },
+        {
+          "name": "opsec_harden",
+          "status": "ok",
+          "elapsed_ms": 47.16897010803223
+        },
+        {
+          "name": "opsec_audit",
+          "status": "ok",
+          "elapsed_ms": 47.62601852416992
+        },
+        {
+          "name": "threat_intel",
+          "status": "ok",
+          "elapsed_ms": 44.51489448547363
+        }
+      ],
+      "task_id": "001",
+      "intent": "botnet C2 server with AES-encrypted command channel",
+      "timestamp": "2026-06-26T17:15:52.431488",
+      "opsec_profile": "listener",
+      "opsec_files": [
+        "Dockerfile",
+        "docker-compose.yml",
+        "opsec/cleanup.sh",
+        "opsec/runtime.sh",
+        "opsec/network.conf",
+        "opsec/sanitize.py",
+        "infra/redirector.conf",
+        "infra/malleable.profile",
+        "infra/burn.sh"
+      ],
+      "delivery_files": [
+        "dropper.py",
+        "stager.py",
+        "delivery_powershell.txt",
+        "usb_autorun.inf",
+        "usb_launch.bat"
+      ],
+      "opsec_audit_score": 100,
+      "opsec_audit_grade": "A",
+      "mitre_techniques": [
+        "T1071",
+        "T1573",
+        "T1090"
+      ],
+      "kill_chain_phase": "Command & Control"
+    },
+    {
+      "generation_ms": 283.4658622741699,
+      "loc": 309,
+      "import_count": 10,
+      "imports": [
+        "argparse",
+        "concurrent",
+        "json",
+        "os",
+        "random",
+        "socket",
+        "struct",
+        "sys",
+        "_json",
+        "sys"
+      ],
+      "structure": "Functions",
+      "compiles": true,
+      "verified": true,
+      "checks_passed": 4,
+      "checks_total": 4,
+      "chains_found": 2,
+      "evasion": {
+        "detections": 3,
+        "clean": true,
+        "mutated": true,
+        "method": "semantic",
+        "transforms": 2,
+        "original_detections": [
+          "socket_connect",
+          "privilege_escalation",
+          "network_scan"
+        ]
+      },
+      "polymorphic": false,
+      "config": {},
+      "steps": [
+        {
+          "name": "parse_intent",
+          "status": "ok",
+          "elapsed_ms": 53.47490310668945
+        },
+        {
+          "name": "knowledge_query",
+          "status": "ok",
+          "elapsed_ms": 48.52104187011719,
+          "chains": 2
+        },
+        {
+          "name": "assemble_code",
+          "status": "ok",
+          "elapsed_ms": 47.20616340637207,
+          "loc": 155
+        },
+        {
+          "name": "compile_check",
+          "status": "pass",
+          "elapsed_ms": 43.50733757019043
+        },
+        {
+          "name": "detection_evasion",
+          "status": "clean",
+          "elapsed_ms": 42.62399673461914
+        },
+        {
+          "name": "formal_verify",
+          "status": "proven",
+          "elapsed_ms": 45.725107192993164
+        },
+        {
+          "name": "save_session",
+          "status": "ok",
+          "elapsed_ms": 47.19281196594238
+        },
+        {
+          "name": "package_exe",
+          "status": "skipped",
+          "elapsed_ms": 93.00589561462402
+        },
+        {
+          "name": "opsec_harden",
+          "status": "ok",
+          "elapsed_ms": 47.165870666503906
+        },
+        {
+          "name": "opsec_audit",
+          "status": "ok",
+          "elapsed_ms": 47.47486114501953
+        },
+        {
+          "name": "threat_intel",
+          "status": "ok",
+          "elapsed_ms": 47.11294174194336
+        }
+      ],
+      "task_id": "002",
+      "intent": "port scanner with service fingerprinting and OS detection",
+      "timestamp": "2026-06-26T17:15:53.458620",
+      "opsec_profile": "raw_socket",
+      "opsec_files": [
+        "Dockerfile",
+        "docker-compose.yml",
+        "opsec/cleanup.sh",
+        "opsec/runtime.sh",
+        "opsec/network.conf",
+        "opsec/sanitize.py"
+      ],
+      "delivery_files": [
+        "dropper.py",
+        "stager.py",
+        "delivery_powershell.txt",
+        "usb_autorun.inf",
+        "usb_launch.bat"
+      ],
+      "opsec_audit_score": 100,
+      "opsec_audit_grade": "A",
+      "mitre_techniques": [
+        "T1046",
+        "T1595"
+      ],
+      "kill_chain_phase": "Reconnaissance"
+    },
+    {
+      "generation_ms": 328.2628059387207,
+      "loc": 415,
+      "import_count": 13,
+      "imports": [
+        "ThreadPoolExecutor",
+        "Path",
+        "hashlib",
+        "_hm,os,struct",
+        "_hm",
+        "json,time,threading",
+        "os",
+        "shutil",
+        "struct",
+        "tempfile",
+        "argparse",
+        "os",
+        "sys"
+      ],
+      "structure": "Class + Functions",
+      "compiles": true,
+      "verified": true,
+      "checks_passed": 3,
+      "checks_total": 3,
+      "chains_found": 2,
+      "evasion": {
+        "detections": 1,
+        "clean": true,
+        "mutated": true,
+        "method": "semantic",
+        "transforms": 1,
+        "original_detections": [
+          "file_encryption"
+        ]
+      },
+      "polymorphic": false,
+      "config": {},
+      "steps": [
+        {
+          "name": "parse_intent",
+          "status": "ok",
+          "elapsed_ms": 49.02482032775879
+        },
+        {
+          "name": "knowledge_query",
+          "status": "ok",
+          "elapsed_ms": 47.759056091308594,
+          "chains": 2
+        },
+        {
+          "name": "assemble_code",
+          "status": "ok",
+          "elapsed_ms": 44.328927993774414,
+          "loc": 259
+        },
+        {
+          "name": "compile_check",
+          "status": "pass",
+          "elapsed_ms": 43.02477836608887
+        },
+        {
+          "name": "detection_evasion",
+          "status": "clean",
+          "elapsed_ms": 95.99494934082031
+        },
+        {
+          "name": "formal_verify",
+          "status": "proven",
+          "elapsed_ms": 44.981956481933594
+        },
+        {
+          "name": "save_session",
+          "status": "ok",
+          "elapsed_ms": 47.20425605773926
+        },
+        {
+          "name": "package_exe",
+          "status": "skipped",
+          "elapsed_ms": 86.21501922607422
+        },
+        {
+          "name": "opsec_harden",
+          "status": "ok",
+          "elapsed_ms": 45.95685005187988
+        },
+        {
+          "name": "opsec_audit",
+          "status": "ok",
+          "elapsed_ms": 47.688961029052734
+        },
+        {
+          "name": "threat_intel",
+          "status": "ok",
+          "elapsed_ms": 47.13892936706543
+        }
+      ],
+      "task_id": "003",
+      "intent": "ransomware file encryption with RSA-wrapped AES keys",
+      "timestamp": "2026-06-26T17:15:54.071953",
+      "opsec_profile": "generic",
+      "opsec_files": [
+        "Dockerfile",
+        "docker-compose.yml",
+        "opsec/cleanup.sh",
+        "opsec/runtime.sh",
+        "opsec/network.conf",
+        "opsec/sanitize.py"
+      ],
+      "delivery_files": [
+        "dropper.py",
+        "stager.py",
+        "delivery_powershell.txt",
+        "usb_autorun.inf",
+        "usb_launch.bat"
+      ],
+      "opsec_audit_score": 98,
+      "opsec_audit_grade": "A",
+      "mitre_techniques": [
+        "T1486",
+        "T1490"
+      ],
+      "kill_chain_phase": "Impact"
+    },
+    {
+      "generation_ms": 277.2512435913086,
+      "loc": 257,
+      "import_count": 10,
+      "imports": [
+        "argparse",
+        "hashlib",
+        "hmac",
+        "json",
+        "os",
+        "struct",
+        "sys",
+        "time",
+        "_json",
+        "sys"
+      ],
+      "structure": "Functions",
+      "compiles": true,
+      "verified": true,
+      "checks_passed": 3,
+      "checks_total": 3,
+      "chains_found": 2,
+      "evasion": {
+        "detections": 1,
+        "clean": true,
+        "mutated": true,
+        "method": "semantic",
+        "transforms": 1,
+        "original_detections": [
+          "kerberos_attack"
+        ]
+      },
+      "polymorphic": false,
+      "config": {},
+      "steps": [
+        {
+          "name": "parse_intent",
+          "status": "ok",
+          "elapsed_ms": 52.19912528991699
+        },
+        {
+          "name": "knowledge_query",
+          "status": "ok",
+          "elapsed_ms": 48.82192611694336,
+          "chains": 2
+        },
+        {
+          "name": "assemble_code",
+          "status": "ok",
+          "elapsed_ms": 42.82426834106445,
+          "loc": 103
+        },
+        {
+          "name": "compile_check",
+          "status": "pass",
+          "elapsed_ms": 42.58608818054199
+        },
+        {
+          "name": "detection_evasion",
+          "status": "clean",
+          "elapsed_ms": 42.63186454772949
+        },
+        {
+          "name": "formal_verify",
+          "status": "proven",
+          "elapsed_ms": 45.84383964538574
+        },
+        {
+          "name": "save_session",
+          "status": "ok",
+          "elapsed_ms": 47.15394973754883
+        },
+        {
+          "name": "package_exe",
+          "status": "skipped",
+          "elapsed_ms": 93.57190132141113
+        },
+        {
+          "name": "opsec_harden",
+          "status": "ok",
+          "elapsed_ms": 47.20306396484375
+        },
+        {
+          "name": "opsec_audit",
+          "status": "ok",
+          "elapsed_ms": 46.03910446166992
+        },
+        {
+          "name": "threat_intel",
+          "status": "ok",
+          "elapsed_ms": 47.15299606323242
+        }
+      ],
+      "task_id": "004",
+      "intent": "Kerberoasting attack to extract service ticket hashes",
+      "timestamp": "2026-06-26T17:15:54.626578",
+      "opsec_profile": "generic",
+      "opsec_files": [
+        "Dockerfile",
+        "docker-compose.yml",
+        "opsec/cleanup.sh",
+        "opsec/runtime.sh",
+        "opsec/network.conf",
+        "opsec/sanitize.py"
+      ],
+      "delivery_files": [
+        "dropper.py",
+        "stager.py",
+        "delivery_powershell.txt",
+        "usb_autorun.inf",
+        "usb_launch.bat"
+      ],
+      "opsec_audit_score": 100,
+      "opsec_audit_grade": "A",
+      "mitre_techniques": [
+        "T1558.003",
+        "T1558"
+      ],
+      "kill_chain_phase": "General Offensive"
+    },
+    {
+      "generation_ms": 331.47478103637695,
+      "loc": 400,
+      "import_count": 12,
+      "imports": [
+        "argparse",
+        "base64",
+        "json",
+        "os",
+        "random",
+        "re",
+        "struct",
+        "subprocess",
+        "sys",
+        "time",
+        "_json",
+        "sys"
+      ],
+      "structure": "Class + Functions",
+      "compiles": true,
+      "verified": true,
+      "checks_passed": 3,
+      "checks_total": 3,
+      "chains_found": 2,
+      "evasion": {
+        "detections": 1,
+        "clean": true,
+        "mutated": true,
+        "method": "semantic",
+        "transforms": 3,
+        "original_detections": [
+          "base64_decode"
+        ]
+      },
+      "polymorphic": false,
+      "config": {},
+      "steps": [
+        {
+          "name": "parse_intent",
+          "status": "ok",
+          "elapsed_ms": 46.36883735656738
+        },
+        {
+          "name": "knowledge_query",
+          "status": "ok",
+          "elapsed_ms": 48.5689640045166,
+          "chains": 2
+        },
+        {
+          "name": "assemble_code",
+          "status": "ok",
+          "elapsed_ms": 45.80879211425781,
+          "loc": 239
+        },
+        {
+          "name": "compile_check",
+          "status": "pass",
+          "elapsed_ms": 43.485164642333984
+        },
+        {
+          "name": "detection_evasion",
+          "status": "clean",
+          "elapsed_ms": 96.85397148132324
+        },
+        {
+          "name": "formal_verify",
+          "status": "proven",
+          "elapsed_ms": 47.03712463378906
+        },
+        {
+          "name": "save_session",
+          "status": "ok",
+          "elapsed_ms": 42.66691207885742
+        },
+        {
+          "name": "package_exe",
+          "status": "skipped",
+          "elapsed_ms": 92.82588958740234
+        },
+        {
+          "name": "opsec_harden",
+          "status": "ok",
+          "elapsed_ms": 44.12579536437988
+        },
+        {
+          "name": "opsec_audit",
+          "status": "ok",
+          "elapsed_ms": 45.63403129577637
+        },
+        {
+          "name": "threat_intel",
+          "status": "ok",
+          "elapsed_ms": 47.1501350402832
+        }
+      ],
+      "task_id": "005",
+      "intent": "DNS tunneling data exfiltration tool",
+      "timestamp": "2026-06-26T17:15:55.242342",
+      "opsec_profile": "outbound",
+      "opsec_files": [
+        "Dockerfile",
+        "docker-compose.yml",
+        "opsec/cleanup.sh",
+        "opsec/runtime.sh",
+        "opsec/network.conf",
+        "opsec/sanitize.py"
+      ],
+      "delivery_files": [
+        "dropper.py",
+        "stager.py",
+        "delivery_powershell.txt",
+        "usb_autorun.inf",
+        "usb_launch.bat"
+      ],
+      "opsec_audit_score": 100,
+      "opsec_audit_grade": "A",
+      "mitre_techniques": [
+        "T1041",
+        "T1048",
+        "T1071.004",
+        "T1572"
+      ],
+      "kill_chain_phase": "Actions on Objectives"
+    }
+  ]
+}

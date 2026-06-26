@@ -1,0 +1,242 @@
+[
+  {
+    "trigger": "web_application",
+    "mechanism": "requires",
+    "outcome": "input_validation_layer",
+    "confidence": 0.95,
+    "arch_role": "validator",
+    "security_tier": "boundary"
+  },
+  {
+    "trigger": "web_application",
+    "mechanism": "requires",
+    "outcome": "authentication_layer",
+    "confidence": 0.95,
+    "arch_role": "authenticator",
+    "security_tier": "boundary"
+  },
+  {
+    "trigger": "web_application",
+    "mechanism": "requires",
+    "outcome": "authorization_layer",
+    "confidence": 0.90,
+    "arch_role": "authorizer",
+    "security_tier": "boundary"
+  },
+  {
+    "trigger": "web_application",
+    "mechanism": "requires",
+    "outcome": "output_encoding_layer",
+    "confidence": 0.90,
+    "arch_role": "sanitizer",
+    "security_tier": "boundary"
+  },
+  {
+    "trigger": "web_application",
+    "mechanism": "requires",
+    "outcome": "rate_limiting",
+    "confidence": 0.85,
+    "arch_role": "rate_limiter",
+    "security_tier": "defense"
+  },
+  {
+    "trigger": "input_validation_layer",
+    "mechanism": "protects_against",
+    "outcome": "injection_attack",
+    "confidence": 0.95,
+    "arch_role": "validator",
+    "security_tier": "mitigation"
+  },
+  {
+    "trigger": "input_validation_layer",
+    "mechanism": "protects_against",
+    "outcome": "xss_attack",
+    "confidence": 0.90,
+    "arch_role": "validator",
+    "security_tier": "mitigation"
+  },
+  {
+    "trigger": "input_validation_layer",
+    "mechanism": "protects_against",
+    "outcome": "path_traversal_attack",
+    "confidence": 0.90,
+    "arch_role": "validator",
+    "security_tier": "mitigation"
+  },
+  {
+    "trigger": "authentication_layer",
+    "mechanism": "protects_against",
+    "outcome": "unauthorized_access",
+    "confidence": 0.95,
+    "arch_role": "authenticator",
+    "security_tier": "mitigation"
+  },
+  {
+    "trigger": "authorization_layer",
+    "mechanism": "protects_against",
+    "outcome": "privilege_escalation",
+    "confidence": 0.90,
+    "arch_role": "authorizer",
+    "security_tier": "mitigation"
+  },
+  {
+    "trigger": "output_encoding_layer",
+    "mechanism": "protects_against",
+    "outcome": "xss_attack",
+    "confidence": 0.95,
+    "arch_role": "sanitizer",
+    "security_tier": "mitigation"
+  },
+  {
+    "trigger": "rate_limiting",
+    "mechanism": "protects_against",
+    "outcome": "denial_of_service",
+    "confidence": 0.85,
+    "arch_role": "rate_limiter",
+    "security_tier": "mitigation"
+  },
+  {
+    "trigger": "parameterized_query",
+    "mechanism": "protects_against",
+    "outcome": "sql_injection",
+    "confidence": 0.95,
+    "arch_role": "sanitizer",
+    "security_tier": "mitigation"
+  },
+  {
+    "trigger": "shlex_quote",
+    "mechanism": "protects_against",
+    "outcome": "command_injection",
+    "confidence": 0.90,
+    "arch_role": "sanitizer",
+    "security_tier": "mitigation"
+  },
+  {
+    "trigger": "html_escape",
+    "mechanism": "protects_against",
+    "outcome": "xss_attack",
+    "confidence": 0.90,
+    "arch_role": "sanitizer",
+    "security_tier": "mitigation"
+  },
+  {
+    "trigger": "yaml_safe_load",
+    "mechanism": "protects_against",
+    "outcome": "deserialization_attack",
+    "confidence": 0.90,
+    "arch_role": "sanitizer",
+    "security_tier": "mitigation"
+  },
+  {
+    "trigger": "os_path_basename",
+    "mechanism": "protects_against",
+    "outcome": "path_traversal_attack",
+    "confidence": 0.85,
+    "arch_role": "sanitizer",
+    "security_tier": "mitigation"
+  },
+  {
+    "trigger": "csrf_token",
+    "mechanism": "protects_against",
+    "outcome": "csrf_attack",
+    "confidence": 0.90,
+    "arch_role": "validator",
+    "security_tier": "mitigation"
+  },
+  {
+    "trigger": "content_security_policy",
+    "mechanism": "protects_against",
+    "outcome": "xss_attack",
+    "confidence": 0.85,
+    "arch_role": "defense_in_depth",
+    "security_tier": "mitigation"
+  },
+  {
+    "trigger": "tls_encryption",
+    "mechanism": "protects_against",
+    "outcome": "man_in_the_middle",
+    "confidence": 0.95,
+    "arch_role": "encryptor",
+    "security_tier": "transport"
+  },
+  {
+    "trigger": "bcrypt_hash",
+    "mechanism": "protects_against",
+    "outcome": "password_cracking",
+    "confidence": 0.90,
+    "arch_role": "encryptor",
+    "security_tier": "storage"
+  },
+  {
+    "trigger": "security_logging",
+    "mechanism": "enables",
+    "outcome": "incident_detection",
+    "confidence": 0.85,
+    "arch_role": "logger",
+    "security_tier": "monitoring"
+  },
+  {
+    "trigger": "security_logging",
+    "mechanism": "enables",
+    "outcome": "forensic_analysis",
+    "confidence": 0.85,
+    "arch_role": "logger",
+    "security_tier": "monitoring"
+  },
+  {
+    "trigger": "sandbox_profile",
+    "mechanism": "protects_against",
+    "outcome": "sandbox_escape",
+    "confidence": 0.80,
+    "arch_role": "isolator",
+    "security_tier": "containment"
+  },
+  {
+    "trigger": "entitlement_check",
+    "mechanism": "protects_against",
+    "outcome": "privilege_escalation",
+    "confidence": 0.85,
+    "arch_role": "authorizer",
+    "security_tier": "macos"
+  },
+  {
+    "trigger": "code_signing",
+    "mechanism": "protects_against",
+    "outcome": "code_tampering",
+    "confidence": 0.90,
+    "arch_role": "validator",
+    "security_tier": "integrity"
+  },
+  {
+    "trigger": "xpc_connection_audit",
+    "mechanism": "protects_against",
+    "outcome": "ipc_injection",
+    "confidence": 0.85,
+    "arch_role": "validator",
+    "security_tier": "macos"
+  },
+  {
+    "trigger": "mach_msg_validation",
+    "mechanism": "protects_against",
+    "outcome": "kernel_exploit",
+    "confidence": 0.80,
+    "arch_role": "validator",
+    "security_tier": "macos"
+  },
+  {
+    "trigger": "heap_guard",
+    "mechanism": "protects_against",
+    "outcome": "heap_overflow",
+    "confidence": 0.75,
+    "arch_role": "defense_in_depth",
+    "security_tier": "runtime"
+  },
+  {
+    "trigger": "stack_canary",
+    "mechanism": "protects_against",
+    "outcome": "buffer_overflow",
+    "confidence": 0.75,
+    "arch_role": "defense_in_depth",
+    "security_tier": "runtime"
+  }
+]

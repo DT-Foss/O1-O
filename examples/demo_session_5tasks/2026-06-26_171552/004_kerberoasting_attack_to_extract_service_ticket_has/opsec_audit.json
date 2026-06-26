@@ -1,0 +1,29 @@
+{
+  "score": 100,
+  "grade": "A",
+  "findings": [
+    {
+      "severity": "MEDIUM",
+      "category": "ATTRIBUTION",
+      "finding": "FORGE engine attribution markers",
+      "remediation": "Run opsec/sanitize.py to strip FORGE markers"
+    },
+    {
+      "severity": "LOW",
+      "category": "TIMING",
+      "finding": "Timestamp generation may leak timezone/locale",
+      "remediation": "Use UTC only: datetime.utcnow() or time.gmtime()"
+    },
+    {
+      "severity": "LOW",
+      "category": "EXECUTION",
+      "finding": "Environment variable access \u2014 may leak host info",
+      "remediation": "Sanitize environment before execution (see opsec/runtime.sh)"
+    }
+  ],
+  "critical_count": 0,
+  "high_count": 0,
+  "medium_count": 1,
+  "low_count": 2,
+  "total_findings": 3
+}

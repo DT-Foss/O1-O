@@ -1,0 +1,53 @@
+# Isolated network, Tor routing, ephemeral storage
+services:
+  kerberoasting_attack_to_extract_service_:
+    build: .
+    container_name: forge-kerberoasting_attack_to_extract_service_
+
+
+
+    depends_on:
+      - tor-proxy
+    environment:
+      - ALL_PROXY=socks5h://tor-proxy:9050
+      - HTTP_PROXY=socks5h://tor-proxy:9050
+      - HTTPS_PROXY=socks5h://tor-proxy:9050
+      - NO_PROXY=localhost,127.0.0.1
+    tmpfs:
+      - /tmp:size=100m,mode=1777
+      - /app/data:size=50m
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    ulimits:
+      core:
+        soft: 0
+        hard: 0
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: "1.0"
+    stop_grace_period: 5s
+    labels:
+      - "forge.auto-destruct=60m"
+    networks:
+      - isolated
+
+  tor-proxy:
+    image: dperson/torproxy:latest
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:9050:9050"
+    environment:
+      - TORUSER=tor
+    tmpfs:
+      - /var/lib/tor:size=50m
+    read_only: true
+    networks:
+      - isolated
+
+networks:
+  isolated:
+    driver: bridge
+    internal: true  # No direct internet access — all traffic via Tor

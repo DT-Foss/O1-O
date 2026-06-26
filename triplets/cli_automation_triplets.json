@@ -1,0 +1,38 @@
+[
+    {
+        "trigger": "click",
+        "mechanism": "creates",
+        "outcome": "cli commands",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "rich",
+        "mechanism": "renders",
+        "outcome": "styled console",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "rich",
+        "mechanism": "creates",
+        "outcome": "tables",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "tqdm",
+        "mechanism": "shows",
+        "outcome": "progress bars",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "watchdog",
+        "mechanism": "monitors",
+        "outcome": "file system",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "schedule",
+        "mechanism": "executes",
+        "outcome": "scheduled jobs",
+        "confidence": 0.95
+    }
+]

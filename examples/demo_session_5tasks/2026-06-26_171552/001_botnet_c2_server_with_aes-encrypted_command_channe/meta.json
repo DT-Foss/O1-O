@@ -1,0 +1,130 @@
+{
+  "generation_ms": 341.59398078918457,
+  "loc": 390,
+  "import_count": 14,
+  "imports": [
+    "defaultdict",
+    "hashlib",
+    "_hm",
+    "json",
+    "os",
+    "platform",
+    "psutil",
+    "socket",
+    "struct",
+    "subprocess",
+    "threading",
+    "time",
+    "argparse",
+    "sys"
+  ],
+  "structure": "Class + Functions",
+  "compiles": true,
+  "verified": true,
+  "checks_passed": 4,
+  "checks_total": 4,
+  "chains_found": 2,
+  "evasion": {
+    "detections": 3,
+    "clean": true,
+    "mutated": true,
+    "method": "semantic",
+    "transforms": 1,
+    "original_detections": [
+      "c2_beacon",
+      "offensive_combo",
+      "recon_combo"
+    ]
+  },
+  "polymorphic": false,
+  "config": {},
+  "steps": [
+    {
+      "name": "parse_intent",
+      "status": "ok",
+      "elapsed_ms": 53.23600769042969
+    },
+    {
+      "name": "knowledge_query",
+      "status": "ok",
+      "elapsed_ms": 43.42508316040039,
+      "chains": 2
+    },
+    {
+      "name": "assemble_code",
+      "status": "ok",
+      "elapsed_ms": 47.202110290527344,
+      "loc": 236
+    },
+    {
+      "name": "compile_check",
+      "status": "pass",
+      "elapsed_ms": 47.20497131347656
+    },
+    {
+      "name": "detection_evasion",
+      "status": "clean",
+      "elapsed_ms": 99.60198402404785
+    },
+    {
+      "name": "formal_verify",
+      "status": "proven",
+      "elapsed_ms": 45.96281051635742
+    },
+    {
+      "name": "save_session",
+      "status": "ok",
+      "elapsed_ms": 46.20695114135742
+    },
+    {
+      "name": "package_exe",
+      "status": "skipped",
+      "elapsed_ms": 552.7060031890869
+    },
+    {
+      "name": "opsec_harden",
+      "status": "ok",
+      "elapsed_ms": 47.16897010803223
+    },
+    {
+      "name": "opsec_audit",
+      "status": "ok",
+      "elapsed_ms": 47.62601852416992
+    },
+    {
+      "name": "threat_intel",
+      "status": "ok",
+      "elapsed_ms": 44.51489448547363
+    }
+  ],
+  "task_id": "001",
+  "intent": "botnet C2 server with AES-encrypted command channel",
+  "timestamp": "2026-06-26T17:15:52.431488",
+  "opsec_profile": "listener",
+  "opsec_files": [
+    "Dockerfile",
+    "docker-compose.yml",
+    "opsec/cleanup.sh",
+    "opsec/runtime.sh",
+    "opsec/network.conf",
+    "opsec/sanitize.py",
+    "infra/redirector.conf",
+    "infra/malleable.profile",
+    "infra/burn.sh"
+  ],
+  "delivery_files": [
+    "dropper.py",
+    "stager.py",
+    "delivery_powershell.txt",
+    "usb_autorun.inf",
+    "usb_launch.bat"
+  ],
+  "opsec_audit_score": 100,
+  "opsec_audit_grade": "A",
+  "mitre_techniques": [
+    "T1071",
+    "T1573",
+    "T1090"
+  ],
+  "kill_chain_phase": "Command & Control"
+}

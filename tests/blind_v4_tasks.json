@@ -1,0 +1,1282 @@
+[
+  {
+    "id": 1,
+    "tier": "stdlib",
+    "intent": "write a generator function using yield that produces fibonacci numbers",
+    "expects": [
+      "yield",
+      "def"
+    ],
+    "so_id": 231767,
+    "so_title": "What does the \"yield\" keyword do in Python?",
+    "so_score": 13124
+  },
+  {
+    "id": 2,
+    "tier": "stdlib",
+    "intent": "create a Python script with a proper if __name__ == '__main__' guard and a main function",
+    "expects": [
+      "__name__",
+      "__main__",
+      "def main"
+    ],
+    "so_id": 419163,
+    "so_title": "What does if __name__ == \"__main__\": do?",
+    "so_score": 8432
+  },
+  {
+    "id": 3,
+    "tier": "stdlib",
+    "intent": "implement a function that uses Python's ternary operator to return 'even' or 'odd' for a number",
+    "expects": [
+      "if",
+      "else",
+      "return"
+    ],
+    "so_id": 394814,
+    "so_title": "SO#394814",
+    "so_score": 0
+  },
+  {
+    "id": 4,
+    "tier": "stdlib",
+    "intent": "check whether a file exists without exceptions using pathlib or os.path",
+    "expects": [
+      "os.path",
+      "exists"
+    ],
+    "so_id": 6760685,
+    "so_title": "SO#6760685",
+    "so_score": 0
+  },
+  {
+    "id": 5,
+    "tier": "stdlib",
+    "intent": "merge two dictionaries in a single expression in Python",
+    "expects": [
+      "{",
+      "}"
+    ],
+    "so_id": 38987,
+    "so_title": "How do I merge two dictionaries in a single expression in Python?",
+    "so_score": 7122
+  },
+  {
+    "id": 6,
+    "tier": "stdlib",
+    "intent": "execute a system command from Python and capture its output",
+    "expects": [
+      "subprocess"
+    ],
+    "so_id": 89228,
+    "so_title": "How do I execute a program or call a system command?",
+    "so_score": 6286
+  },
+  {
+    "id": 7,
+    "tier": "stdlib",
+    "intent": "create a directory and any missing parent directories",
+    "expects": [
+      "os.makedirs",
+      "mkdir"
+    ],
+    "so_id": 273192,
+    "so_title": "How do I create a directory, and any missing parent directories?",
+    "so_score": 5814
+  },
+  {
+    "id": 8,
+    "tier": "stdlib",
+    "intent": "access the index value in a for loop using enumerate",
+    "expects": [
+      "enumerate",
+      "for"
+    ],
+    "so_id": 522563,
+    "so_title": "How can I access the index value in a 'for' loop?",
+    "so_score": 5670
+  },
+  {
+    "id": 9,
+    "tier": "stdlib",
+    "intent": "make a flat list out of a list of lists using itertools or list comprehension",
+    "expects": [
+      "for",
+      "in"
+    ],
+    "so_id": 952914,
+    "so_title": "How do I make a flat list out of a list of lists?",
+    "so_score": 5505
+  },
+  {
+    "id": 10,
+    "tier": "stdlib",
+    "intent": "find the index for a given item in a list",
+    "expects": [
+      ".index("
+    ],
+    "so_id": 176011,
+    "so_title": "SO#176011",
+    "so_score": 0
+  },
+  {
+    "id": 11,
+    "tier": "stdlib",
+    "intent": "use a global variable inside a function",
+    "expects": [
+      "global"
+    ],
+    "so_id": 423379,
+    "so_title": "How can I use a global variable in a function?",
+    "so_score": 4047
+  },
+  {
+    "id": 12,
+    "tier": "stdlib",
+    "intent": "get the current time in Python",
+    "expects": [
+      "datetime",
+      "time"
+    ],
+    "so_id": 415511,
+    "so_title": "How do I get the current time in Python?",
+    "so_score": 3992
+  },
+  {
+    "id": 13,
+    "tier": "stdlib",
+    "intent": "catch multiple exceptions in one except block",
+    "expects": [
+      "except",
+      "("
+    ],
+    "so_id": 6470428,
+    "so_title": "How can I catch multiple exceptions in one line? (in the \"except\" block)",
+    "so_score": 3962
+  },
+  {
+    "id": 14,
+    "tier": "stdlib",
+    "intent": "copy a file from one location to another in Python",
+    "expects": [
+      "shutil",
+      "copy"
+    ],
+    "so_id": 123198,
+    "so_title": "How do I copy a file?",
+    "so_score": 3944
+  },
+  {
+    "id": 15,
+    "tier": "stdlib",
+    "intent": "convert bytes to a string in Python 3",
+    "expects": [
+      ".decode("
+    ],
+    "so_id": 606191,
+    "so_title": "Convert bytes to a string in Python 3",
+    "so_score": 3885
+  },
+  {
+    "id": 16,
+    "tier": "stdlib",
+    "intent": "implement __str__ and __repr__ methods for a custom class",
+    "expects": [
+      "__str__",
+      "__repr__",
+      "class"
+    ],
+    "so_id": 1301346,
+    "so_title": "What is the meaning of single and double underscore before an object name?",
+    "so_score": 1920
+  },
+  {
+    "id": 17,
+    "tier": "stdlib",
+    "intent": "add new keys to a dictionary in Python",
+    "expects": [
+      "[",
+      "]",
+      "="
+    ],
+    "so_id": 1024847,
+    "so_title": "How can I add new keys to a dictionary?",
+    "so_score": 3600
+  },
+  {
+    "id": 18,
+    "tier": "stdlib",
+    "intent": "check if a string contains a substring in Python",
+    "expects": [
+      "in"
+    ],
+    "so_id": 3437059,
+    "so_title": "Does Python have a string 'contains' substring method?",
+    "so_score": 3585
+  },
+  {
+    "id": 19,
+    "tier": "stdlib",
+    "intent": "delete a file or folder in Python",
+    "expects": [
+      "os.remove",
+      "shutil"
+    ],
+    "so_id": 6996603,
+    "so_title": "How can I delete a file or folder in Python?",
+    "so_score": 3543
+  },
+  {
+    "id": 20,
+    "tier": "stdlib",
+    "intent": "implement a function with *args and **kwargs parameters",
+    "expects": [
+      "*args",
+      "**kwargs"
+    ],
+    "so_id": 36901,
+    "so_title": "What does ** (double star/asterisk) and * (star/asterisk) do for parameters?",
+    "so_score": 3498
+  },
+  {
+    "id": 21,
+    "tier": "stdlib",
+    "intent": "list all files in a directory",
+    "expects": [
+      "os.listdir",
+      "glob"
+    ],
+    "so_id": 3207219,
+    "so_title": "How do I list all files of a directory?",
+    "so_score": 3464
+  },
+  {
+    "id": 22,
+    "tier": "stdlib",
+    "intent": "access environment variables in Python",
+    "expects": [
+      "os.environ"
+    ],
+    "so_id": 4906977,
+    "so_title": "How can I access environment variables in Python?",
+    "so_score": 3461
+  },
+  {
+    "id": 23,
+    "tier": "stdlib",
+    "intent": "sort a dictionary by its values",
+    "expects": [
+      "sorted",
+      "lambda"
+    ],
+    "so_id": 613183,
+    "so_title": "How do I sort a dictionary by value?",
+    "so_score": 3413
+  },
+  {
+    "id": 24,
+    "tier": "stdlib",
+    "intent": "clone a list so that modifying the clone doesn't change the original",
+    "expects": [
+      "copy",
+      "[:]",
+      "list("
+    ],
+    "so_id": 2612802,
+    "so_title": "How do I clone a list so that it doesn't change unexpectedly after assignment?",
+    "so_score": 3367
+  },
+  {
+    "id": 25,
+    "tier": "stdlib",
+    "intent": "demonstrate pass by reference vs pass by value behavior in Python",
+    "expects": [
+      "def",
+      "list",
+      "append"
+    ],
+    "so_id": 986006,
+    "so_title": "How do I pass a variable by reference?",
+    "so_score": 3363
+  },
+  {
+    "id": 26,
+    "tier": "stdlib",
+    "intent": "print colored text to the terminal using ANSI escape codes",
+    "expects": [
+      "\\033[",
+      "print"
+    ],
+    "so_id": 287871,
+    "so_title": "How do I print colored text to the terminal?",
+    "so_score": 3323
+  },
+  {
+    "id": 27,
+    "tier": "stdlib",
+    "intent": "manually raise an exception with a custom message in Python",
+    "expects": [
+      "raise",
+      "Exception"
+    ],
+    "so_id": 2052390,
+    "so_title": "Manually raising (throwing) an exception in Python",
+    "so_score": 3317
+  },
+  {
+    "id": 28,
+    "tier": "stdlib",
+    "intent": "demonstrate Python super() with __init__() in class inheritance",
+    "expects": [
+      "super()",
+      "__init__",
+      "class"
+    ],
+    "so_id": 576169,
+    "so_title": "Understanding Python super() with __init__() methods",
+    "so_score": 3294
+  },
+  {
+    "id": 29,
+    "tier": "stdlib",
+    "intent": "make a time delay in Python using time.sleep",
+    "expects": [
+      "time.sleep"
+    ],
+    "so_id": 510348,
+    "so_title": "How do I make a time delay?",
+    "so_score": 3283
+  },
+  {
+    "id": 30,
+    "tier": "stdlib",
+    "intent": "concatenate two lists in Python",
+    "expects": [
+      "+",
+      "extend"
+    ],
+    "so_id": 1720421,
+    "so_title": "How do I concatenate two lists in Python?",
+    "so_score": 3238
+  },
+  {
+    "id": 31,
+    "tier": "stdlib",
+    "intent": "check if a list is empty in Python",
+    "expects": [
+      "if",
+      "not",
+      "len"
+    ],
+    "so_id": 53513,
+    "so_title": "How do I check if a list is empty?",
+    "so_score": 3222
+  },
+  {
+    "id": 32,
+    "tier": "stdlib",
+    "intent": "create a function decorator that logs function calls and chain multiple decorators",
+    "expects": [
+      "def",
+      "wrapper",
+      "@"
+    ],
+    "so_id": 739654,
+    "so_title": "How do I make function decorators and chain them together?",
+    "so_score": 3200
+  },
+  {
+    "id": 33,
+    "tier": "stdlib",
+    "intent": "split a list into equally-sized chunks",
+    "expects": [
+      "def",
+      "range",
+      "yield"
+    ],
+    "so_id": 312443,
+    "so_title": "How do I split a list into equally-sized chunks?",
+    "so_score": 3175
+  },
+  {
+    "id": 34,
+    "tier": "stdlib",
+    "intent": "find the current directory and the script file's directory",
+    "expects": [
+      "os.getcwd",
+      "__file__"
+    ],
+    "so_id": 5137497,
+    "so_title": "Find the current directory and file's directory",
+    "so_score": 3137
+  },
+  {
+    "id": 35,
+    "tier": "stdlib",
+    "intent": "demonstrate the difference between list append and extend methods",
+    "expects": [
+      "append",
+      "extend"
+    ],
+    "so_id": 252703,
+    "so_title": "What is the difference between Python's list methods append and extend?",
+    "so_score": 3109
+  },
+  {
+    "id": 36,
+    "tier": "stdlib",
+    "intent": "remove a key from a Python dictionary",
+    "expects": [
+      "del",
+      "pop"
+    ],
+    "so_id": 11010165,
+    "so_title": "SO#11010165",
+    "so_score": 0
+  },
+  {
+    "id": 37,
+    "tier": "stdlib",
+    "intent": "convert a date string 'Jun 1 2005 1:33PM' into a datetime object",
+    "expects": [
+      "strptime",
+      "datetime"
+    ],
+    "so_id": 466345,
+    "so_title": "Convert string \"Jun 1 2005 1:33PM\" into datetime",
+    "so_score": 3003
+  },
+  {
+    "id": 38,
+    "tier": "stdlib",
+    "intent": "sort a list of dictionaries by a specific key value",
+    "expects": [
+      "sorted",
+      "lambda",
+      "key"
+    ],
+    "so_id": 72899,
+    "so_title": "How can I sort a list of dictionaries by a value of the dictionary in Python?",
+    "so_score": 2856
+  },
+  {
+    "id": 39,
+    "tier": "stdlib",
+    "intent": "get the last element of a list in Python",
+    "expects": [
+      "[-1]"
+    ],
+    "so_id": 180986,
+    "so_title": "SO#180986",
+    "so_score": 0
+  },
+  {
+    "id": 40,
+    "tier": "stdlib",
+    "intent": "parse a string to a float or int in Python",
+    "expects": [
+      "int(",
+      "float("
+    ],
+    "so_id": 379906,
+    "so_title": "How do I parse a string to a float or int?",
+    "so_score": 2778
+  },
+  {
+    "id": 41,
+    "tier": "stdlib",
+    "intent": "get a substring of a string in Python using slicing",
+    "expects": [
+      "[",
+      ":",
+      "]"
+    ],
+    "so_id": 663171,
+    "so_title": "How do I get a substring of a string in Python?",
+    "so_score": 2727
+  },
+  {
+    "id": 42,
+    "tier": "stdlib",
+    "intent": "escape curly braces in a Python format string",
+    "expects": [
+      "{{",
+      "}}"
+    ],
+    "so_id": 5466451,
+    "so_title": "How do I escape curly-brace ({}) characters characters in a string while using .format?",
+    "so_score": 2713
+  },
+  {
+    "id": 43,
+    "tier": "stdlib",
+    "intent": "check if a given key exists in a dictionary",
+    "expects": [
+      "in"
+    ],
+    "so_id": 1602934,
+    "so_title": "Check if a given key already exists in a dictionary",
+    "so_score": 2675
+  },
+  {
+    "id": 44,
+    "tier": "stdlib",
+    "intent": "import a Python file from a different folder",
+    "expects": [
+      "sys.path",
+      "import"
+    ],
+    "so_id": 20309456,
+    "so_title": "SO#20309456",
+    "so_score": 0
+  },
+  {
+    "id": 45,
+    "tier": "stdlib",
+    "intent": "implement class variables and class methods with @classmethod and @staticmethod",
+    "expects": [
+      "@classmethod",
+      "@staticmethod",
+      "class"
+    ],
+    "so_id": 68645,
+    "so_title": "Class (static) variables and methods",
+    "so_score": 2631
+  },
+  {
+    "id": 46,
+    "tier": "stdlib",
+    "intent": "lowercase a string in Python",
+    "expects": [
+      ".lower()"
+    ],
+    "so_id": 6797984,
+    "so_title": "How do I lowercase a string in Python?",
+    "so_score": 2584
+  },
+  {
+    "id": 47,
+    "tier": "stdlib",
+    "intent": "check if an object has a specific attribute using hasattr",
+    "expects": [
+      "hasattr"
+    ],
+    "so_id": 610883,
+    "so_title": "How can I check if an object has an attribute?",
+    "so_score": 2534
+  },
+  {
+    "id": 48,
+    "tier": "stdlib",
+    "intent": "print output without a trailing newline in Python",
+    "expects": [
+      "end="
+    ],
+    "so_id": 493386,
+    "so_title": "How to print without a newline or space",
+    "so_score": 2519
+  },
+  {
+    "id": 49,
+    "tier": "stdlib",
+    "intent": "call a function by its name stored as a string using getattr",
+    "expects": [
+      "getattr"
+    ],
+    "so_id": 3061,
+    "so_title": "Calling a function of a module by using its name (a string)",
+    "so_score": 2494
+  },
+  {
+    "id": 50,
+    "tier": "stdlib",
+    "intent": "limit a float to two decimal points",
+    "expects": [
+      "round",
+      ":.2f"
+    ],
+    "so_id": 455612,
+    "so_title": "Limiting floats to two decimal points",
+    "so_score": 2458
+  },
+  {
+    "id": 51,
+    "tier": "stdlib",
+    "intent": "randomly select an item from a list",
+    "expects": [
+      "random.choice"
+    ],
+    "so_id": 306400,
+    "so_title": "How can I randomly select (choose) an item from a list (get a random element)?",
+    "so_score": 2440
+  },
+  {
+    "id": 52,
+    "tier": "stdlib",
+    "intent": "remove an element from a list by its index",
+    "expects": [
+      "del",
+      "pop"
+    ],
+    "so_id": 627435,
+    "so_title": "How to remove an element from a list by index",
+    "so_score": 2346
+  },
+  {
+    "id": 53,
+    "tier": "stdlib",
+    "intent": "get the number of elements (length) of a list",
+    "expects": [
+      "len("
+    ],
+    "so_id": 1712227,
+    "so_title": "How do I get the number of elements in a list (length of a list) in Python?",
+    "so_score": 2303
+  },
+  {
+    "id": 54,
+    "tier": "stdlib",
+    "intent": "pad a string with leading zeros in Python",
+    "expects": [
+      "zfill",
+      "rjust"
+    ],
+    "so_id": 14016761,
+    "so_title": "SO#14016761",
+    "so_score": 0
+  },
+  {
+    "id": 55,
+    "tier": "stdlib",
+    "intent": "determine a Python variable's type",
+    "expects": [
+      "type("
+    ],
+    "so_id": 402504,
+    "so_title": "How can I determine a Python variable's type?",
+    "so_score": 2251
+  },
+  {
+    "id": 56,
+    "tier": "stdlib",
+    "intent": "delete an element from a dictionary by key",
+    "expects": [
+      "del",
+      "pop"
+    ],
+    "so_id": 5844672,
+    "so_title": "Delete an element from a dictionary",
+    "so_score": 2245
+  },
+  {
+    "id": 57,
+    "tier": "stdlib",
+    "intent": "determine the type of an object using type() and isinstance()",
+    "expects": [
+      "type(",
+      "isinstance("
+    ],
+    "so_id": 2225038,
+    "so_title": "Determine the type of an object?",
+    "so_score": 2227
+  },
+  {
+    "id": 58,
+    "tier": "stdlib",
+    "intent": "count the occurrences of each item in a list",
+    "expects": [
+      "count(",
+      "Counter"
+    ],
+    "so_id": 2600191,
+    "so_title": "How do I count the occurrences of a list item?",
+    "so_score": 2225
+  },
+  {
+    "id": 59,
+    "tier": "stdlib",
+    "intent": "check if a string is empty in Python",
+    "expects": [
+      "if",
+      "not"
+    ],
+    "so_id": 9573244,
+    "so_title": "How to check if the string is empty in Python?",
+    "so_score": 2224
+  },
+  {
+    "id": 60,
+    "tier": "stdlib",
+    "intent": "measure elapsed time of a function in Python",
+    "expects": [
+      "time.time(",
+      "perf_counter"
+    ],
+    "so_id": 8651119,
+    "so_title": "SO#8651119",
+    "so_score": 0
+  },
+  {
+    "id": 61,
+    "tier": "stdlib",
+    "intent": "append text to an existing file in Python",
+    "expects": [
+      "open(",
+      "'a'"
+    ],
+    "so_id": 4435169,
+    "so_title": "SO#4435169",
+    "so_score": 0
+  },
+  {
+    "id": 62,
+    "tier": "stdlib",
+    "intent": "remove a trailing newline from a string",
+    "expects": [
+      "strip",
+      "rstrip"
+    ],
+    "so_id": 275018,
+    "so_title": "How can I remove a trailing newline?",
+    "so_score": 2078
+  },
+  {
+    "id": 63,
+    "tier": "stdlib",
+    "intent": "split a long string across multiple lines in Python",
+    "expects": [
+      "(",
+      ")"
+    ],
+    "so_id": 2083987,
+    "so_title": "SO#2083987",
+    "so_score": 0
+  },
+  {
+    "id": 64,
+    "tier": "stdlib",
+    "intent": "pretty-print a JSON file with proper indentation",
+    "expects": [
+      "json.dumps",
+      "indent"
+    ],
+    "so_id": 12943819,
+    "so_title": "How to prettyprint a JSON file?",
+    "so_score": 2054
+  },
+  {
+    "id": 65,
+    "tier": "stdlib",
+    "intent": "get the class name of an instance as a string",
+    "expects": [
+      "__class__.__name__"
+    ],
+    "so_id": 510972,
+    "so_title": "Getting the class name of an instance",
+    "so_score": 2033
+  },
+  {
+    "id": 66,
+    "tier": "stdlib",
+    "intent": "read a file line-by-line into a list",
+    "expects": [
+      "readlines",
+      "open("
+    ],
+    "so_id": 3277503,
+    "so_title": "How to read a file line-by-line into a list?",
+    "so_score": 2023
+  },
+  {
+    "id": 67,
+    "tier": "stdlib",
+    "intent": "check if a string represents a valid number (float or int)",
+    "expects": [
+      "try",
+      "except",
+      "float("
+    ],
+    "so_id": 354038,
+    "so_title": "How do I check if a string represents a number (float or int)?",
+    "so_score": 2022
+  },
+  {
+    "id": 68,
+    "tier": "stdlib",
+    "intent": "declare and use custom exceptions with proper inheritance in Python",
+    "expects": [
+      "class",
+      "Exception",
+      "raise"
+    ],
+    "so_id": 1549801,
+    "so_title": "SO#1549801",
+    "so_score": 0
+  },
+  {
+    "id": 69,
+    "tier": "stdlib",
+    "intent": "generate random integers between 0 and 9",
+    "expects": [
+      "random.randint"
+    ],
+    "so_id": 3996904,
+    "so_title": "Generate random integers between 0 and 9",
+    "so_score": 1930
+  },
+  {
+    "id": 70,
+    "tier": "stdlib",
+    "intent": "write JSON data to a file in Python",
+    "expects": [
+      "json.dump",
+      "open("
+    ],
+    "so_id": 1301750,
+    "so_title": "SO#1301750",
+    "so_score": 0
+  },
+  {
+    "id": 71,
+    "tier": "data",
+    "intent": "iterate over rows in a Pandas DataFrame",
+    "expects": [
+      "iterrows",
+      "DataFrame"
+    ],
+    "so_id": 3294889,
+    "so_title": "Iterating over a dictionary using a 'for' loop, getting keys",
+    "so_score": 4423
+  },
+  {
+    "id": 72,
+    "tier": "data",
+    "intent": "select rows from a DataFrame based on column values",
+    "expects": [
+      "DataFrame",
+      "["
+    ],
+    "so_id": 17071871,
+    "so_title": "How do I select rows from a DataFrame based on column values?",
+    "so_score": 3632
+  },
+  {
+    "id": 73,
+    "tier": "data",
+    "intent": "change the size of a Matplotlib figure",
+    "expects": [
+      "figsize",
+      "plt"
+    ],
+    "so_id": 332289,
+    "so_title": "How do I change the size of figures drawn with Matplotlib?",
+    "so_score": 3264
+  },
+  {
+    "id": 74,
+    "tier": "data",
+    "intent": "rename column names in a Pandas DataFrame",
+    "expects": [
+      "rename",
+      "columns"
+    ],
+    "so_id": 11346283,
+    "so_title": "Renaming column names in Pandas",
+    "so_score": 3072
+  },
+  {
+    "id": 75,
+    "tier": "data",
+    "intent": "delete a column from a Pandas DataFrame",
+    "expects": [
+      "drop",
+      "columns"
+    ],
+    "so_id": 13411544,
+    "so_title": "Delete a column from a Pandas DataFrame",
+    "so_score": 2338
+  },
+  {
+    "id": 76,
+    "tier": "data",
+    "intent": "get the row count of a Pandas DataFrame",
+    "expects": [
+      "len(",
+      "shape"
+    ],
+    "so_id": 28773911,
+    "so_title": "SO#28773911",
+    "so_score": 0
+  },
+  {
+    "id": 77,
+    "tier": "intermediate",
+    "intent": "implement a function decorator that caches results (memoization)",
+    "expects": [
+      "def",
+      "wrapper",
+      "cache",
+      "@"
+    ],
+    "so_id": 100003,
+    "so_title": "What are metaclasses in Python?",
+    "so_score": 7524
+  },
+  {
+    "id": 78,
+    "tier": "intermediate",
+    "intent": "build a context manager class with __enter__ and __exit__ methods",
+    "expects": [
+      "__enter__",
+      "__exit__",
+      "class"
+    ],
+    "so_id": 100004,
+    "so_title": "SO#100004",
+    "so_score": 0
+  },
+  {
+    "id": 79,
+    "tier": "intermediate",
+    "intent": "implement the observer pattern with event subscription and notification",
+    "expects": [
+      "class",
+      "subscribe",
+      "notify"
+    ],
+    "so_id": 100005,
+    "so_title": "SO#100005",
+    "so_score": 0
+  },
+  {
+    "id": 80,
+    "tier": "intermediate",
+    "intent": "create a thread-safe counter using threading.Lock",
+    "expects": [
+      "threading",
+      "Lock",
+      "acquire"
+    ],
+    "so_id": 100006,
+    "so_title": "SO#100006",
+    "so_score": 0
+  },
+  {
+    "id": 81,
+    "tier": "intermediate",
+    "intent": "build a simple REST API client with retry logic and error handling",
+    "expects": [
+      "requests",
+      "retry",
+      "except"
+    ],
+    "so_id": 100007,
+    "so_title": "SO#100007",
+    "so_score": 0
+  },
+  {
+    "id": 82,
+    "tier": "intermediate",
+    "intent": "implement a binary tree with insert, search, and traversal methods",
+    "expects": [
+      "class",
+      "insert",
+      "left",
+      "right"
+    ],
+    "so_id": 100008,
+    "so_title": "SO#100008",
+    "so_score": 0
+  },
+  {
+    "id": 83,
+    "tier": "intermediate",
+    "intent": "create a producer-consumer pattern using queue.Queue and threading",
+    "expects": [
+      "Queue",
+      "Thread",
+      "put",
+      "get"
+    ],
+    "so_id": 100009,
+    "so_title": "SO#100009",
+    "so_score": 0
+  },
+  {
+    "id": 84,
+    "tier": "intermediate",
+    "intent": "build a configuration file parser that reads INI, JSON, and YAML formats",
+    "expects": [
+      "json",
+      "open(",
+      "def"
+    ],
+    "so_id": 100010,
+    "so_title": "SO#100010",
+    "so_score": 0
+  },
+  {
+    "id": 85,
+    "tier": "intermediate",
+    "intent": "implement a simple LRU cache from scratch using OrderedDict",
+    "expects": [
+      "OrderedDict",
+      "class",
+      "def get"
+    ],
+    "so_id": 100011,
+    "so_title": "SO#100011",
+    "so_score": 0
+  },
+  {
+    "id": 86,
+    "tier": "intermediate",
+    "intent": "create a command-line tool with subcommands using argparse",
+    "expects": [
+      "argparse",
+      "add_subparsers",
+      "add_argument"
+    ],
+    "so_id": 100012,
+    "so_title": "SO#100012",
+    "so_score": 0
+  },
+  {
+    "id": 87,
+    "tier": "intermediate",
+    "intent": "build a CSV file processor that reads, transforms, and writes data",
+    "expects": [
+      "csv",
+      "reader",
+      "writer"
+    ],
+    "so_id": 100013,
+    "so_title": "SO#100013",
+    "so_score": 0
+  },
+  {
+    "id": 88,
+    "tier": "intermediate",
+    "intent": "implement a retry decorator with exponential backoff",
+    "expects": [
+      "def",
+      "wrapper",
+      "time.sleep",
+      "**"
+    ],
+    "so_id": 100014,
+    "so_title": "SO#100014",
+    "so_score": 0
+  },
+  {
+    "id": 89,
+    "tier": "intermediate",
+    "intent": "create a simple state machine with transitions and callbacks",
+    "expects": [
+      "class",
+      "transition",
+      "state"
+    ],
+    "so_id": 100015,
+    "so_title": "SO#100015",
+    "so_score": 0
+  },
+  {
+    "id": 90,
+    "tier": "intermediate",
+    "intent": "build a file watcher that detects changes and triggers callbacks",
+    "expects": [
+      "os.stat",
+      "time",
+      "while"
+    ],
+    "so_id": 100016,
+    "so_title": "SO#100016",
+    "so_score": 0
+  },
+  {
+    "id": 91,
+    "tier": "intermediate",
+    "intent": "implement a simple pub/sub messaging system",
+    "expects": [
+      "class",
+      "subscribe",
+      "publish"
+    ],
+    "so_id": 100017,
+    "so_title": "SO#100017",
+    "so_score": 0
+  },
+  {
+    "id": 92,
+    "tier": "intermediate",
+    "intent": "create a connection pool for database connections",
+    "expects": [
+      "class",
+      "acquire",
+      "release",
+      "queue"
+    ],
+    "so_id": 100018,
+    "so_title": "SO#100018",
+    "so_score": 0
+  },
+  {
+    "id": 93,
+    "tier": "intermediate",
+    "intent": "build a pipeline pattern where data flows through multiple transform functions",
+    "expects": [
+      "def",
+      "pipe",
+      "result"
+    ],
+    "so_id": 100019,
+    "so_title": "SO#100019",
+    "so_score": 0
+  },
+  {
+    "id": 94,
+    "tier": "intermediate",
+    "intent": "implement a rate limiter using the token bucket algorithm",
+    "expects": [
+      "class",
+      "time",
+      "tokens"
+    ],
+    "so_id": 100020,
+    "so_title": "SO#100020",
+    "so_score": 0
+  },
+  {
+    "id": 95,
+    "tier": "advanced",
+    "intent": "implement Dijkstra's shortest path algorithm on a weighted graph",
+    "expects": [
+      "heapq",
+      "dict",
+      "while"
+    ],
+    "so_id": 100021,
+    "so_title": "SO#100021",
+    "so_score": 0
+  },
+  {
+    "id": 96,
+    "tier": "advanced",
+    "intent": "build a trie (prefix tree) data structure with insert, search, and prefix matching",
+    "expects": [
+      "class",
+      "children",
+      "insert",
+      "search"
+    ],
+    "so_id": 100022,
+    "so_title": "SO#100022",
+    "so_score": 0
+  },
+  {
+    "id": 97,
+    "tier": "advanced",
+    "intent": "implement a thread pool executor that processes tasks concurrently",
+    "expects": [
+      "threading",
+      "Queue",
+      "class"
+    ],
+    "so_id": 100023,
+    "so_title": "SO#100023",
+    "so_score": 0
+  },
+  {
+    "id": 98,
+    "tier": "advanced",
+    "intent": "create a simple template engine that replaces {{variables}} in text",
+    "expects": [
+      "re.sub",
+      "{{",
+      "}}"
+    ],
+    "so_id": 100024,
+    "so_title": "SO#100024",
+    "so_score": 0
+  },
+  {
+    "id": 99,
+    "tier": "advanced",
+    "intent": "build a diff algorithm that finds differences between two text files",
+    "expects": [
+      "def",
+      "diff",
+      "lines"
+    ],
+    "so_id": 100025,
+    "so_title": "SO#100025",
+    "so_score": 0
+  },
+  {
+    "id": 100,
+    "tier": "advanced",
+    "intent": "implement a simple HTTP server that handles GET and POST requests",
+    "expects": [
+      "http.server",
+      "GET",
+      "POST"
+    ],
+    "so_id": 100026,
+    "so_title": "SO#100026",
+    "so_score": 0
+  },
+  {
+    "id": 101,
+    "tier": "advanced",
+    "intent": "create a task scheduler that executes jobs at specified intervals",
+    "expects": [
+      "threading",
+      "schedule",
+      "time"
+    ],
+    "so_id": 100027,
+    "so_title": "SO#100027",
+    "so_score": 0
+  },
+  {
+    "id": 102,
+    "tier": "advanced",
+    "intent": "build a simple in-memory key-value store with TTL expiration",
+    "expects": [
+      "class",
+      "time",
+      "dict",
+      "expire"
+    ],
+    "so_id": 100028,
+    "so_title": "SO#100028",
+    "so_score": 0
+  },
+  {
+    "id": 103,
+    "tier": "advanced",
+    "intent": "implement topological sort for a directed acyclic graph",
+    "expects": [
+      "def",
+      "visited",
+      "stack"
+    ],
+    "so_id": 100029,
+    "so_title": "SO#100029",
+    "so_score": 0
+  },
+  {
+    "id": 104,
+    "tier": "advanced",
+    "intent": "create a bloom filter data structure for probabilistic membership testing",
+    "expects": [
+      "class",
+      "hash",
+      "bit"
+    ],
+    "so_id": 100030,
+    "so_title": "SO#100030",
+    "so_score": 0
+  }
+]

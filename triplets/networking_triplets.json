@@ -1,0 +1,62 @@
+[
+    {
+        "trigger": "socket",
+        "mechanism": "creates",
+        "outcome": "network connection",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "socket",
+        "mechanism": "binds",
+        "outcome": "port",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "urllib",
+        "mechanism": "parses",
+        "outcome": "urls",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "urllib",
+        "mechanism": "downloads",
+        "outcome": "files",
+        "confidence": 0.90
+    },
+    {
+        "trigger": "asyncio",
+        "mechanism": "manages",
+        "outcome": "event loop",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "asyncio",
+        "mechanism": "runs",
+        "outcome": "coroutines",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "websockets",
+        "mechanism": "implements",
+        "outcome": "websocket client",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "websockets",
+        "mechanism": "implements",
+        "outcome": "websocket server",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "paramiko",
+        "mechanism": "handles",
+        "outcome": "ssh",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "http.server",
+        "mechanism": "creates",
+        "outcome": "web server",
+        "confidence": 0.95
+    }
+]

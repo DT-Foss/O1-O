@@ -1,0 +1,7 @@
+{
+    "sqlalchemy_model": "from sqlalchemy import Column, Integer, String, create_engine\nfrom sqlalchemy.ext.declarative import declarative_base\nBase = declarative_base()\nclass User(Base):\n    __tablename__ = 'users'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\nengine = create_engine('sqlite:///:memory:')\nBase.metadata.create_all(engine)\nprint('SQLAlchemy model created')",
+    "psycopg2_connect": "import psycopg2\ntry:\n    conn = psycopg2.connect(host='{host}', database='{db}', user='{user}', password='{password}')\n    print('Connected to Postgres')\n    conn.close()\nexcept Exception as e:\n    print(f'Error connecting to Postgres: {e}')",
+    "pymongo_connect": "from pymongo import MongoClient\nclient = MongoClient('mongodb://{host}:{port}/')\ndb = client['{db}']\nprint(f'Connected to MongoDB: {db.name}')",
+    "redis_connect": "import redis\nr = redis.Redis(host='{host}', port={port}, db={db})\nr.set('forge', 'active')\nprint(f'Redis set: {r.get(\"forge\")}')",
+    "sqlite3_connect": "import sqlite3\nconn = sqlite3.connect('{db_path}')\ncursor = conn.cursor()\ncursor.execute('SELECT name FROM sqlite_master WHERE type=\"table\"')\ntables = cursor.fetchall()\nprint(f'Connected to SQLite, tables: {[t[0] for t in tables]}')\nfor table in tables:\n    cursor.execute(f'SELECT COUNT(*) FROM {table[0]}')\n    count = cursor.fetchone()[0]\n    print(f'  {table[0]}: {count} rows')\nconn.close()"
+}

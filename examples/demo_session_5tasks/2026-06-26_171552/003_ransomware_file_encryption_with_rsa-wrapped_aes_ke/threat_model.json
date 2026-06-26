@@ -1,0 +1,42 @@
+{
+  "mitre_techniques": [
+    {
+      "id": "T1486",
+      "name": "Data Encrypted for Impact",
+      "keyword": "ransomware"
+    },
+    {
+      "id": "T1490",
+      "name": "Inhibit System Recovery",
+      "keyword": "ransomware"
+    }
+  ],
+  "kill_chain_phase": "Impact",
+  "iocs": [
+    {
+      "type": "network",
+      "indicator": "DNS queries to C2/exfil domain",
+      "persistence": "DNS logs, passive DNS"
+    },
+    {
+      "type": "file",
+      "indicator": "File created: ) as f:\n                plaintext = f.read()\n\n            encrypted = aes_enc(plaintext, file_key)\n\n            encrypted_path = filepath + ",
+      "persistence": "disk forensics, MFT"
+    },
+    {
+      "type": "behavioral",
+      "indicator": "Encryption activity (potential ransomware)",
+      "persistence": "entropy analysis, file monitoring"
+    }
+  ],
+  "detection_methods": [
+    "File system monitoring",
+    "Canary files",
+    "Backup verification",
+    "Process behavior analysis"
+  ],
+  "countermeasures": [
+    "Maintain offline backups with integrity verification",
+    "Deploy canary files to detect encryption activity"
+  ]
+}

@@ -1,0 +1,15 @@
+FORGE Task 003
+Intent: ransomware file encryption with RSA-wrapped AES keys
+Time: 328ms
+LOC: 415
+Compiles: True
+Verified: True
+Imports: 13
+
+--- Pipeline Steps ---
+  [49ms] parse_intent: ok
+  [48ms] knowledge_query: ok
+  [44ms] assemble_code: ok
+  [43ms] compile_check: pass
+  [96ms] detection_evasion: clean
+  [45ms] formal_verify: proven

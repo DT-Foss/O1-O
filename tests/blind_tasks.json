@@ -1,0 +1,252 @@
+[
+    {
+        "id": 1,
+        "tier": "easy",
+        "intent": "count the number of lines in a text file"
+    },
+    {
+        "id": 2,
+        "tier": "easy",
+        "intent": "generate a random password with 16 characters"
+    },
+    {
+        "id": 3,
+        "tier": "easy",
+        "intent": "convert a PNG image to grayscale"
+    },
+    {
+        "id": 4,
+        "tier": "easy",
+        "intent": "get the current timestamp in ISO 8601 format"
+    },
+    {
+        "id": 5,
+        "tier": "easy",
+        "intent": "find all duplicate files in a directory by comparing their SHA256 hash"
+    },
+    {
+        "id": 6,
+        "tier": "easy",
+        "intent": "compress a folder into a tar.gz archive"
+    },
+    {
+        "id": 7,
+        "tier": "easy",
+        "intent": "merge two JSON files into one"
+    },
+    {
+        "id": 8,
+        "tier": "easy",
+        "intent": "calculate the MD5 checksum of a file"
+    },
+    {
+        "id": 9,
+        "tier": "easy",
+        "intent": "reverse the lines of a text file and save to a new file"
+    },
+    {
+        "id": 10,
+        "tier": "easy",
+        "intent": "find the largest file in a directory tree"
+    },
+    {
+        "id": 11,
+        "tier": "easy",
+        "intent": "convert a CSV file to JSON format"
+    },
+    {
+        "id": 12,
+        "tier": "easy",
+        "intent": "extract all email addresses from a text file using regex"
+    },
+    {
+        "id": 13,
+        "tier": "easy",
+        "intent": "create a simple HTTP server that serves files from the current directory"
+    },
+    {
+        "id": 14,
+        "tier": "easy",
+        "intent": "rename all files in a directory by adding a date prefix"
+    },
+    {
+        "id": 15,
+        "tier": "easy",
+        "intent": "split a large text file into chunks of 1000 lines each"
+    },
+    {
+        "id": 16,
+        "tier": "medium",
+        "intent": "monitor a log file in real-time and print lines containing ERROR"
+    },
+    {
+        "id": 17,
+        "tier": "medium",
+        "intent": "build a CLI tool with argparse that converts between Celsius and Fahrenheit"
+    },
+    {
+        "id": 18,
+        "tier": "medium",
+        "intent": "scrape all links from a webpage and check which ones return 404"
+    },
+    {
+        "id": 19,
+        "tier": "medium",
+        "intent": "create a SQLite database from a CSV file with automatic column type detection"
+    },
+    {
+        "id": 20,
+        "tier": "medium",
+        "intent": "watch a directory for new files and move them to subfolders based on extension"
+    },
+    {
+        "id": 21,
+        "tier": "medium",
+        "intent": "send an email with an attachment using SMTP"
+    },
+    {
+        "id": 22,
+        "tier": "medium",
+        "intent": "create a bar chart from a dictionary of values using matplotlib"
+    },
+    {
+        "id": 23,
+        "tier": "medium",
+        "intent": "implement a simple key-value store backed by a JSON file"
+    },
+    {
+        "id": 24,
+        "tier": "medium",
+        "intent": "parse Apache access log and count requests per IP address"
+    },
+    {
+        "id": 25,
+        "tier": "medium",
+        "intent": "build a TCP port scanner that checks ports 1-1024 on a given host"
+    },
+    {
+        "id": 26,
+        "tier": "medium",
+        "intent": "encrypt a file using AES-256 with a password"
+    },
+    {
+        "id": 27,
+        "tier": "medium",
+        "intent": "create a REST API with Flask that does CRUD operations on a JSON file"
+    },
+    {
+        "id": 28,
+        "tier": "medium",
+        "intent": "diff two text files and show added and removed lines"
+    },
+    {
+        "id": 29,
+        "tier": "medium",
+        "intent": "download all images from a webpage and save them locally"
+    },
+    {
+        "id": 30,
+        "tier": "medium",
+        "intent": "create a simple chat server using sockets that handles multiple clients"
+    },
+    {
+        "id": 31,
+        "tier": "hard",
+        "intent": "build a markdown to HTML converter that supports headers, bold, italic, links and code blocks"
+    },
+    {
+        "id": 32,
+        "tier": "hard",
+        "intent": "create a task scheduler that reads jobs from a YAML config and runs them at specified intervals"
+    },
+    {
+        "id": 33,
+        "tier": "hard",
+        "intent": "build a file synchronization tool that copies changed files between two directories"
+    },
+    {
+        "id": 34,
+        "tier": "hard",
+        "intent": "create a SQLite-backed TODO app with a CLI interface supporting add, list, complete, and delete"
+    },
+    {
+        "id": 35,
+        "tier": "hard",
+        "intent": "parse a PDF file, extract all tables, and save each table as a separate CSV"
+    },
+    {
+        "id": 36,
+        "tier": "hard",
+        "intent": "build a web scraper that paginates through multiple pages and saves all results to a database"
+    },
+    {
+        "id": 37,
+        "tier": "hard",
+        "intent": "create a DNS lookup tool that resolves A, MX, and NS records for a given domain"
+    },
+    {
+        "id": 38,
+        "tier": "hard",
+        "intent": "build a log analyzer that reads multiple log files, aggregates errors by type, and generates a HTML report"
+    },
+    {
+        "id": 39,
+        "tier": "hard",
+        "intent": "create a git pre-commit hook that checks Python files for syntax errors and PEP8 compliance"
+    },
+    {
+        "id": 40,
+        "tier": "hard",
+        "intent": "build a rate limiter decorator that limits function calls to N per minute using a sliding window"
+    },
+    {
+        "id": 41,
+        "tier": "hard",
+        "intent": "create a network packet sniffer that captures and displays TCP packets on a given interface"
+    },
+    {
+        "id": 42,
+        "tier": "hard",
+        "intent": "build a static site generator that converts a directory of markdown files to HTML with a template"
+    },
+    {
+        "id": 43,
+        "tier": "hard",
+        "intent": "create a database migration tool that tracks schema versions in a migrations table"
+    },
+    {
+        "id": 44,
+        "tier": "hard",
+        "intent": "build a webhook receiver with Flask that validates HMAC signatures and logs payloads"
+    },
+    {
+        "id": 45,
+        "tier": "hard",
+        "intent": "create a parallel file processor that uses multiprocessing to hash all files in a directory"
+    },
+    {
+        "id": 46,
+        "tier": "hard",
+        "intent": "build a simple load tester that sends concurrent HTTP requests and measures response times"
+    },
+    {
+        "id": 47,
+        "tier": "hard",
+        "intent": "create a data pipeline that reads from a REST API, transforms the JSON, and loads into SQLite"
+    },
+    {
+        "id": 48,
+        "tier": "hard",
+        "intent": "build a certificate checker that connects to HTTPS hosts and reports expiry dates"
+    },
+    {
+        "id": 49,
+        "tier": "hard",
+        "intent": "create a systemd service file generator from a Python script path and arguments"
+    },
+    {
+        "id": 50,
+        "tier": "hard",
+        "intent": "build a Prometheus-compatible metrics endpoint that exposes system CPU and memory stats"
+    }
+]

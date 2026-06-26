@@ -1,0 +1,8 @@
+{
+  "subprocess_run": "import subprocess\nresult = subprocess.run({cmd}, capture_output=True, text=True, shell=True)\nprint(f'STDOUT:\\n{result.stdout}')\nprint(f'STDERR:\\n{result.stderr}')",
+  "docker_ps": "import subprocess\nresult = subprocess.run(['docker', 'ps'], capture_output=True, text=True)\nprint(result.stdout)",
+  "systemctl_status": "import subprocess\nresult = subprocess.run(['systemctl', 'status', '{service}'], capture_output=True, text=True)\nprint(result.stdout)",
+  "logging_basic": "import logging\nlogging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')\nlogger = logging.getLogger(__name__)\nlogger.info('Logging initialized')",
+  "argparse_basic": "import argparse\nimport sys\nparser = argparse.ArgumentParser(description='Command line argument parser')\nparser.add_argument('filename', help='Input filename')\nparser.add_argument('-v', '--verbose', action='store_true', help='Enable verbose output')\nif len(sys.argv) <= 1:\n    args = parser.parse_args(['data.txt', '-v'])\n    print('(Demo mode)')\nelse:\n    args = parser.parse_args()\nprint(f'Filename: {args.filename}, Verbose: {args.verbose}')",
+  "cron_list": "import subprocess\nresult = subprocess.run(['crontab', '-l'], capture_output=True, text=True)\nprint(result.stdout)"
+}

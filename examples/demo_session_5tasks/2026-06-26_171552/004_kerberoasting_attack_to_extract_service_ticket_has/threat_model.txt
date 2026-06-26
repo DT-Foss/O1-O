@@ -1,0 +1,25 @@
+FORGE THREAT MODEL
+============================================================
+
+Kill Chain Phase: General Offensive
+
+MITRE ATT&CK Techniques:
+  * T1558.003 -- Kerberoasting
+  * T1558 -- Steal or Forge Kerberos Tickets
+
+Indicators of Compromise (IOCs):
+  [NETWORK] DNS queries to C2/exfil domain
+    Evidence: DNS logs, passive DNS
+  [BEHAVIORAL] Encryption activity (potential ransomware)
+    Evidence: entropy analysis, file monitoring
+
+Detection Methods:
+  * Network traffic analysis
+  * Endpoint detection and response (EDR)
+  * Process monitoring
+  * Log correlation (SIEM)
+
+Countermeasures (Blue Team Awareness):
+  * Monitor for anomalous process execution patterns
+  * Implement network segmentation
+  * Deploy host-based IDS/IPS

@@ -1,0 +1,146 @@
+[
+  {
+    "trigger": "ssh_key_persistence",
+    "mechanism": "chattr_immutable_protection",
+    "outcome": "key_survives_cleanup_and_reboot",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "plant_ssh_authorized_key",
+    "mechanism": "overwrite_authorized_keys_file",
+    "outcome": "persistent_ssh_access_without_password",
+    "confidence": 0.98
+  },
+  {
+    "trigger": "chattr_remove_flags",
+    "mechanism": "chattr_minus_ia_on_file",
+    "outcome": "file_becomes_modifiable",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "chattr_set_immutable",
+    "mechanism": "chattr_plus_ai_on_file",
+    "outcome": "file_resists_deletion_and_modification",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "anti_forensics_execution",
+    "mechanism": "self_deleting_script_pattern",
+    "outcome": "no_payload_artifacts_on_disk",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "staged_cleanup_then_payload",
+    "mechanism": "execute_clean_sh_then_setup_sh",
+    "outcome": "clean_environment_before_payload_runs",
+    "confidence": 0.9
+  },
+  {
+    "trigger": "script_self_deletion",
+    "mechanism": "rm_rf_after_sh_execution",
+    "outcome": "script_file_removed_from_disk",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "compound_ssh_command",
+    "mechanism": "semicolon_chained_multi_stage",
+    "outcome": "full_kill_chain_in_single_session",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "single_session_operation",
+    "mechanism": "all_stages_in_one_command",
+    "outcome": "minimal_session_footprint",
+    "confidence": 0.9
+  },
+  {
+    "trigger": "cleanup_persist_recon_validate",
+    "mechanism": "four_stage_compound_chain",
+    "outcome": "complete_host_compromise_in_seconds",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "hex_encoded_probe",
+    "mechanism": "echo_minus_e_hex_escapes",
+    "outcome": "validation_without_plaintext_in_logs",
+    "confidence": 0.9
+  },
+  {
+    "trigger": "alive_check_probe",
+    "mechanism": "hex_encoded_token_output",
+    "outcome": "confirm_shell_execution_capability",
+    "confidence": 0.88
+  },
+  {
+    "trigger": "credential_file_scan",
+    "mechanism": "http_get_env_aws_config_paths",
+    "outcome": "discover_exposed_api_keys_and_passwords",
+    "confidence": 0.85
+  },
+  {
+    "trigger": "env_file_enumeration",
+    "mechanism": "scan_dotenv_variants_and_aws_credentials",
+    "outcome": "extract_database_urls_api_keys_secrets",
+    "confidence": 0.88
+  },
+  {
+    "trigger": "backup_file_scanning",
+    "mechanism": "probe_backup_dir_for_env_keys_vpn",
+    "outcome": "recover_credentials_from_backup_files",
+    "confidence": 0.8
+  },
+  {
+    "trigger": "path_traversal_attack",
+    "mechanism": "directory_traversal_depth_probing",
+    "outcome": "read_sensitive_system_files",
+    "confidence": 0.85
+  },
+  {
+    "trigger": "lfi_etc_passwd_read",
+    "mechanism": "dot_dot_slash_sequences",
+    "outcome": "enumerate_system_users_and_shells",
+    "confidence": 0.9
+  },
+  {
+    "trigger": "lfi_shadow_read",
+    "mechanism": "deep_traversal_to_etc_shadow",
+    "outcome": "obtain_password_hashes_for_cracking",
+    "confidence": 0.8
+  },
+  {
+    "trigger": "initial_credential_scan",
+    "mechanism": "http_env_file_discovery",
+    "outcome": "obtain_ssh_credentials_from_web_config",
+    "confidence": 0.75
+  },
+  {
+    "trigger": "web_credential_to_ssh_pivot",
+    "mechanism": "use_discovered_credentials_for_ssh",
+    "outcome": "lateral_movement_web_to_shell",
+    "confidence": 0.7
+  },
+  {
+    "trigger": "scada_hmi_reconnaissance",
+    "mechanism": "probe_login_config_firmware_endpoints",
+    "outcome": "map_industrial_control_system_topology",
+    "confidence": 0.82
+  },
+  {
+    "trigger": "snmp_community_scan",
+    "mechanism": "snmpv1_public_community_walk",
+    "outcome": "enumerate_device_configuration_and_oids",
+    "confidence": 0.85
+  },
+  {
+    "trigger": "go_ssh_client_automation",
+    "mechanism": "ssh_2_0_go_parameterized_sessions",
+    "outcome": "rapid_multi_target_compromise",
+    "confidence": 0.88
+  },
+  {
+    "trigger": "repeated_identical_sessions",
+    "mechanism": "same_command_across_multiple_connections",
+    "outcome": "automated_botnet_propagation",
+    "confidence": 0.9
+  }
+]

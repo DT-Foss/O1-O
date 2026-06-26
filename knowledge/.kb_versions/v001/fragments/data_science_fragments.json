@@ -1,0 +1,24 @@
+{
+    "numpy_array": "import numpy as np\narr = np.array({data})\nprint(f'Numpy array:\\n{arr}')",
+    "numpy_linspace": "import numpy as np\nx = np.linspace({start}, {stop}, {num})\nprint(f'Linspace: {x}')",
+    "numpy_random": "import numpy as np\ndata = np.random.rand({shape})\nprint(f'Random data:\\n{data}')",
+    "numpy_stats": "import numpy as np\ndata = np.array({data})\nprint(f'Mean: {np.mean(data)}, Std: {np.std(data)}')",
+    "matplotlib_bar": "import matplotlib.pyplot as plt\nplt.bar({categories}, {values})\nplt.title('{title}')\nplt.xlabel('{xlabel}')\nplt.ylabel('{ylabel}')\nplt.savefig('{filename}')\nprint(f'Saved bar chart to {filename}')",
+    "matplotlib_line": "import matplotlib.pyplot as plt\nplt.plot({x}, {y})\nplt.title('{title}')\nplt.savefig('{filename}')\nprint(f'Saved line chart to {filename}')",
+    "matplotlib_scatter": "import matplotlib.pyplot as plt\nplt.scatter({x}, {y})\nplt.title('{title}')\nplt.savefig('{filename}')\nprint(f'Saved scatter plot to {filename}')",
+    "seaborn_heatmap": "import seaborn as sns\nimport matplotlib.pyplot as plt\nimport pandas as pd\ndf = pd.DataFrame({data})\nsns.heatmap(df.corr(), annot=True)\nplt.title('{title}')\nplt.savefig('{filename}')\nprint(f'Saved heatmap to {filename}')",
+    "sklearn_split": "from sklearn.model_selection import train_test_split\nX_train, X_test, y_train, y_test = train_test_split({X}, {y}, test_size={test_size})\nprint(f'Split data into {len(X_train)} train and {len(X_test)} test samples')",
+    "sklearn_linear_regression": "from sklearn.linear_model import LinearRegression\nmodel = LinearRegression()\nmodel.fit({X_train}, {y_train})\npredictions = model.predict({X_test})\nprint(f'Linear Regression trained. R2 score: {model.score({X_test}, {y_test})}')",
+    "sklearn_random_forest": "from sklearn.ensemble import RandomForestClassifier\nmodel = RandomForestClassifier(n_estimators={n_estimators})\nmodel.fit({X_train}, {y_train})\nprint(f'Random Forest trained. Accuracy: {model.score({X_test}, {y_test})}')",
+    "sklearn_metrics": "from sklearn.metrics import classification_report, confusion_matrix\nprint(classification_report({y_true}, {y_pred}))\nprint(confusion_matrix({y_true}, {y_pred}))",
+
+    "pandas_iterrows": "import pandas as pd\n\ndf = pd.DataFrame({'name': ['Alice', 'Bob', 'Carol'], 'age': [30, 25, 35], 'city': ['Berlin', 'Munich', 'Hamburg']})\n\n# Iterate over rows\nfor index, row in df.iterrows():\n    print(f'Row {index}: {row[\"name\"]} is {row[\"age\"]} from {row[\"city\"]}')\n\n# Alternative: itertuples (faster)\nfor row in df.itertuples():\n    print(f'{row.name} - {row.age}')",
+
+    "pandas_select_rows": "import pandas as pd\n\ndf = pd.DataFrame({'name': ['Alice', 'Bob', 'Carol', 'Dave'], 'age': [30, 25, 35, 28], 'score': [85, 92, 78, 95]})\n\n# Select rows where age > 27\nfiltered = df[df['age'] > 27]\nprint('Age > 27:')\nprint(filtered)\n\n# Multiple conditions\nresult = df[(df['age'] > 25) & (df['score'] > 80)]\nprint('\\nAge > 25 and Score > 80:')\nprint(result)\n\n# Using .loc\nrow = df.loc[df['name'] == 'Bob']\nprint(f'\\nBob: {row.to_dict(\"records\")}')",
+
+    "pandas_rename_cols": "import pandas as pd\n\ndf = pd.DataFrame({'old_name': ['Alice', 'Bob'], 'old_age': [30, 25]})\nprint('Before:', list(df.columns))\n\n# Rename columns\ndf = df.rename(columns={'old_name': 'name', 'old_age': 'age'})\nprint('After:', list(df.columns))\nprint(df)",
+
+    "pandas_drop_column": "import pandas as pd\n\ndf = pd.DataFrame({'name': ['Alice', 'Bob'], 'age': [30, 25], 'temp': ['x', 'y']})\nprint('Before:', list(df.columns))\n\n# Drop a column\ndf = df.drop(columns=['temp'])\nprint('After:', list(df.columns))\nprint(df)",
+
+    "pandas_row_count": "import pandas as pd\n\ndf = pd.DataFrame({'name': ['Alice', 'Bob', 'Carol'], 'age': [30, 25, 35]})\n\n# Method 1: len()\nprint(f'Row count (len): {len(df)}')\n\n# Method 2: shape\nprint(f'Shape: {df.shape} → {df.shape[0]} rows, {df.shape[1]} columns')\n\n# Method 3: count per column\nprint(f'Count per column:\\n{df.count()}')"
+}

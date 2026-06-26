@@ -1,0 +1,31 @@
+FORGE THREAT MODEL
+============================================================
+
+Kill Chain Phase: Actions on Objectives
+
+MITRE ATT&CK Techniques:
+  * T1041 -- Exfiltration Over C2 Channel
+  * T1048 -- Exfiltration Over Alternative Protocol
+  * T1071.004 -- DNS
+  * T1572 -- Protocol Tunneling
+
+Indicators of Compromise (IOCs):
+  [NETWORK] DNS queries to C2/exfil domain
+    Evidence: DNS logs, passive DNS
+  [BEHAVIORAL] Encryption activity (potential ransomware)
+    Evidence: entropy analysis, file monitoring
+
+Detection Methods:
+  * DLP solutions
+  * Egress filtering
+  * Data volume anomaly detection
+  * Network traffic analysis
+  * TLS inspection
+  * DNS monitoring
+  * JA3/JA3S fingerprinting
+
+Countermeasures (Blue Team Awareness):
+  * Deploy EDR with behavior-based detection
+  * Enable detailed process logging (Sysmon, auditd)
+  * Implement TLS inspection at network boundary
+  * Monitor for anomalous outbound connections (frequency, volume, destination)

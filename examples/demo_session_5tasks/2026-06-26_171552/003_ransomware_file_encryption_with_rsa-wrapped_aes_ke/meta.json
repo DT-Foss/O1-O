@@ -1,0 +1,123 @@
+{
+  "generation_ms": 328.2628059387207,
+  "loc": 415,
+  "import_count": 13,
+  "imports": [
+    "ThreadPoolExecutor",
+    "Path",
+    "hashlib",
+    "_hm,os,struct",
+    "_hm",
+    "json,time,threading",
+    "os",
+    "shutil",
+    "struct",
+    "tempfile",
+    "argparse",
+    "os",
+    "sys"
+  ],
+  "structure": "Class + Functions",
+  "compiles": true,
+  "verified": true,
+  "checks_passed": 3,
+  "checks_total": 3,
+  "chains_found": 2,
+  "evasion": {
+    "detections": 1,
+    "clean": true,
+    "mutated": true,
+    "method": "semantic",
+    "transforms": 1,
+    "original_detections": [
+      "file_encryption"
+    ]
+  },
+  "polymorphic": false,
+  "config": {},
+  "steps": [
+    {
+      "name": "parse_intent",
+      "status": "ok",
+      "elapsed_ms": 49.02482032775879
+    },
+    {
+      "name": "knowledge_query",
+      "status": "ok",
+      "elapsed_ms": 47.759056091308594,
+      "chains": 2
+    },
+    {
+      "name": "assemble_code",
+      "status": "ok",
+      "elapsed_ms": 44.328927993774414,
+      "loc": 259
+    },
+    {
+      "name": "compile_check",
+      "status": "pass",
+      "elapsed_ms": 43.02477836608887
+    },
+    {
+      "name": "detection_evasion",
+      "status": "clean",
+      "elapsed_ms": 95.99494934082031
+    },
+    {
+      "name": "formal_verify",
+      "status": "proven",
+      "elapsed_ms": 44.981956481933594
+    },
+    {
+      "name": "save_session",
+      "status": "ok",
+      "elapsed_ms": 47.20425605773926
+    },
+    {
+      "name": "package_exe",
+      "status": "skipped",
+      "elapsed_ms": 86.21501922607422
+    },
+    {
+      "name": "opsec_harden",
+      "status": "ok",
+      "elapsed_ms": 45.95685005187988
+    },
+    {
+      "name": "opsec_audit",
+      "status": "ok",
+      "elapsed_ms": 47.688961029052734
+    },
+    {
+      "name": "threat_intel",
+      "status": "ok",
+      "elapsed_ms": 47.13892936706543
+    }
+  ],
+  "task_id": "003",
+  "intent": "ransomware file encryption with RSA-wrapped AES keys",
+  "timestamp": "2026-06-26T17:15:54.071953",
+  "opsec_profile": "generic",
+  "opsec_files": [
+    "Dockerfile",
+    "docker-compose.yml",
+    "opsec/cleanup.sh",
+    "opsec/runtime.sh",
+    "opsec/network.conf",
+    "opsec/sanitize.py"
+  ],
+  "delivery_files": [
+    "dropper.py",
+    "stager.py",
+    "delivery_powershell.txt",
+    "usb_autorun.inf",
+    "usb_launch.bat"
+  ],
+  "opsec_audit_score": 98,
+  "opsec_audit_grade": "A",
+  "mitre_techniques": [
+    "T1486",
+    "T1490"
+  ],
+  "kill_chain_phase": "Impact"
+}

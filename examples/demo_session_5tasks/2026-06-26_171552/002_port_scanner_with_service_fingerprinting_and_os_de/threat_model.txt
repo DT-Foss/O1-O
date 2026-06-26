@@ -1,0 +1,23 @@
+FORGE THREAT MODEL
+============================================================
+
+Kill Chain Phase: Reconnaissance
+
+MITRE ATT&CK Techniques:
+  * T1046 -- Network Service Discovery
+  * T1595 -- Active Scanning
+
+Indicators of Compromise (IOCs):
+  [NETWORK] Outbound connections on configured port
+    Evidence: network logs, PCAP
+  [NETWORK] DNS queries to C2/exfil domain
+    Evidence: DNS logs, passive DNS
+
+Detection Methods:
+  * Network IDS (port scan detection)
+  * Firewall rate limiting
+  * Honeypot canaries
+
+Countermeasures (Blue Team Awareness):
+  * Deploy EDR with behavior-based detection
+  * Enable detailed process logging (Sysmon, auditd)

@@ -1,0 +1,35 @@
+{
+  "score": 98,
+  "grade": "A",
+  "findings": [
+    {
+      "severity": "MEDIUM",
+      "category": "FORENSICS",
+      "finding": "File write to persistent path: ) as f:\n                plaintext = f.read()\n\n            encrypted = aes_enc(plaintext, file_key)\n\n            encrypted_path = filepath + ",
+      "remediation": "Write to tmpfs only (/tmp/ or memory-backed fs)"
+    },
+    {
+      "severity": "MEDIUM",
+      "category": "ATTRIBUTION",
+      "finding": "FORGE engine attribution markers",
+      "remediation": "Run opsec/sanitize.py to strip FORGE markers"
+    },
+    {
+      "severity": "LOW",
+      "category": "ARTIFACTS",
+      "finding": "Exception traces leak internal structure",
+      "remediation": "Catch and suppress exceptions silently in production"
+    },
+    {
+      "severity": "LOW",
+      "category": "EXECUTION",
+      "finding": "Environment variable access \u2014 may leak host info",
+      "remediation": "Sanitize environment before execution (see opsec/runtime.sh)"
+    }
+  ],
+  "critical_count": 0,
+  "high_count": 0,
+  "medium_count": 2,
+  "low_count": 2,
+  "total_findings": 4
+}

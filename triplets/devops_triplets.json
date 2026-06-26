@@ -1,0 +1,80 @@
+[
+    {
+        "trigger": "subprocess",
+        "mechanism": "executes",
+        "outcome": "shell commands",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "subprocess",
+        "mechanism": "captures",
+        "outcome": "command output",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "docker",
+        "mechanism": "manages",
+        "outcome": "containers",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "docker",
+        "mechanism": "builds",
+        "outcome": "images",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "systemd",
+        "mechanism": "manages",
+        "outcome": "services",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "systemd",
+        "mechanism": "controls",
+        "outcome": "systemctl",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "logging",
+        "mechanism": "provides",
+        "outcome": "logs",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "logging",
+        "mechanism": "formats",
+        "outcome": "log message",
+        "confidence": 0.90
+    },
+    {
+        "trigger": "logging",
+        "mechanism": "configures",
+        "outcome": "basicConfig",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "argparse",
+        "mechanism": "parses",
+        "outcome": "cli arguments",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "argparse",
+        "mechanism": "defines",
+        "outcome": "parameters",
+        "confidence": 0.90
+    },
+    {
+        "trigger": "cron",
+        "mechanism": "schedules",
+        "outcome": "tasks",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "crontab",
+        "mechanism": "manages",
+        "outcome": "cron jobs",
+        "confidence": 0.95
+    }
+]

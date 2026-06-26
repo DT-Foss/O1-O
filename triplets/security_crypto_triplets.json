@@ -1,0 +1,44 @@
+[
+    {
+        "trigger": "cryptography",
+        "mechanism": "provides",
+        "outcome": "encryption",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "cryptography",
+        "mechanism": "handles",
+        "outcome": "fernet",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "jwt",
+        "mechanism": "performs",
+        "outcome": "token encoding",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "jwt",
+        "mechanism": "performs",
+        "outcome": "token decoding",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "bcrypt",
+        "mechanism": "provides",
+        "outcome": "password hashing",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "secrets",
+        "mechanism": "generates",
+        "outcome": "secure tokens",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "ssl",
+        "mechanism": "manages",
+        "outcome": "certificates",
+        "confidence": 0.95
+    }
+]

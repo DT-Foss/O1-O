@@ -1,0 +1,1808 @@
+[
+  {
+    "trigger": "keylogger",
+    "mechanism": "captures",
+    "outcome": "keyboard input",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "keylogger",
+    "mechanism": "uses",
+    "outcome": "pynput",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "keylogger",
+    "mechanism": "uses",
+    "outcome": "evdev",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "keylogger",
+    "mechanism": "writes",
+    "outcome": "log file",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "keystroke logging",
+    "mechanism": "requires",
+    "outcome": "input device access",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "pynput",
+    "mechanism": "provides",
+    "outcome": "keyboard listener",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "evdev",
+    "mechanism": "reads",
+    "outcome": "linux input events",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "reverse shell",
+    "mechanism": "uses",
+    "outcome": "socket duplex",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "reverse shell",
+    "mechanism": "redirects",
+    "outcome": "stdin stdout stderr",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "reverse shell",
+    "mechanism": "spawns",
+    "outcome": "interactive shell",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "reverse shell listener",
+    "mechanism": "accepts",
+    "outcome": "incoming connection",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "bind shell",
+    "mechanism": "listens",
+    "outcome": "local port",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "pty",
+    "mechanism": "provides",
+    "outcome": "pseudo terminal",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "os.dup2",
+    "mechanism": "redirects",
+    "outcome": "file descriptors",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "port scanner",
+    "mechanism": "probes",
+    "outcome": "open ports",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "port scanner",
+    "mechanism": "uses",
+    "outcome": "tcp connect",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "port scanning",
+    "mechanism": "detects",
+    "outcome": "services",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "syn scan",
+    "mechanism": "uses",
+    "outcome": "raw sockets",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "banner grabbing",
+    "mechanism": "extracts",
+    "outcome": "service version",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "nmap equivalent",
+    "mechanism": "performs",
+    "outcome": "service enumeration",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "network scanning",
+    "mechanism": "discovers",
+    "outcome": "live hosts",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "host discovery",
+    "mechanism": "uses",
+    "outcome": "icmp ping",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "packet sniffer",
+    "mechanism": "captures",
+    "outcome": "network traffic",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "packet sniffer",
+    "mechanism": "uses",
+    "outcome": "raw sockets",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "packet sniffer",
+    "mechanism": "parses",
+    "outcome": "ethernet ip tcp headers",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "packet capture",
+    "mechanism": "requires",
+    "outcome": "promiscuous mode",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "network sniffing",
+    "mechanism": "intercepts",
+    "outcome": "packets",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "scapy",
+    "mechanism": "provides",
+    "outcome": "packet manipulation",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "ssh brute force",
+    "mechanism": "tests",
+    "outcome": "credentials",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "ssh brute force",
+    "mechanism": "uses",
+    "outcome": "paramiko",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "brute force",
+    "mechanism": "iterates",
+    "outcome": "password dictionary",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "credential stuffing",
+    "mechanism": "reuses",
+    "outcome": "leaked passwords",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "password spraying",
+    "mechanism": "tests",
+    "outcome": "common passwords",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "dictionary attack",
+    "mechanism": "uses",
+    "outcome": "wordlist",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "redis brute force",
+    "mechanism": "tests",
+    "outcome": "redis AUTH passwords",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "paramiko",
+    "mechanism": "implements",
+    "outcome": "ssh client",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "c2 server",
+    "mechanism": "manages",
+    "outcome": "remote agents",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "c2 server",
+    "mechanism": "sends",
+    "outcome": "commands",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "command and control",
+    "mechanism": "uses",
+    "outcome": "socket server",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "c2 client",
+    "mechanism": "beacons",
+    "outcome": "heartbeat",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "c2 client",
+    "mechanism": "executes",
+    "outcome": "remote commands",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "botnet",
+    "mechanism": "coordinates",
+    "outcome": "distributed agents",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "botnet client",
+    "mechanism": "connects",
+    "outcome": "c2 server",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "bot agent",
+    "mechanism": "reports",
+    "outcome": "system info",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "p2p botnet",
+    "mechanism": "uses",
+    "outcome": "mesh network",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "beacon interval",
+    "mechanism": "controls",
+    "outcome": "check-in frequency",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "credential harvester",
+    "mechanism": "extracts",
+    "outcome": "saved credentials",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "password stealer",
+    "mechanism": "reads",
+    "outcome": "browser passwords",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "browser credential extraction",
+    "mechanism": "queries",
+    "outcome": "chrome login data sqlite",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "wifi password extraction",
+    "mechanism": "reads",
+    "outcome": "network manager configs",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "environment variable harvesting",
+    "mechanism": "scans",
+    "outcome": "api keys and secrets",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "credential dumping",
+    "mechanism": "accesses",
+    "outcome": "password stores",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "payload delivery",
+    "mechanism": "uses",
+    "outcome": "triple fallback",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "triple fallback",
+    "mechanism": "tries",
+    "outcome": "curl wget python",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "payload download",
+    "mechanism": "fetches",
+    "outcome": "remote binary",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "dropper",
+    "mechanism": "downloads",
+    "outcome": "malware payload",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "stager",
+    "mechanism": "fetches",
+    "outcome": "second stage",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "persistence cron",
+    "mechanism": "schedules",
+    "outcome": "recurring execution",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "cron persistence",
+    "mechanism": "writes",
+    "outcome": "crontab entry",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "systemd persistence",
+    "mechanism": "creates",
+    "outcome": "service unit",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "ssh key persistence",
+    "mechanism": "injects",
+    "outcome": "authorized keys",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "windows persistence",
+    "mechanism": "uses",
+    "outcome": "scheduled task schtasks",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "startup persistence",
+    "mechanism": "modifies",
+    "outcome": "autorun entries",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "redis cron persistence",
+    "mechanism": "writes",
+    "outcome": "cron via redis config",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "redis ssh injection",
+    "mechanism": "writes",
+    "outcome": "authorized_keys via redis save",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "ddos",
+    "mechanism": "floods",
+    "outcome": "target with traffic",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "syn flood",
+    "mechanism": "sends",
+    "outcome": "spoofed syn packets",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "denial of service",
+    "mechanism": "exhausts",
+    "outcome": "server resources",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "udp flood",
+    "mechanism": "sends",
+    "outcome": "high volume udp",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "http flood",
+    "mechanism": "sends",
+    "outcome": "mass http requests",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "sql injection",
+    "mechanism": "manipulates",
+    "outcome": "database queries",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "sql injection scanner",
+    "mechanism": "tests",
+    "outcome": "sqli payloads",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "blind sql injection",
+    "mechanism": "uses",
+    "outcome": "time based detection",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "union injection",
+    "mechanism": "extracts",
+    "outcome": "database tables",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "xss scanner",
+    "mechanism": "tests",
+    "outcome": "cross site scripting",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "phishing page",
+    "mechanism": "clones",
+    "outcome": "login form",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "phishing",
+    "mechanism": "captures",
+    "outcome": "user credentials",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "credential phishing",
+    "mechanism": "serves",
+    "outcome": "fake login page",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "social engineering",
+    "mechanism": "deceives",
+    "outcome": "user",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "ransomware",
+    "mechanism": "encrypts",
+    "outcome": "files",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "ransomware",
+    "mechanism": "demands",
+    "outcome": "payment",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "file encryption",
+    "mechanism": "uses",
+    "outcome": "symmetric cipher",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "ransomware decryptor",
+    "mechanism": "reverses",
+    "outcome": "encryption",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "crypto locker",
+    "mechanism": "locks",
+    "outcome": "user files",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "crypto miner",
+    "mechanism": "mines",
+    "outcome": "cryptocurrency",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "cryptominer",
+    "mechanism": "uses",
+    "outcome": "cpu resources",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "xmrig",
+    "mechanism": "mines",
+    "outcome": "monero",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "proof of work",
+    "mechanism": "computes",
+    "outcome": "hash puzzles",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "mining pool",
+    "mechanism": "aggregates",
+    "outcome": "hash power",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "rootkit",
+    "mechanism": "hides",
+    "outcome": "malware processes",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "ld_preload rootkit",
+    "mechanism": "hooks",
+    "outcome": "libc functions",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "rootkit",
+    "mechanism": "intercepts",
+    "outcome": "readdir open stat",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "process hiding",
+    "mechanism": "filters",
+    "outcome": "proc directory entries",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "port hiding",
+    "mechanism": "filters",
+    "outcome": "proc net tcp",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "file hiding",
+    "mechanism": "hooks",
+    "outcome": "stat family",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "anti debug",
+    "mechanism": "checks",
+    "outcome": "tracer pid",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "anti debug",
+    "mechanism": "disables",
+    "outcome": "core dumps",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "debugger evasion",
+    "mechanism": "detects",
+    "outcome": "analysis environment",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "anti analysis",
+    "mechanism": "checks",
+    "outcome": "timing anomalies",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "sandbox evasion",
+    "mechanism": "detects",
+    "outcome": "virtual machine",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "lateral movement",
+    "mechanism": "uses",
+    "outcome": "ssh with stolen keys",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "lateral movement",
+    "mechanism": "exploits",
+    "outcome": "internal services",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "pivot",
+    "mechanism": "uses",
+    "outcome": "compromised host",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "ssh lateral",
+    "mechanism": "connects",
+    "outcome": "adjacent hosts",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "redis exploitation",
+    "mechanism": "abuses",
+    "outcome": "redis config write",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "cve 2022 0543",
+    "mechanism": "escapes",
+    "outcome": "lua sandbox",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "redis rogue server",
+    "mechanism": "loads",
+    "outcome": "malicious module",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "redis config set dir",
+    "mechanism": "writes",
+    "outcome": "arbitrary files",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "data exfiltration",
+    "mechanism": "sends",
+    "outcome": "stolen data",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "dns exfiltration",
+    "mechanism": "encodes",
+    "outcome": "data in dns queries",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "covert channel",
+    "mechanism": "hides",
+    "outcome": "data in protocol",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "hash cracker",
+    "mechanism": "reverses",
+    "outcome": "password hashes",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "hash cracking",
+    "mechanism": "uses",
+    "outcome": "dictionary brute force",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "rainbow table",
+    "mechanism": "precomputes",
+    "outcome": "hash chain",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "arp spoofing",
+    "mechanism": "poisons",
+    "outcome": "arp cache",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "arp spoof",
+    "mechanism": "redirects",
+    "outcome": "network traffic",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "man in the middle",
+    "mechanism": "intercepts",
+    "outcome": "communications",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "process hollowing",
+    "mechanism": "injects",
+    "outcome": "code into process",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "dll injection",
+    "mechanism": "loads",
+    "outcome": "malicious library",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "code injection",
+    "mechanism": "writes",
+    "outcome": "shellcode to memory",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "network reconnaissance",
+    "mechanism": "discovers",
+    "outcome": "hosts and services",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "host discovery",
+    "mechanism": "pings",
+    "outcome": "subnet range",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "service enumeration",
+    "mechanism": "probes",
+    "outcome": "common ports",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "vulnerability scanner",
+    "mechanism": "tests",
+    "outcome": "known cves",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "privilege escalation",
+    "mechanism": "exploits",
+    "outcome": "suid misconfiguration",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "privesc",
+    "mechanism": "abuses",
+    "outcome": "sudo misconfiguration",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "kernel exploit",
+    "mechanism": "achieves",
+    "outcome": "root access",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "anti remediation",
+    "mechanism": "renames",
+    "outcome": "system tools",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "defense evasion",
+    "mechanism": "disables",
+    "outcome": "security tools",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "log clearing",
+    "mechanism": "deletes",
+    "outcome": "audit logs",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "powershell payload",
+    "mechanism": "encodes",
+    "outcome": "base64 utf16le command",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "encoded command",
+    "mechanism": "bypasses",
+    "outcome": "string detection",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "living off the land",
+    "mechanism": "abuses",
+    "outcome": "system binaries",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "sql injection",
+    "mechanism": "executes",
+    "outcome": "arbitrary sql queries",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "sql injection",
+    "mechanism": "uses",
+    "outcome": "quote escaping bypass",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "sqli payloads",
+    "mechanism": "includes",
+    "outcome": "union select",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "sqli payloads",
+    "mechanism": "includes",
+    "outcome": "time-based blind",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "sql payload generator",
+    "mechanism": "creates",
+    "outcome": "injection strings",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "command injection",
+    "mechanism": "exploits",
+    "outcome": "shell metacharacters",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "command injection",
+    "mechanism": "uses",
+    "outcome": "pipe backtick dollar",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "rce payload",
+    "mechanism": "executes",
+    "outcome": "os commands",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "command execution",
+    "mechanism": "bypasses",
+    "outcome": "input validation",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "xxe attack",
+    "mechanism": "reads",
+    "outcome": "local files",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "xxe attack",
+    "mechanism": "sends",
+    "outcome": "external requests",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "xml external entity",
+    "mechanism": "exploits",
+    "outcome": "parsers",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "xxe payload",
+    "mechanism": "uses",
+    "outcome": "dtd entities",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "path traversal",
+    "mechanism": "reads",
+    "outcome": "files outside directory",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "path traversal",
+    "mechanism": "uses",
+    "outcome": "dot dot slash",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "lfi attack",
+    "mechanism": "includes",
+    "outcome": "local files",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "rfi attack",
+    "mechanism": "includes",
+    "outcome": "remote files",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "cross site scripting",
+    "mechanism": "injects",
+    "outcome": "javascript",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "xss payload",
+    "mechanism": "steals",
+    "outcome": "cookies tokens",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "stored xss",
+    "mechanism": "persists",
+    "outcome": "in database",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "reflected xss",
+    "mechanism": "executes",
+    "outcome": "immediately",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "dom xss",
+    "mechanism": "exploits",
+    "outcome": "javascript execution",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "csrf attack",
+    "mechanism": "forges",
+    "outcome": "requests",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "cross site request forgery",
+    "mechanism": "tricks",
+    "outcome": "users",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "csrf token",
+    "mechanism": "bypasses",
+    "outcome": "token validation",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "csrf payload",
+    "mechanism": "performs",
+    "outcome": "unauthorized actions",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "aes encryption",
+    "mechanism": "encrypts",
+    "outcome": "data",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "rsa encryption",
+    "mechanism": "uses",
+    "outcome": "public key cryptography",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "hash function",
+    "mechanism": "generates",
+    "outcome": "digest",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "md5 hashing",
+    "mechanism": "creates",
+    "outcome": "128 bit digest",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "sha256 hashing",
+    "mechanism": "creates",
+    "outcome": "256 bit digest",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "pbkdf2",
+    "mechanism": "derives",
+    "outcome": "key from password",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "hmac",
+    "mechanism": "authenticates",
+    "outcome": "message",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "xor encoding",
+    "mechanism": "obfuscates",
+    "outcome": "code",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "base64 encoding",
+    "mechanism": "encodes",
+    "outcome": "data",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "anti vm detection",
+    "mechanism": "checks",
+    "outcome": "vm signatures",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "anti debugging",
+    "mechanism": "detects",
+    "outcome": "debugger",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "sandbox detection",
+    "mechanism": "identifies",
+    "outcome": "sandboxed environment",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "cron persistence",
+    "mechanism": "schedules",
+    "outcome": "recurring execution",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "systemd persistence",
+    "mechanism": "creates",
+    "outcome": "service",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "registry persistence",
+    "mechanism": "modifies",
+    "outcome": "windows registry",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "startup persistence",
+    "mechanism": "places",
+    "outcome": "startup folder",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "pam module",
+    "mechanism": "hooks",
+    "outcome": "authentication",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "ld preload",
+    "mechanism": "hijacks",
+    "outcome": "library calls",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "privilege escalation",
+    "mechanism": "elevates",
+    "outcome": "privileges",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "uac bypass",
+    "mechanism": "bypasses",
+    "outcome": "user account control",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "sudo exploit",
+    "mechanism": "escalates",
+    "outcome": "to root",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "suid binary",
+    "mechanism": "exploits",
+    "outcome": "set user id",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "arp spoofing",
+    "mechanism": "impersonates",
+    "outcome": "network device",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "dns spoofing",
+    "mechanism": "redirects",
+    "outcome": "dns queries",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "syn flood",
+    "mechanism": "overwhelms",
+    "outcome": "server",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "udp flood",
+    "mechanism": "floods",
+    "outcome": "network",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "ping of death",
+    "mechanism": "crashes",
+    "outcome": "system",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "slowloris",
+    "mechanism": "exhausts",
+    "outcome": "connections",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "worm",
+    "mechanism": "self replicates",
+    "outcome": "to other systems",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "trojan",
+    "mechanism": "hides",
+    "outcome": "malicious payload",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "rootkit",
+    "mechanism": "gains",
+    "outcome": "kernel access",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "backdoor",
+    "mechanism": "provides",
+    "outcome": "persistent access",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "data exfiltration",
+    "mechanism": "steals",
+    "outcome": "sensitive data",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "dns tunneling",
+    "mechanism": "covertly",
+    "outcome": "exfiltrates data",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "http tunnel",
+    "mechanism": "hides",
+    "outcome": "traffic",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "credential harvesting",
+    "mechanism": "extracts",
+    "outcome": "passwords",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "lateral movement",
+    "mechanism": "spreads",
+    "outcome": "to other hosts",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "port scan",
+    "mechanism": "discovers",
+    "outcome": "open ports",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "service enumeration",
+    "mechanism": "identifies",
+    "outcome": "running services",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "vulnerability scan",
+    "mechanism": "checks",
+    "outcome": "for weaknesses",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "osint",
+    "mechanism": "gathers",
+    "outcome": "public information",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "c2 protocol",
+    "mechanism": "communicates",
+    "outcome": "with server",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "beacon",
+    "mechanism": "reports",
+    "outcome": "to c2",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "command execution",
+    "mechanism": "runs",
+    "outcome": "remote command",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "data exfil",
+    "mechanism": "sends",
+    "outcome": "to attacker",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "metasploit",
+    "mechanism": "executes",
+    "outcome": "exploit",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "payload generator",
+    "mechanism": "creates",
+    "outcome": "shellcode",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "exploit kit",
+    "mechanism": "deploys",
+    "outcome": "vulnerabilities",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "buffer overflow",
+    "mechanism": "overwrites",
+    "outcome": "memory",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "stack overflow",
+    "mechanism": "corrupts",
+    "outcome": "return address",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "heap overflow",
+    "mechanism": "corrupts",
+    "outcome": "heap metadata",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "shellcode",
+    "mechanism": "executes",
+    "outcome": "arbitrary code",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "rop chain",
+    "mechanism": "bypasses",
+    "outcome": "aslr dep",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "return oriented programming",
+    "mechanism": "chains",
+    "outcome": "gadgets",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "format string",
+    "mechanism": "reads",
+    "outcome": "memory",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "format string",
+    "mechanism": "writes",
+    "outcome": "to memory",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "%x format",
+    "mechanism": "leaks",
+    "outcome": "stack values",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "type confusion",
+    "mechanism": "exploits",
+    "outcome": "type checking",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "use after free",
+    "mechanism": "accesses",
+    "outcome": "freed memory",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "double free",
+    "mechanism": "corrupts",
+    "outcome": "heap",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "integer overflow",
+    "mechanism": "wraps",
+    "outcome": "integer",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "integer underflow",
+    "mechanism": "underflows",
+    "outcome": "buffer",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "race condition",
+    "mechanism": "exploits",
+    "outcome": "timing",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "toctou",
+    "mechanism": "time of check",
+    "outcome": "time of use",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "insecure deserialization",
+    "mechanism": "executes",
+    "outcome": "code",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "java deserialization",
+    "mechanism": "gadget chain",
+    "outcome": "rce",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "pickle exploit",
+    "mechanism": "python",
+    "outcome": "code execution",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "ssti",
+    "mechanism": "injects",
+    "outcome": "template",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "server side template injection",
+    "mechanism": "executes",
+    "outcome": "code",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "ldap injection",
+    "mechanism": "modifies",
+    "outcome": "query",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "ldap filter",
+    "mechanism": "bypasses",
+    "outcome": "authentication",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "log injection",
+    "mechanism": "pollutes",
+    "outcome": "logs",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "log forging",
+    "mechanism": "falsifies",
+    "outcome": "audit trail",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "csv injection",
+    "mechanism": "executes",
+    "outcome": "formula",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "formula injection",
+    "mechanism": "opens",
+    "outcome": "external url",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "wifi cracking",
+    "mechanism": "breaks",
+    "outcome": "wpa2",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "handshake capture",
+    "mechanism": "intercepts",
+    "outcome": "authentication",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "aircrack",
+    "mechanism": "cracks",
+    "outcome": "wifi",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "deauth attack",
+    "mechanism": "disconnects",
+    "outcome": "clients",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "evil twin",
+    "mechanism": "creates",
+    "outcome": "fake ap",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "bluetooth sniffing",
+    "mechanism": "captures",
+    "outcome": "packets",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "bluejacking",
+    "mechanism": "sends",
+    "outcome": "unauthorized messages",
+    "confidence": 0.91
+  },
+  {
+    "trigger": "bluesnarfing",
+    "mechanism": "reads",
+    "outcome": "data",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "nfc cloning",
+    "mechanism": "duplicates",
+    "outcome": "card",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "nfc skimming",
+    "mechanism": "reads",
+    "outcome": "contactless",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "jtag",
+    "mechanism": "debugs",
+    "outcome": "hardware",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "uart",
+    "mechanism": "accesses",
+    "outcome": "serial port",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "side channel attack",
+    "mechanism": "leaks",
+    "outcome": "information",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "power analysis",
+    "mechanism": "measures",
+    "outcome": "power consumption",
+    "confidence": 0.91
+  },
+  {
+    "trigger": "firmware extraction",
+    "mechanism": "dumps",
+    "outcome": "code",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "firmware modification",
+    "mechanism": "patches",
+    "outcome": "binary",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "bootloader exploit",
+    "mechanism": "bypasses",
+    "outcome": "boot security",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "apk analysis",
+    "mechanism": "decompiles",
+    "outcome": "android",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "frida hooking",
+    "mechanism": "intercepts",
+    "outcome": "function calls",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "app interception",
+    "mechanism": "proxies",
+    "outcome": "traffic",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "s3 enumeration",
+    "mechanism": "discovers",
+    "outcome": "buckets",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "s3 bucket",
+    "mechanism": "reads",
+    "outcome": "objects",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "iam exploitation",
+    "mechanism": "escalates",
+    "outcome": "privileges",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "lambda execution",
+    "mechanism": "runs",
+    "outcome": "serverless code",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "docker escape",
+    "mechanism": "breaks",
+    "outcome": "container",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "kubernetes exploit",
+    "mechanism": "compromises",
+    "outcome": "cluster",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "api enumeration",
+    "mechanism": "discovers",
+    "outcome": "endpoints",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "graphql injection",
+    "mechanism": "exploits",
+    "outcome": "query",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "rest api abuse",
+    "mechanism": "misuses",
+    "outcome": "endpoint",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "auth bypass",
+    "mechanism": "circumvents",
+    "outcome": "authentication",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "default credentials",
+    "mechanism": "logs in",
+    "outcome": "as admin",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "credential spraying",
+    "mechanism": "tests",
+    "outcome": "usernames",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "session hijacking",
+    "mechanism": "steals",
+    "outcome": "session",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "session fixation",
+    "mechanism": "forces",
+    "outcome": "session id",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "cookie theft",
+    "mechanism": "steals",
+    "outcome": "http only cookie",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "cors misconfiguration",
+    "mechanism": "bypasses",
+    "outcome": "same origin policy",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "cors exploitation",
+    "mechanism": "reads",
+    "outcome": "cross origin",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "cache poisoning",
+    "mechanism": "corrupts",
+    "outcome": "cache",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "cdn bypass",
+    "mechanism": "finds",
+    "outcome": "origin server",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "subdomain takeover",
+    "mechanism": "registers",
+    "outcome": "expired domain",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "phishing email",
+    "mechanism": "tricks",
+    "outcome": "user",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "spear phishing",
+    "mechanism": "targets",
+    "outcome": "individual",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "whaling",
+    "mechanism": "targets",
+    "outcome": "executive",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "social engineering",
+    "mechanism": "manipulates",
+    "outcome": "person",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "pretexting",
+    "mechanism": "fabricates",
+    "outcome": "scenario",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "baiting",
+    "mechanism": "entices",
+    "outcome": "victim",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "php wrapper",
+    "mechanism": "reads",
+    "outcome": "file",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "data wrapper",
+    "mechanism": "executes",
+    "outcome": "payload",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "zip wrapper",
+    "mechanism": "reads",
+    "outcome": "archive",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "polyglot file",
+    "mechanism": "executes",
+    "outcome": "as multiple formats",
+    "confidence": 0.91
+  },
+  {
+    "trigger": "mime type",
+    "mechanism": "tricks",
+    "outcome": "parser",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "server side request forgery",
+    "mechanism": "makes",
+    "outcome": "internal requests",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "ssrf",
+    "mechanism": "bypasses",
+    "outcome": "firewall",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "timing attack",
+    "mechanism": "leaks",
+    "outcome": "information",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "side channel",
+    "mechanism": "measures",
+    "outcome": "timing",
+    "confidence": 0.91
+  },
+  {
+    "trigger": "fault injection",
+    "mechanism": "induces",
+    "outcome": "error",
+    "confidence": 0.91
+  },
+  {
+    "trigger": "birthday attack",
+    "mechanism": "finds",
+    "outcome": "collision",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "meet in the middle",
+    "mechanism": "breaks",
+    "outcome": "encryption",
+    "confidence": 0.91
+  },
+  {
+    "trigger": "brute force",
+    "mechanism": "tries",
+    "outcome": "all possibilities",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "zero day",
+    "mechanism": "exploits",
+    "outcome": "unknown vulnerability",
+    "confidence": 0.9
+  },
+  {
+    "trigger": "patch bypass",
+    "mechanism": "circumvents",
+    "outcome": "security patch",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "domain generation algorithm",
+    "mechanism": "generates",
+    "outcome": "domains",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "fast flux",
+    "mechanism": "changes",
+    "outcome": "ip address",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "polymorphic",
+    "mechanism": "mutates",
+    "outcome": "code",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "metamorphic",
+    "mechanism": "rewrites",
+    "outcome": "itself",
+    "confidence": 0.91
+  },
+  {
+    "trigger": "steganography",
+    "mechanism": "hides",
+    "outcome": "data",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "watermarking",
+    "mechanism": "embeds",
+    "outcome": "identifier",
+    "confidence": 0.92
+  }
+]

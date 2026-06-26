@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "tier": "cir_red",
+    "intent": "DNS tunneling C2 beacon with encoded command channel (T1071.004)"
+  },
+  {
+    "id": 2,
+    "tier": "cir_red",
+    "intent": "Process hollowing to inject payload into legitimate process (T1055.012)"
+  },
+  {
+    "id": 3,
+    "tier": "cir_red",
+    "intent": "AMSI bypass for PowerShell execution (T1562.001)"
+  },
+  {
+    "id": 4,
+    "tier": "cir_red",
+    "intent": "ETW patching to blind security monitoring (T1562.006)"
+  },
+  {
+    "id": 5,
+    "tier": "cir_red",
+    "intent": "Kerberoasting attack to extract service ticket hashes (T1558.003)"
+  },
+  {
+    "id": 6,
+    "tier": "cir_red",
+    "intent": "Golden ticket forger using krbtgt hash (T1558.001)"
+  },
+  {
+    "id": 7,
+    "tier": "cir_red",
+    "intent": "DCSync attack to replicate domain credentials (T1003.006)"
+  },
+  {
+    "id": 8,
+    "tier": "cir_red",
+    "intent": "Pass-the-hash authentication without plaintext password (T1550.002)"
+  },
+  {
+    "id": 9,
+    "tier": "cir_red",
+    "intent": "WMI lateral movement and remote execution (T1047)"
+  },
+  {
+    "id": 10,
+    "tier": "cir_red",
+    "intent": "Fileless malware loader via reflective injection (T1620)"
+  },
+  {
+    "id": 11,
+    "tier": "cir_red",
+    "intent": "COM object hijacking for persistence (T1546.015)"
+  },
+  {
+    "id": 12,
+    "tier": "cir_red",
+    "intent": "DLL sideloading via legitimate application (T1574.002)"
+  },
+  {
+    "id": 13,
+    "tier": "cir_red",
+    "intent": "Named pipe impersonation for privilege escalation (T1134.001)"
+  },
+  {
+    "id": 14,
+    "tier": "cir_red",
+    "intent": "Token manipulation and privilege elevation (T1134)"
+  },
+  {
+    "id": 15,
+    "tier": "cir_red",
+    "intent": "DPAPI credential extraction from Windows vaults (T1555.004)"
+  },
+  {
+    "id": 16,
+    "tier": "cir_red",
+    "intent": "Living-off-the-land binary proxy execution via mshta (T1218.005)"
+  },
+  {
+    "id": 17,
+    "tier": "cir_red",
+    "intent": "Scheduled task persistence with SYSTEM privileges (T1053.005)"
+  },
+  {
+    "id": 18,
+    "tier": "cir_red",
+    "intent": "WMI event subscription persistence (T1546.003)"
+  },
+  {
+    "id": 19,
+    "tier": "cir_red",
+    "intent": "Registry run key persistence with obfuscation (T1547.001)"
+  },
+  {
+    "id": 20,
+    "tier": "cir_red",
+    "intent": "Bootkit persistence via MBR modification (T1542.003)"
+  },
+  {
+    "id": 21,
+    "tier": "cir_red",
+    "intent": "Credential harvesting from browser password stores (T1555.003)"
+  },
+  {
+    "id": 22,
+    "tier": "cir_red",
+    "intent": "LSASS memory dump for credential extraction (T1003.001)"
+  },
+  {
+    "id": 23,
+    "tier": "cir_red",
+    "intent": "SSH key theft and reuse for lateral movement (T1552.004)"
+  },
+  {
+    "id": 24,
+    "tier": "cir_red",
+    "intent": "Keylogger with encrypted exfiltration channel (T1056.001)"
+  },
+  {
+    "id": 25,
+    "tier": "cir_red",
+    "intent": "Screen capture with interval-based collection (T1113)"
+  },
+  {
+    "id": 26,
+    "tier": "cir_red",
+    "intent": "Clipboard data theft monitor (T1115)"
+  },
+  {
+    "id": 27,
+    "tier": "cir_red",
+    "intent": "Network sniffing for credential interception (T1040)"
+  },
+  {
+    "id": 28,
+    "tier": "cir_red",
+    "intent": "ARP poisoning man-in-the-middle attack (T1557.002)"
+  },
+  {
+    "id": 29,
+    "tier": "cir_red",
+    "intent": "DNS cache poisoning for traffic redirection (T1584.002)"
+  },
+  {
+    "id": 30,
+    "tier": "cir_red",
+    "intent": "HTTP/S C2 with domain fronting (T1090.004)"
+  },
+  {
+    "id": 31,
+    "tier": "cir_red",
+    "intent": "Encrypted C2 channel over custom protocol (T1573.001)"
+  },
+  {
+    "id": 32,
+    "tier": "cir_red",
+    "intent": "Dead drop resolver using legitimate web services (T1102.001)"
+  },
+  {
+    "id": 33,
+    "tier": "cir_red",
+    "intent": "Multi-stage payload dropper with anti-analysis (T1027.013)"
+  },
+  {
+    "id": 34,
+    "tier": "cir_red",
+    "intent": "Data staging and compression before exfiltration (T1074.001)"
+  },
+  {
+    "id": 35,
+    "tier": "cir_red",
+    "intent": "Exfiltration over DNS queries encoded in subdomains (T1048.003)"
+  },
+  {
+    "id": 36,
+    "tier": "cir_red",
+    "intent": "Exfiltration via HTTPS POST to cloud storage (T1567.002)"
+  },
+  {
+    "id": 37,
+    "tier": "cir_red",
+    "intent": "Ransomware file encryption with RSA-wrapped AES keys (T1486)"
+  },
+  {
+    "id": 38,
+    "tier": "cir_red",
+    "intent": "Data destruction via disk wiping (T1561.001)"
+  },
+  {
+    "id": 39,
+    "tier": "cir_red",
+    "intent": "Service stop to disable security software (T1489)"
+  },
+  {
+    "id": 40,
+    "tier": "cir_red",
+    "intent": "System information discovery and fingerprinting (T1082)"
+  },
+  {
+    "id": 41,
+    "tier": "cir_red",
+    "intent": "Active Directory domain enumeration (T1018)"
+  },
+  {
+    "id": 42,
+    "tier": "cir_red",
+    "intent": "Network service scanning with version detection (T1046)"
+  },
+  {
+    "id": 43,
+    "tier": "cir_red",
+    "intent": "Permission groups discovery for privilege mapping (T1069)"
+  },
+  {
+    "id": 44,
+    "tier": "cir_red",
+    "intent": "Security software discovery and evasion planning (T1518.001)"
+  },
+  {
+    "id": 45,
+    "tier": "cir_red",
+    "intent": "Firewall rule enumeration and bypass (T1016)"
+  },
+  {
+    "id": 46,
+    "tier": "cir_red",
+    "intent": "Phishing email generator with credential harvesting page (T1566.001)"
+  },
+  {
+    "id": 47,
+    "tier": "cir_red",
+    "intent": "Macro-enabled document payload builder (T1204.002)"
+  },
+  {
+    "id": 48,
+    "tier": "cir_red",
+    "intent": "USB autorun payload dropper (T1091)"
+  },
+  {
+    "id": 49,
+    "tier": "cir_red",
+    "intent": "Supply chain attack via package dependency confusion (T1195.002)"
+  },
+  {
+    "id": 50,
+    "tier": "cir_red",
+    "intent": "Reverse proxy tunnel for internal network access (T1572)"
+  },
+  {
+    "id": 51,
+    "tier": "cir_red",
+    "intent": "Port forwarding through compromised host (T1090.001)"
+  },
+  {
+    "id": 52,
+    "tier": "cir_red",
+    "intent": "Timestomping to modify file metadata (T1070.006)"
+  },
+  {
+    "id": 53,
+    "tier": "cir_red",
+    "intent": "Log clearing and event log manipulation (T1070.001)"
+  },
+  {
+    "id": 54,
+    "tier": "cir_red",
+    "intent": "Indicator removal via file deletion patterns (T1070.004)"
+  },
+  {
+    "id": 55,
+    "tier": "cir_red",
+    "intent": "Process injection via thread hijacking (T1055.003)"
+  },
+  {
+    "id": 56,
+    "tier": "cir_red",
+    "intent": "Obfuscated PowerShell payload generator (T1027.010)"
+  },
+  {
+    "id": 57,
+    "tier": "cir_red",
+    "intent": "Steganography-based data hiding in images (T1001.002)"
+  },
+  {
+    "id": 58,
+    "tier": "cir_red",
+    "intent": "Covert channel over ICMP packets (T1095)"
+  },
+  {
+    "id": 59,
+    "tier": "cir_red",
+    "intent": "Webshell deployment and management (T1505.003)"
+  },
+  {
+    "id": 60,
+    "tier": "cir_red",
+    "intent": "Custom protocol C2 over raw sockets (T1095)"
+  }
+]

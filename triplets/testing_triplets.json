@@ -1,0 +1,44 @@
+[
+    {
+        "trigger": "pytest",
+        "mechanism": "manages",
+        "outcome": "unit tests",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "pytest",
+        "mechanism": "provides",
+        "outcome": "fixtures",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "pytest",
+        "mechanism": "supports",
+        "outcome": "parametrization",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "unittest",
+        "mechanism": "implements",
+        "outcome": "TestCase",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "mock",
+        "mechanism": "provides",
+        "outcome": "MagicMock",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "mock",
+        "mechanism": "performs",
+        "outcome": "patching",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "coverage",
+        "mechanism": "measures",
+        "outcome": "code coverage",
+        "confidence": 0.95
+    }
+]

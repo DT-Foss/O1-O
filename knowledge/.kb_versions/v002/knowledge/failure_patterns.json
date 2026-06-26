@@ -1,0 +1,96 @@
+{
+  "errors": {
+    "6a399a8e569f": {
+      "error_type": "NameError",
+      "message_pattern": "NameError: name '<VAL>' is not defined. Did you mean: '<VAL>'?",
+      "count": 2,
+      "contexts": [
+        {
+          "intent": "bluetooth scanner and then saga orchestrator",
+          "fragment": "port_scanner_socket",
+          "stderr_head": "Traceback (most recent call last):\n  File \"/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/tmpk4dpofr7/forge_script.py\", line 49, in <module>\n    main()\n  File \"/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/tmpk4dpofr7/forge_script.py\", line 15, in main\n    PORT_RANGE = range({start_port}, {end_"
+        },
+        {
+          "intent": "wifi scanner and then bash deploy",
+          "fragment": "NullCallbacks",
+          "stderr_head": "Traceback (most recent call last):\n  File \"/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/tmpusn_fmj8/forge_script.py\", line 49, in <module>\n    main()\n  File \"/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/tmpusn_fmj8/forge_script.py\", line 15, in main\n    PORT_RANGE = range({start_port}, {end_"
+        }
+      ],
+      "fixes": []
+    },
+    "18c593f8ce5b": {
+      "error_type": "UNKNOWN_ERROR",
+      "message_pattern": "IndentationError: unexpected indent",
+      "count": 5,
+      "contexts": [
+        {
+          "intent": "bluetooth scanner and then saga orchestrator",
+          "fragment": "port_scanner_socket",
+          "stderr_head": "  File \"/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/tmpwebrld0g/forge_script.py\", line 14\n    start_port = None  # Auto-initialized\nIndentationError: unexpected indent\n"
+        },
+        {
+          "intent": "wifi scanner and then bash deploy",
+          "fragment": "NullCallbacks",
+          "stderr_head": "  File \"/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/tmp7va42hsp/forge_script.py\", line 14\n    start_port = None  # Auto-initialized\nIndentationError: unexpected indent\n"
+        },
+        {
+          "intent": "lsass dump concept and then exfiltration dns",
+          "fragment": "lsass_dump_concept",
+          "stderr_head": "  File \"/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/tmpvem97t4a/forge_script.py\", line 39\n    SSP hooks authentication and captures plaintext credentials')\nIndentationError: unexpected indent\n"
+        },
+        {
+          "intent": "lsass dump concept and then bloodhound collector",
+          "fragment": "lsass_dump_concept",
+          "stderr_head": "  File \"/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/tmpv_s2y277/forge_script.py\", line 37\n    SSP hooks authentication and captures plaintext credentials')\nIndentationError: unexpected indent\n"
+        },
+        {
+          "intent": "polymorphic wrapper and then numpy mean",
+          "fragment": "numpy_mean",
+          "stderr_head": "  File \"/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/tmpfhwb4e4o/forge_script.py\", line 13\n    data = \"\"  # Auto-initialized\nIndentationError: unexpected indent\n"
+        }
+      ],
+      "fixes": []
+    },
+    "3cd5c8f19e56": {
+      "error_type": "NameError",
+      "message_pattern": "NameError: name '<VAL>' is not defined",
+      "count": 1,
+      "contexts": [
+        {
+          "intent": "polymorphic wrapper and then numpy mean",
+          "fragment": "numpy_mean",
+          "stderr_head": "Traceback (most recent call last):\n  File \"/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/tmp48e2g1rx/forge_script.py\", line 18, in <module>\n    main()\n  File \"/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/tmp48e2g1rx/forge_script.py\", line 13, in main\n    arr = np.array(data)\n                 "
+        }
+      ],
+      "fixes": []
+    },
+    "3166509b27b4": {
+      "error_type": "UNKNOWN_ERROR",
+      "message_pattern": "UnboundLocalError: cannot access local variable '<VAL>' where it is not associated with a value",
+      "count": 1,
+      "contexts": [
+        {
+          "intent": "bluetooth scanner and then pprint output",
+          "fragment": "pprint",
+          "stderr_head": "Traceback (most recent call last):\n  File \"/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/tmp23r0ahfl/forge_script.py\", line 18, in <module>\n    main()\n  File \"/var/folders/6d/v5s01yqx4f388x67wr_w3hs00000gn/T/tmp23r0ahfl/forge_script.py\", line 13, in main\n    data = data\n           ^^^^\nUnboundLoc"
+        }
+      ],
+      "fixes": []
+    },
+    "f8d72571a21c": {
+      "error_type": "UNKNOWN_ERROR",
+      "message_pattern": "",
+      "count": 1,
+      "contexts": [
+        {
+          "intent": "cqrs pattern and then bash ssh auto",
+          "fragment": "ssh",
+          "stderr_head": ""
+        }
+      ],
+      "fixes": []
+    }
+  },
+  "fix_strategies": {},
+  "version": 1
+}

@@ -1,0 +1,38 @@
+{
+  "mitre_techniques": [
+    {
+      "id": "T1558.003",
+      "name": "Kerberoasting",
+      "keyword": "kerbero"
+    },
+    {
+      "id": "T1558",
+      "name": "Steal or Forge Kerberos Tickets",
+      "keyword": "kerbero"
+    }
+  ],
+  "kill_chain_phase": "General Offensive",
+  "iocs": [
+    {
+      "type": "network",
+      "indicator": "DNS queries to C2/exfil domain",
+      "persistence": "DNS logs, passive DNS"
+    },
+    {
+      "type": "behavioral",
+      "indicator": "Encryption activity (potential ransomware)",
+      "persistence": "entropy analysis, file monitoring"
+    }
+  ],
+  "detection_methods": [
+    "Network traffic analysis",
+    "Endpoint detection and response (EDR)",
+    "Process monitoring",
+    "Log correlation (SIEM)"
+  ],
+  "countermeasures": [
+    "Monitor for anomalous process execution patterns",
+    "Implement network segmentation",
+    "Deploy host-based IDS/IPS"
+  ]
+}

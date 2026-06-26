@@ -1,0 +1,74 @@
+[
+    {
+        "trigger": "plot a bar chart",
+        "mechanism": "uses",
+        "outcome": "matplotlib_bar",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "create a numpy array",
+        "mechanism": "uses",
+        "outcome": "numpy_array",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "split dataset",
+        "mechanism": "uses",
+        "outcome": "sklearn_split",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "train linear regression",
+        "mechanism": "uses",
+        "outcome": "sklearn_linear_regression",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "run shell command",
+        "mechanism": "uses",
+        "outcome": "subprocess_run",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "initialize logging",
+        "mechanism": "uses",
+        "outcome": "logging_basic",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "connect to postgres",
+        "mechanism": "uses",
+        "outcome": "psycopg2_connect",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "connect to redis",
+        "mechanism": "uses",
+        "outcome": "redis_connect",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "write unit tests",
+        "mechanism": "uses",
+        "outcome": "pytest_basic",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "create flask app",
+        "mechanism": "uses",
+        "outcome": "flask_basic",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "encrypt message",
+        "mechanism": "uses",
+        "outcome": "cryptography_fernet",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "hash password",
+        "mechanism": "uses",
+        "outcome": "bcrypt_hash",
+        "confidence": 0.95
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "trigger": "performance",
+        "mechanism": "demands",
+        "outcome": "native_extension",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "computation",
+        "mechanism": "accelerated_by",
+        "outcome": "c_extension",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "python",
+        "mechanism": "calls",
+        "outcome": "ctypes",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "python",
+        "mechanism": "integrates",
+        "outcome": "cffi",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "high_precision",
+        "mechanism": "requires",
+        "outcome": "assembly",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "hardware_acceleration",
+        "mechanism": "implemented_via",
+        "outcome": "verilog",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "x86_64",
+        "mechanism": "supports",
+        "outcome": "nasm",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "arm64",
+        "mechanism": "supports",
+        "outcome": "as",
+        "confidence": 0.93
+    },
+    {
+        "trigger": "simd",
+        "mechanism": "optimized_via",
+        "outcome": "avx2",
+        "confidence": 0.90
+    },
+    {
+        "trigger": "fpga",
+        "mechanism": "programmed_via",
+        "outcome": "iverilog",
+        "confidence": 0.90
+    },
+    {
+        "trigger": "c_code",
+        "mechanism": "compiled_by",
+        "outcome": "gcc",
+        "confidence": 0.95
+    },
+    {
+        "trigger": "binary_patching",
+        "mechanism": "achieved_via",
+        "outcome": "lief",
+        "confidence": 0.85
+    }
+]

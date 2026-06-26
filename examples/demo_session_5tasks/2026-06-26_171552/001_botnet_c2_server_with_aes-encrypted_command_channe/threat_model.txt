@@ -1,0 +1,31 @@
+FORGE THREAT MODEL
+============================================================
+
+Kill Chain Phase: Command & Control
+
+MITRE ATT&CK Techniques:
+  * T1071 -- Application Layer Protocol
+  * T1573 -- Encrypted Channel
+  * T1090 -- Proxy
+
+Indicators of Compromise (IOCs):
+  [NETWORK] Outbound connections on configured port
+    Evidence: network logs, PCAP
+  [NETWORK] Listening port on target
+    Evidence: netstat, port scan
+  [NETWORK] DNS queries to C2/exfil domain
+    Evidence: DNS logs, passive DNS
+  [BEHAVIORAL] Encryption activity (potential ransomware)
+    Evidence: entropy analysis, file monitoring
+
+Detection Methods:
+  * Network traffic analysis
+  * TLS inspection
+  * DNS monitoring
+  * JA3/JA3S fingerprinting
+
+Countermeasures (Blue Team Awareness):
+  * Deploy EDR with behavior-based detection
+  * Enable detailed process logging (Sysmon, auditd)
+  * Implement TLS inspection at network boundary
+  * Monitor for anomalous outbound connections (frequency, volume, destination)

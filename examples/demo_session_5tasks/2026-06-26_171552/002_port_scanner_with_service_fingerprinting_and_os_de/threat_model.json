@@ -1,0 +1,36 @@
+{
+  "mitre_techniques": [
+    {
+      "id": "T1046",
+      "name": "Network Service Discovery",
+      "keyword": "scan"
+    },
+    {
+      "id": "T1595",
+      "name": "Active Scanning",
+      "keyword": "scan"
+    }
+  ],
+  "kill_chain_phase": "Reconnaissance",
+  "iocs": [
+    {
+      "type": "network",
+      "indicator": "Outbound connections on configured port",
+      "persistence": "network logs, PCAP"
+    },
+    {
+      "type": "network",
+      "indicator": "DNS queries to C2/exfil domain",
+      "persistence": "DNS logs, passive DNS"
+    }
+  ],
+  "detection_methods": [
+    "Network IDS (port scan detection)",
+    "Firewall rate limiting",
+    "Honeypot canaries"
+  ],
+  "countermeasures": [
+    "Deploy EDR with behavior-based detection",
+    "Enable detailed process logging (Sysmon, auditd)"
+  ]
+}

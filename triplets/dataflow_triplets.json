@@ -1,0 +1,402 @@
+[
+  {
+    "trigger": "user_input",
+    "mechanism": "flows_through",
+    "outcome": "string_format",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "data_propagation"
+  },
+  {
+    "trigger": "user_input",
+    "mechanism": "flows_through",
+    "outcome": "sql_query",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "injection_risk"
+  },
+  {
+    "trigger": "user_input",
+    "mechanism": "flows_through",
+    "outcome": "subprocess_run",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "command_injection"
+  },
+  {
+    "trigger": "user_input",
+    "mechanism": "flows_through",
+    "outcome": "os_system",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "command_injection"
+  },
+  {
+    "trigger": "user_input",
+    "mechanism": "flows_through",
+    "outcome": "eval",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "code_injection"
+  },
+  {
+    "trigger": "user_input",
+    "mechanism": "flows_through",
+    "outcome": "exec",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "code_injection"
+  },
+  {
+    "trigger": "user_input",
+    "mechanism": "flows_through",
+    "outcome": "pickle_loads",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "deserialization"
+  },
+  {
+    "trigger": "user_input",
+    "mechanism": "flows_through",
+    "outcome": "yaml_load",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "deserialization"
+  },
+  {
+    "trigger": "user_input",
+    "mechanism": "flows_through",
+    "outcome": "open",
+    "confidence": 0.90,
+    "taint": "untrusted",
+    "flow_type": "path_traversal"
+  },
+  {
+    "trigger": "user_input",
+    "mechanism": "flows_through",
+    "outcome": "html_template",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "xss"
+  },
+  {
+    "trigger": "user_input",
+    "mechanism": "sanitized_by",
+    "outcome": "parameterized_query",
+    "confidence": 0.95,
+    "taint": "sanitized",
+    "flow_type": "sanitization"
+  },
+  {
+    "trigger": "user_input",
+    "mechanism": "sanitized_by",
+    "outcome": "shlex_quote",
+    "confidence": 0.95,
+    "taint": "sanitized",
+    "flow_type": "sanitization"
+  },
+  {
+    "trigger": "user_input",
+    "mechanism": "sanitized_by",
+    "outcome": "html_escape",
+    "confidence": 0.95,
+    "taint": "sanitized",
+    "flow_type": "sanitization"
+  },
+  {
+    "trigger": "user_input",
+    "mechanism": "sanitized_by",
+    "outcome": "input_validation",
+    "confidence": 0.90,
+    "taint": "sanitized",
+    "flow_type": "sanitization"
+  },
+  {
+    "trigger": "user_input",
+    "mechanism": "sanitized_by",
+    "outcome": "os_path_basename",
+    "confidence": 0.85,
+    "taint": "sanitized",
+    "flow_type": "sanitization"
+  },
+  {
+    "trigger": "file_read",
+    "mechanism": "flows_through",
+    "outcome": "json_loads",
+    "confidence": 0.90,
+    "taint": "untrusted",
+    "flow_type": "data_propagation"
+  },
+  {
+    "trigger": "file_read",
+    "mechanism": "flows_through",
+    "outcome": "eval",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "code_injection"
+  },
+  {
+    "trigger": "file_read",
+    "mechanism": "flows_through",
+    "outcome": "pickle_loads",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "deserialization"
+  },
+  {
+    "trigger": "http_response",
+    "mechanism": "flows_through",
+    "outcome": "json_loads",
+    "confidence": 0.85,
+    "taint": "untrusted",
+    "flow_type": "data_propagation"
+  },
+  {
+    "trigger": "http_response",
+    "mechanism": "flows_through",
+    "outcome": "eval",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "code_injection"
+  },
+  {
+    "trigger": "http_response",
+    "mechanism": "flows_through",
+    "outcome": "html_template",
+    "confidence": 0.90,
+    "taint": "untrusted",
+    "flow_type": "xss"
+  },
+  {
+    "trigger": "environment_variable",
+    "mechanism": "flows_through",
+    "outcome": "subprocess_run",
+    "confidence": 0.80,
+    "taint": "untrusted",
+    "flow_type": "command_injection"
+  },
+  {
+    "trigger": "environment_variable",
+    "mechanism": "flows_through",
+    "outcome": "open",
+    "confidence": 0.75,
+    "taint": "semi_trusted",
+    "flow_type": "path_traversal"
+  },
+  {
+    "trigger": "database_result",
+    "mechanism": "flows_through",
+    "outcome": "html_template",
+    "confidence": 0.85,
+    "taint": "untrusted",
+    "flow_type": "stored_xss"
+  },
+  {
+    "trigger": "database_result",
+    "mechanism": "flows_through",
+    "outcome": "eval",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "code_injection"
+  },
+  {
+    "trigger": "socket_recv",
+    "mechanism": "flows_through",
+    "outcome": "pickle_loads",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "deserialization"
+  },
+  {
+    "trigger": "socket_recv",
+    "mechanism": "flows_through",
+    "outcome": "json_loads",
+    "confidence": 0.85,
+    "taint": "untrusted",
+    "flow_type": "data_propagation"
+  },
+  {
+    "trigger": "socket_recv",
+    "mechanism": "flows_through",
+    "outcome": "subprocess_run",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "command_injection"
+  },
+  {
+    "trigger": "socket_recv",
+    "mechanism": "flows_through",
+    "outcome": "struct_unpack",
+    "confidence": 0.90,
+    "taint": "untrusted",
+    "flow_type": "buffer_overflow"
+  },
+  {
+    "trigger": "command_line_args",
+    "mechanism": "flows_through",
+    "outcome": "open",
+    "confidence": 0.85,
+    "taint": "untrusted",
+    "flow_type": "path_traversal"
+  },
+  {
+    "trigger": "command_line_args",
+    "mechanism": "flows_through",
+    "outcome": "subprocess_run",
+    "confidence": 0.90,
+    "taint": "untrusted",
+    "flow_type": "command_injection"
+  },
+  {
+    "trigger": "command_line_args",
+    "mechanism": "flows_through",
+    "outcome": "sql_query",
+    "confidence": 0.90,
+    "taint": "untrusted",
+    "flow_type": "injection_risk"
+  },
+  {
+    "trigger": "mach_msg",
+    "mechanism": "flows_through",
+    "outcome": "xpc_handler",
+    "confidence": 0.90,
+    "taint": "untrusted",
+    "flow_type": "ipc_injection"
+  },
+  {
+    "trigger": "mach_msg",
+    "mechanism": "flows_through",
+    "outcome": "nscoding_decode",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "deserialization"
+  },
+  {
+    "trigger": "mach_msg",
+    "mechanism": "flows_through",
+    "outcome": "cfproperty_list",
+    "confidence": 0.90,
+    "taint": "untrusted",
+    "flow_type": "data_propagation"
+  },
+  {
+    "trigger": "xpc_message",
+    "mechanism": "flows_through",
+    "outcome": "xpc_dictionary_get",
+    "confidence": 0.85,
+    "taint": "untrusted",
+    "flow_type": "data_propagation"
+  },
+  {
+    "trigger": "xpc_message",
+    "mechanism": "flows_through",
+    "outcome": "nscoding_decode",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "deserialization"
+  },
+  {
+    "trigger": "xpc_message",
+    "mechanism": "flows_through",
+    "outcome": "subprocess_run",
+    "confidence": 0.90,
+    "taint": "untrusted",
+    "flow_type": "privilege_escalation"
+  },
+  {
+    "trigger": "iokit_user_client",
+    "mechanism": "flows_through",
+    "outcome": "kernel_buffer",
+    "confidence": 0.95,
+    "taint": "untrusted",
+    "flow_type": "kernel_overflow"
+  },
+  {
+    "trigger": "iokit_user_client",
+    "mechanism": "flows_through",
+    "outcome": "scalar_input",
+    "confidence": 0.90,
+    "taint": "untrusted",
+    "flow_type": "integer_overflow"
+  },
+  {
+    "trigger": "preference_domain",
+    "mechanism": "flows_through",
+    "outcome": "cfproperty_list",
+    "confidence": 0.85,
+    "taint": "untrusted",
+    "flow_type": "plist_injection"
+  },
+  {
+    "trigger": "preference_domain",
+    "mechanism": "flows_through",
+    "outcome": "nscoding_decode",
+    "confidence": 0.90,
+    "taint": "untrusted",
+    "flow_type": "deserialization"
+  },
+  {
+    "trigger": "sandbox_read",
+    "mechanism": "flows_through",
+    "outcome": "cfproperty_list",
+    "confidence": 0.80,
+    "taint": "semi_trusted",
+    "flow_type": "sandbox_escape"
+  },
+  {
+    "trigger": "code_signature",
+    "mechanism": "flows_through",
+    "outcome": "integer_multiply",
+    "confidence": 0.90,
+    "taint": "untrusted",
+    "flow_type": "integer_overflow"
+  },
+  {
+    "trigger": "code_signature",
+    "mechanism": "flows_through",
+    "outcome": "malloc_size",
+    "confidence": 0.90,
+    "taint": "untrusted",
+    "flow_type": "heap_overflow"
+  },
+  {
+    "trigger": "parameterized_query",
+    "mechanism": "reaches",
+    "outcome": "database",
+    "confidence": 0.95,
+    "taint": "sanitized",
+    "flow_type": "safe_sink"
+  },
+  {
+    "trigger": "shlex_quote",
+    "mechanism": "reaches",
+    "outcome": "subprocess_run",
+    "confidence": 0.90,
+    "taint": "sanitized",
+    "flow_type": "safe_sink"
+  },
+  {
+    "trigger": "html_escape",
+    "mechanism": "reaches",
+    "outcome": "html_template",
+    "confidence": 0.90,
+    "taint": "sanitized",
+    "flow_type": "safe_sink"
+  },
+  {
+    "trigger": "os_path_basename",
+    "mechanism": "reaches",
+    "outcome": "open",
+    "confidence": 0.85,
+    "taint": "sanitized",
+    "flow_type": "safe_sink"
+  },
+  {
+    "trigger": "json_loads",
+    "mechanism": "reaches",
+    "outcome": "validated_schema",
+    "confidence": 0.85,
+    "taint": "sanitized",
+    "flow_type": "safe_sink"
+  }
+]

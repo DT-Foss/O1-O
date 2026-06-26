@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "If you use O1-O in research, please cite it as below."
+title: "O1-O: A Deterministic Code Synthesis Operator with an Algebraic Type System, a 7-Pass Causal Knowledge Inference Engine, and an Autonomous Engagement Pipeline"
+authors:
+  - family-names: "Foss"
+    given-names: "David Tom"
+    email: "dtfoss-dev@proton.me"
+date-released: "2026-06-26"
+version: "1.0.0"
+license: "Apache-2.0"
+repository-code: "https://github.com/DT-Foss/O1-O"
+type: software
+abstract: >
+  O1-O is a deterministic code synthesis system that composes working programs
+  from natural-language intent without any LLM in the generation loop.
+  Composition is performed by a closed-set 8-color algebraic type system over
+  ~1245 verified code fragments; the knowledge layer is a binary .causal graph
+  format (132 domain files) traversed by a 7-pass deterministic inference engine
+  (exact-chain, semantic-direction, fuzzy-match, analogical, cross-domain,
+  contextual, recombination). Every generated artifact passes a seven-layer
+  verification pipeline (compile, structural intent, property-based, algebraic,
+  symbolic execution, taint analysis, logic-consistency). The system is paired
+  with an autonomous nine-phase engagement operator that orchestrates the full
+  platform end-to-end from a single IP address. The codebase is fully air-gap
+  capable: AES-256-CTR (PBKDF2 600k) and PE/ELF/Mach-O parsers are implemented
+  from scratch in the Python standard library; only msgpack, jellyfish, requests
+  and beautifulsoup4 are external dependencies. Builds on prior work in
+  programming-language theory (Curry-Howard correspondence, typed lambda
+  calculus), causal knowledge graphs (peer-reviewed across 9 papers accepted
+  at 4 international IEEE 2026 conferences — IEEE ICECET 2026 hosted by
+  Medipol University in Rome, IEEE-NANO 2026 in Nanjing as the flagship
+  conference of the IEEE Nanotechnology Council, IEEE IRI 2026 hosted by
+  the University of Washington Bothell in Seattle, and NURER 2026 in Almaty
+  organized in cooperation with the International Atomic Energy Agency —
+  plus a bit-perfect IBM z/OS mainframe security assessment validated on
+  real z15 hardware), and a self-extending closed-loop architecture in which the
+  system detects its own knowledge gaps, generates tasks against them, and
+  folds successful patterns back into the knowledge graph deterministically.
+keywords:
+  - deterministic code synthesis
+  - program synthesis
+  - causal knowledge graph
+  - algebraic type system
+  - formal verification
+  - self-improving systems
+  - autonomous code generation
+  - air-gapped computing
+  - sovereign software

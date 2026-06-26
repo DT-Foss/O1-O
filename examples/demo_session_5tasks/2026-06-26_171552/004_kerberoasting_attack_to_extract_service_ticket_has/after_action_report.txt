@@ -1,0 +1,50 @@
+FORGE AFTER-ACTION REPORT
+============================================================
+Generated: 2026-06-26 15:15:54 UTC
+Intent: Kerberoasting attack to extract service ticket hashes
+Pipeline: 11 steps, 560ms total
+
+PIPELINE RESULTS
+----------------------------------------
+  Code:         257 LOC, COMPILED
+  Verification: PROVEN (3/3 checks)
+  Evasion:      EVADED (0 rounds)
+  OPSEC:        generic profile (6 files)
+  Audit:        Grade A (100/100)
+  ATT&CK:       2 techniques mapped
+  Kill Chain:   General Offensive
+  IOCs:         2 indicators identified
+
+ARTIFACTS GENERATED
+----------------------------------------
+  Dockerfile (1,704 bytes)
+  README.txt (3,986 bytes)
+  delivery/delivery_powershell.txt (584 bytes)
+  delivery/dropper.py (1,504 bytes)
+  delivery/stager.py (753 bytes)
+  delivery/usb_autorun.inf (130 bytes)
+  delivery/usb_launch.bat (150 bytes)
+  deployment_guide.txt (3,271 bytes)
+  docker-compose.yml (1,159 bytes)
+  generated.py (11,287 bytes)
+  log.txt (339 bytes)
+  meta.json (2,414 bytes)
+  opsec/cleanup.sh (1,820 bytes)
+  opsec/network.conf (1,066 bytes)
+  opsec/runtime.sh (1,164 bytes)
+  opsec/sanitize.py (4,292 bytes)
+  opsec_audit.json (784 bytes)
+  opsec_audit.txt (581 bytes)
+  package_error.log (1,926 bytes)
+  threat_model.json (910 bytes)
+  threat_model.txt (736 bytes)
+
+OPERATIONAL NOTES
+----------------------------------------
+  • Review opsec_audit.txt before deployment
+  • Review threat_model.txt for blue team awareness
+  • Follow deployment_guide.txt for operational procedures
+  • Run opsec/cleanup.sh after operation completion
+  • Destroy all artifacts using burn script when done
+
+CLASSIFICATION: OPERATIONAL — HANDLE ACCORDINGLY

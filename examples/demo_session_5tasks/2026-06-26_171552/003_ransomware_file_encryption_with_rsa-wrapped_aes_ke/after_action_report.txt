@@ -1,0 +1,50 @@
+FORGE AFTER-ACTION REPORT
+============================================================
+Generated: 2026-06-26 15:15:54 UTC
+Intent: ransomware file encryption with RSA-wrapped AES keys
+Pipeline: 11 steps, 604ms total
+
+PIPELINE RESULTS
+----------------------------------------
+  Code:         415 LOC, COMPILED
+  Verification: PROVEN (3/3 checks)
+  Evasion:      EVADED (0 rounds)
+  OPSEC:        generic profile (6 files)
+  Audit:        Grade A (98/100)
+  ATT&CK:       2 techniques mapped
+  Kill Chain:   Impact
+  IOCs:         3 indicators identified
+
+ARTIFACTS GENERATED
+----------------------------------------
+  Dockerfile (1,704 bytes)
+  README.txt (4,733 bytes)
+  delivery/delivery_powershell.txt (584 bytes)
+  delivery/dropper.py (1,504 bytes)
+  delivery/stager.py (753 bytes)
+  delivery/usb_autorun.inf (130 bytes)
+  delivery/usb_launch.bat (150 bytes)
+  deployment_guide.txt (3,671 bytes)
+  docker-compose.yml (1,159 bytes)
+  generated.py (18,460 bytes)
+  log.txt (338 bytes)
+  meta.json (2,486 bytes)
+  opsec/cleanup.sh (1,820 bytes)
+  opsec/network.conf (1,066 bytes)
+  opsec/runtime.sh (1,164 bytes)
+  opsec/sanitize.py (4,292 bytes)
+  opsec_audit.json (1,125 bytes)
+  opsec_audit.txt (849 bytes)
+  package_error.log (1,926 bytes)
+  threat_model.json (1,132 bytes)
+  threat_model.txt (893 bytes)
+
+OPERATIONAL NOTES
+----------------------------------------
+  • Review opsec_audit.txt before deployment
+  • Review threat_model.txt for blue team awareness
+  • Follow deployment_guide.txt for operational procedures
+  • Run opsec/cleanup.sh after operation completion
+  • Destroy all artifacts using burn script when done
+
+CLASSIFICATION: OPERATIONAL — HANDLE ACCORDINGLY

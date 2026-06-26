@@ -1,0 +1,124 @@
+{
+  "generation_ms": 331.47478103637695,
+  "loc": 400,
+  "import_count": 12,
+  "imports": [
+    "argparse",
+    "base64",
+    "json",
+    "os",
+    "random",
+    "re",
+    "struct",
+    "subprocess",
+    "sys",
+    "time",
+    "_json",
+    "sys"
+  ],
+  "structure": "Class + Functions",
+  "compiles": true,
+  "verified": true,
+  "checks_passed": 3,
+  "checks_total": 3,
+  "chains_found": 2,
+  "evasion": {
+    "detections": 1,
+    "clean": true,
+    "mutated": true,
+    "method": "semantic",
+    "transforms": 3,
+    "original_detections": [
+      "base64_decode"
+    ]
+  },
+  "polymorphic": false,
+  "config": {},
+  "steps": [
+    {
+      "name": "parse_intent",
+      "status": "ok",
+      "elapsed_ms": 46.36883735656738
+    },
+    {
+      "name": "knowledge_query",
+      "status": "ok",
+      "elapsed_ms": 48.5689640045166,
+      "chains": 2
+    },
+    {
+      "name": "assemble_code",
+      "status": "ok",
+      "elapsed_ms": 45.80879211425781,
+      "loc": 239
+    },
+    {
+      "name": "compile_check",
+      "status": "pass",
+      "elapsed_ms": 43.485164642333984
+    },
+    {
+      "name": "detection_evasion",
+      "status": "clean",
+      "elapsed_ms": 96.85397148132324
+    },
+    {
+      "name": "formal_verify",
+      "status": "proven",
+      "elapsed_ms": 47.03712463378906
+    },
+    {
+      "name": "save_session",
+      "status": "ok",
+      "elapsed_ms": 42.66691207885742
+    },
+    {
+      "name": "package_exe",
+      "status": "skipped",
+      "elapsed_ms": 92.82588958740234
+    },
+    {
+      "name": "opsec_harden",
+      "status": "ok",
+      "elapsed_ms": 44.12579536437988
+    },
+    {
+      "name": "opsec_audit",
+      "status": "ok",
+      "elapsed_ms": 45.63403129577637
+    },
+    {
+      "name": "threat_intel",
+      "status": "ok",
+      "elapsed_ms": 47.1501350402832
+    }
+  ],
+  "task_id": "005",
+  "intent": "DNS tunneling data exfiltration tool",
+  "timestamp": "2026-06-26T17:15:55.242342",
+  "opsec_profile": "outbound",
+  "opsec_files": [
+    "Dockerfile",
+    "docker-compose.yml",
+    "opsec/cleanup.sh",
+    "opsec/runtime.sh",
+    "opsec/network.conf",
+    "opsec/sanitize.py"
+  ],
+  "delivery_files": [
+    "dropper.py",
+    "stager.py",
+    "delivery_powershell.txt",
+    "usb_autorun.inf",
+    "usb_launch.bat"
+  ],
+  "opsec_audit_score": 100,
+  "opsec_audit_grade": "A",
+  "mitre_techniques": [
+    "T1041",
+    "T1048",
+    "T1071.004",
+    "T1572"
+  ],
+  "kill_chain_phase": "Actions on Objectives"
+}

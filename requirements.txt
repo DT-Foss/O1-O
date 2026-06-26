@@ -1,0 +1,15 @@
+# O1-O — minimal external dependencies
+# Everything else is Python stdlib (by design — air-gap capable, sovereign engineering)
+
+# Causal knowledge graph format (binary, deterministic)
+msgpack>=1.0.0
+
+# Fuzzy entity matching in 7-pass inference engine (Jaro-Winkler)
+jellyfish>=1.0.0
+
+# Web harvester (autonomous GitHub/docs scraping for knowledge expansion)
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+
+# Optional: only needed by core/execution_simulator.py
+# numpy>=1.20.0

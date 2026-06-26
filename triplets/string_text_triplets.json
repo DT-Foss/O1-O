@@ -1,0 +1,458 @@
+[
+  {
+    "trigger": "email input validation",
+    "mechanism": "apply regex pattern ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+    "outcome": "email format validated or rejected",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "extract email from text",
+    "mechanism": "use regex pattern with findall(r'\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b')",
+    "outcome": "list of valid email addresses extracted",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "validate URL format",
+    "mechanism": "apply regex pattern https?://[^\\s]+",
+    "outcome": "URL verified as well-formed or malformed",
+    "confidence": 0.90
+  },
+  {
+    "trigger": "extract URLs from content",
+    "mechanism": "use re.findall with URL regex pattern",
+    "outcome": "list of URLs extracted from text",
+    "confidence": 0.88
+  },
+  {
+    "trigger": "phone number input",
+    "mechanism": "apply formatting regex to standardize to (XXX) XXX-XXXX format",
+    "outcome": "phone number formatted consistently",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "validate US phone number",
+    "mechanism": "check pattern \\d{3}-\\d{3}-\\d{4} or (\\d{3})\\d{3}-\\d{4}",
+    "outcome": "phone number validated or rejected",
+    "confidence": 0.91
+  },
+  {
+    "trigger": "extract phone numbers from text",
+    "mechanism": "regex findall for \\(?\\d{3}\\)?[-.]?\\d{3}[-.]?\\d{4}",
+    "outcome": "list of potential phone numbers extracted",
+    "confidence": 0.85
+  },
+  {
+    "trigger": "date string input",
+    "mechanism": "parse with datetime.strptime() using format specifier",
+    "outcome": "date converted to datetime object or parse error raised",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "extract dates from text",
+    "mechanism": "use regex pattern \\d{1,2}[-/.]\\d{1,2}[-/.]\\d{2,4}",
+    "outcome": "list of date strings extracted",
+    "confidence": 0.87
+  },
+  {
+    "trigger": "format date for display",
+    "mechanism": "apply strftime() with format code like %Y-%m-%d",
+    "outcome": "date converted to human-readable string format",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "validate ISO 8601 date",
+    "mechanism": "check regex \\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}",
+    "outcome": "ISO date format validated",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "text cleaning with strip()",
+    "mechanism": "remove leading/trailing whitespace",
+    "outcome": "string with whitespace removed from edges",
+    "confidence": 0.98
+  },
+  {
+    "trigger": "convert text to lowercase",
+    "mechanism": "apply lower() method",
+    "outcome": "all characters converted to lowercase",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "normalize text case",
+    "mechanism": "apply title() or capitalize() method",
+    "outcome": "text formatted with appropriate capitalization",
+    "confidence": 0.97
+  },
+  {
+    "trigger": "remove punctuation from text",
+    "mechanism": "use str.translate() with str.maketrans() or regex sub()",
+    "outcome": "text with punctuation characters removed",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "replace substring in text",
+    "mechanism": "call replace(old, new) or re.sub(pattern, replacement)",
+    "outcome": "all occurrences of substring replaced",
+    "confidence": 0.98
+  },
+  {
+    "trigger": "remove special characters",
+    "mechanism": "use regex sub(r'[^a-zA-Z0-9\\s]', '') or translate()",
+    "outcome": "special characters stripped from text",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "remove extra whitespace",
+    "mechanism": "apply regex sub(r'\\s+', ' ') or split/join pattern",
+    "outcome": "multiple spaces collapsed to single space",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "split string by delimiter",
+    "mechanism": "call split(delimiter) method",
+    "outcome": "string divided into list of substrings",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "split on multiple delimiters",
+    "mechanism": "use re.split(r'[,;\\t]', string)",
+    "outcome": "string split by any of multiple delimiters",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "split text into lines",
+    "mechanism": "call splitlines() or split('\\n')",
+    "outcome": "text divided into list of lines",
+    "confidence": 0.98
+  },
+  {
+    "trigger": "join list into string",
+    "mechanism": "call join(iterable) with separator",
+    "outcome": "list elements combined into single string",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "partition string at first occurrence",
+    "mechanism": "use partition(sep) method",
+    "outcome": "string split into (head, sep, tail) tuple",
+    "confidence": 0.97
+  },
+  {
+    "trigger": "split string into fixed chunks",
+    "mechanism": "use textwrap.wrap() or list comprehension slicing",
+    "outcome": "string divided into fixed-width chunks",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "encode string to bytes",
+    "mechanism": "call encode(encoding) with UTF-8 or ASCII",
+    "outcome": "string converted to bytes object",
+    "confidence": 0.98
+  },
+  {
+    "trigger": "decode bytes to string",
+    "mechanism": "call decode(encoding) on bytes object",
+    "outcome": "bytes converted back to string",
+    "confidence": 0.98
+  },
+  {
+    "trigger": "encode string to base64",
+    "mechanism": "use base64.b64encode(string.encode())",
+    "outcome": "string converted to base64 encoded bytes",
+    "confidence": 0.97
+  },
+  {
+    "trigger": "decode base64 to string",
+    "mechanism": "use base64.b64decode(encoded).decode()",
+    "outcome": "base64 string decoded to original text",
+    "confidence": 0.97
+  },
+  {
+    "trigger": "URL encode string",
+    "mechanism": "use urllib.parse.quote() or quote_plus()",
+    "outcome": "string converted to URL-safe encoding",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "URL decode string",
+    "mechanism": "use urllib.parse.unquote() or unquote_plus()",
+    "outcome": "URL-encoded string decoded to original",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "HTML encode string",
+    "mechanism": "use html.escape() method",
+    "outcome": "special HTML characters escaped",
+    "confidence": 0.97
+  },
+  {
+    "trigger": "HTML decode string",
+    "mechanism": "use html.unescape() method",
+    "outcome": "HTML entities converted to characters",
+    "confidence": 0.97
+  },
+  {
+    "trigger": "find substring position",
+    "mechanism": "call find(substring) method",
+    "outcome": "index of first occurrence returned or -1 if not found",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "search for substring with error handling",
+    "mechanism": "use index(substring) with try/except",
+    "outcome": "index returned or ValueError raised",
+    "confidence": 0.98
+  },
+  {
+    "trigger": "check string starts with pattern",
+    "mechanism": "call startswith(prefix)",
+    "outcome": "boolean indicating if string begins with pattern",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "check string ends with pattern",
+    "mechanism": "call endswith(suffix)",
+    "outcome": "boolean indicating if string terminates with pattern",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "count substring occurrences",
+    "mechanism": "call count(substring)",
+    "outcome": "integer count of non-overlapping occurrences",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "check if substring exists",
+    "mechanism": "use 'substring' in string operator",
+    "outcome": "boolean for substring membership",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "case-insensitive substring search",
+    "mechanism": "convert to lowercase then use 'in' operator or casefold()",
+    "outcome": "case-insensitive match found or not",
+    "confidence": 0.97
+  },
+  {
+    "trigger": "format string with f-string",
+    "mechanism": "use f'prefix {variable} suffix' syntax",
+    "outcome": "string with variable values interpolated",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "format string with .format()",
+    "mechanism": "call 'template {0} {1}'.format(a, b)",
+    "outcome": "string with positional arguments inserted",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "format string with named arguments",
+    "mechanism": "use '{name} {age}'.format(name=x, age=y)",
+    "outcome": "string with named parameters substituted",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "format with percentage operator",
+    "mechanism": "use 'Value: %d' % (42,) syntax",
+    "outcome": "old-style formatting applied",
+    "confidence": 0.98
+  },
+  {
+    "trigger": "pad string with zeros",
+    "mechanism": "use zfill(width) method",
+    "outcome": "numeric string padded with leading zeros",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "center string in width",
+    "mechanism": "call center(width) or center(width, fillchar)",
+    "outcome": "string centered with padding on sides",
+    "confidence": 0.98
+  },
+  {
+    "trigger": "left-align string in width",
+    "mechanism": "use ljust(width) method",
+    "outcome": "string padded on right to width",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "right-align string in width",
+    "mechanism": "call rjust(width) method",
+    "outcome": "string padded on left to width",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "template string rendering",
+    "mechanism": "use string.Template(template).substitute()",
+    "outcome": "template variables replaced with values",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "safe template substitution",
+    "mechanism": "use Template.safe_substitute() to keep undefined vars",
+    "outcome": "template rendered with undefined vars preserved",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "reverse string",
+    "mechanism": "use slicing [::-1] or reversed()",
+    "outcome": "string characters reversed",
+    "confidence": 0.99
+  },
+  {
+    "trigger": "check if string is alphanumeric",
+    "mechanism": "call isalnum() method",
+    "outcome": "boolean for alphanumeric-only content",
+    "confidence": 0.98
+  },
+  {
+    "trigger": "check if string is alphabetic",
+    "mechanism": "use isalpha() method",
+    "outcome": "boolean for letter-only content",
+    "confidence": 0.98
+  },
+  {
+    "trigger": "check if string is numeric",
+    "mechanism": "call isdigit() method",
+    "outcome": "boolean for digit-only content",
+    "confidence": 0.98
+  },
+  {
+    "trigger": "check if string is whitespace",
+    "mechanism": "use isspace() method",
+    "outcome": "boolean for whitespace-only content",
+    "confidence": 0.98
+  },
+  {
+    "trigger": "extract numbers from text",
+    "mechanism": "use regex findall(r'\\d+') or re.findall(r'[+-]?\\d+\\.?\\d*')",
+    "outcome": "list of numeric strings extracted",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "camelCase to snake_case",
+    "mechanism": "use regex sub(r'(?<!^)(?=[A-Z])', '_').lower()",
+    "outcome": "string converted to snake_case format",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "snake_case to camelCase",
+    "mechanism": "split by underscore, capitalize parts, join",
+    "outcome": "string converted to camelCase format",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "extract words from text",
+    "mechanism": "use re.findall(r'\\b\\w+\\b') or split()",
+    "outcome": "list of individual words extracted",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "remove duplicate characters",
+    "mechanism": "use dict.fromkeys() or set with order preservation",
+    "outcome": "string with consecutive duplicates removed",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "truncate string with ellipsis",
+    "mechanism": "slice string and append '...' if length exceeded",
+    "outcome": "string shortened to max length with suffix",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "extract hashtags from text",
+    "mechanism": "use regex findall(r'#\\w+')",
+    "outcome": "list of hashtag strings extracted",
+    "confidence": 0.91
+  },
+  {
+    "trigger": "extract mentions from text",
+    "mechanism": "use regex findall(r'@\\w+')",
+    "outcome": "list of mention strings extracted",
+    "confidence": 0.91
+  },
+  {
+    "trigger": "validate credit card format",
+    "mechanism": "apply regex \\d{4}[\\s-]?\\d{4}[\\s-]?\\d{4}[\\s-]?\\d{4}",
+    "outcome": "credit card format validated",
+    "confidence": 0.88
+  },
+  {
+    "trigger": "slugify text for URLs",
+    "mechanism": "lowercase, replace spaces with hyphens, remove special chars",
+    "outcome": "URL-friendly slug generated",
+    "confidence": 0.93
+  },
+  {
+    "trigger": "text similarity matching",
+    "mechanism": "use difflib.SequenceMatcher.ratio()",
+    "outcome": "similarity score between 0 and 1 returned",
+    "confidence": 0.87
+  },
+  {
+    "trigger": "levenshtein distance calculation",
+    "mechanism": "compute edit distance using dynamic programming",
+    "outcome": "minimum edits needed to transform one string to another",
+    "confidence": 0.91
+  },
+  {
+    "trigger": "remove non-ASCII characters",
+    "mechanism": "use encode('ascii', 'ignore').decode() or regex sub",
+    "outcome": "string with non-ASCII characters removed",
+    "confidence": 0.95
+  },
+  {
+    "trigger": "convert accented characters",
+    "mechanism": "use unicodedata.normalize('NFKD').encode('ascii', 'ignore')",
+    "outcome": "accented characters converted to ASCII equivalents",
+    "confidence": 0.92
+  },
+  {
+    "trigger": "word wrap text",
+    "mechanism": "use textwrap.wrap(text, width)",
+    "outcome": "long text divided into lines of max width",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "indent text block",
+    "mechanism": "use textwrap.indent(text, prefix)",
+    "outcome": "each line prefixed with indent string",
+    "confidence": 0.97
+  },
+  {
+    "trigger": "dedent text block",
+    "mechanism": "use textwrap.dedent(text)",
+    "outcome": "common leading whitespace removed from all lines",
+    "confidence": 0.97
+  },
+  {
+    "trigger": "compress whitespace in text",
+    "mechanism": "use ' '.join(text.split())",
+    "outcome": "multiple whitespace characters collapsed to single space",
+    "confidence": 0.98
+  },
+  {
+    "trigger": "validate hex color code",
+    "mechanism": "apply regex ^#?[0-9a-fA-F]{6}$",
+    "outcome": "hex color format validated",
+    "confidence": 0.96
+  },
+  {
+    "trigger": "validate IPv4 address",
+    "mechanism": "apply regex with octet pattern or ipaddress module",
+    "outcome": "IPv4 address validated or rejected",
+    "confidence": 0.94
+  },
+  {
+    "trigger": "extract IPv4 addresses",
+    "mechanism": "use regex findall(r'\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b')",
+    "outcome": "list of potential IPv4 addresses extracted",
+    "confidence": 0.89
+  },
+  {
+    "trigger": "validate IPv6 address",
+    "mechanism": "use ipaddress.IPv6Address() or regex pattern",
+    "outcome": "IPv6 address validated or ValueError raised",
+    "confidence": 0.93
+  }
+]

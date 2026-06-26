@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "tier": "cir_blue",
+    "intent": "YARA rule generator for malware family detection"
+  },
+  {
+    "id": 2,
+    "tier": "cir_blue",
+    "intent": "Sigma rule builder for SIEM log detection"
+  },
+  {
+    "id": 3,
+    "tier": "cir_blue",
+    "intent": "Suricata IDS rule generator for network threats"
+  },
+  {
+    "id": 4,
+    "tier": "cir_blue",
+    "intent": "IOC extractor from threat intelligence reports"
+  },
+  {
+    "id": 5,
+    "tier": "cir_blue",
+    "intent": "STIX 2.1 threat intelligence bundle creator"
+  },
+  {
+    "id": 6,
+    "tier": "cir_blue",
+    "intent": "PCAP network traffic analyzer with protocol dissection"
+  },
+  {
+    "id": 7,
+    "tier": "cir_blue",
+    "intent": "Windows Event Log EVTX parser and anomaly detector"
+  },
+  {
+    "id": 8,
+    "tier": "cir_blue",
+    "intent": "Sysmon configuration generator for endpoint monitoring"
+  },
+  {
+    "id": 9,
+    "tier": "cir_blue",
+    "intent": "PE executable static analyzer with section entropy"
+  },
+  {
+    "id": 10,
+    "tier": "cir_blue",
+    "intent": "ELF binary analyzer with symbol extraction"
+  },
+  {
+    "id": 11,
+    "tier": "cir_blue",
+    "intent": "Memory string extractor for forensic analysis"
+  },
+  {
+    "id": 12,
+    "tier": "cir_blue",
+    "intent": "Forensic timeline builder from multiple log sources"
+  },
+  {
+    "id": 13,
+    "tier": "cir_blue",
+    "intent": "File hash calculator with VirusTotal format output"
+  },
+  {
+    "id": 14,
+    "tier": "cir_blue",
+    "intent": "Email header analyzer for phishing detection"
+  },
+  {
+    "id": 15,
+    "tier": "cir_blue",
+    "intent": "DNS query log analyzer for tunneling detection"
+  },
+  {
+    "id": 16,
+    "tier": "cir_blue",
+    "intent": "TLS certificate transparency monitor"
+  },
+  {
+    "id": 17,
+    "tier": "cir_blue",
+    "intent": "Malware sandbox environment detector"
+  },
+  {
+    "id": 18,
+    "tier": "cir_blue",
+    "intent": "Network baseline deviation detector"
+  },
+  {
+    "id": 19,
+    "tier": "cir_blue",
+    "intent": "Brute force attack detector from authentication logs"
+  },
+  {
+    "id": 20,
+    "tier": "cir_blue",
+    "intent": "Lateral movement detector from Windows event logs"
+  },
+  {
+    "id": 21,
+    "tier": "cir_blue",
+    "intent": "PowerShell script block log analyzer"
+  },
+  {
+    "id": 22,
+    "tier": "cir_blue",
+    "intent": "Registry modification tracker for persistence detection"
+  },
+  {
+    "id": 23,
+    "tier": "cir_blue",
+    "intent": "Scheduled task audit tool for anomaly detection"
+  },
+  {
+    "id": 24,
+    "tier": "cir_blue",
+    "intent": "Service creation monitor for backdoor detection"
+  },
+  {
+    "id": 25,
+    "tier": "cir_blue",
+    "intent": "DLL load order hijacking detector"
+  },
+  {
+    "id": 26,
+    "tier": "cir_blue",
+    "intent": "Process tree analyzer for injection detection"
+  },
+  {
+    "id": 27,
+    "tier": "cir_blue",
+    "intent": "Network connection anomaly detector per process"
+  },
+  {
+    "id": 28,
+    "tier": "cir_blue",
+    "intent": "Firewall log parser with geo-enrichment"
+  },
+  {
+    "id": 29,
+    "tier": "cir_blue",
+    "intent": "Honey token generator for intrusion detection"
+  },
+  {
+    "id": 30,
+    "tier": "cir_blue",
+    "intent": "Threat hunting query generator for Elasticsearch"
+  },
+  {
+    "id": 31,
+    "tier": "cir_blue",
+    "intent": "Incident response evidence collector and packager"
+  },
+  {
+    "id": 32,
+    "tier": "cir_blue",
+    "intent": "Volatile data acquisition tool for live forensics"
+  },
+  {
+    "id": 33,
+    "tier": "cir_blue",
+    "intent": "Browser artifact extractor for forensic analysis"
+  },
+  {
+    "id": 34,
+    "tier": "cir_blue",
+    "intent": "USB device history analyzer"
+  },
+  {
+    "id": 35,
+    "tier": "cir_blue",
+    "intent": "Encrypted file detector for ransomware triage"
+  }
+]
