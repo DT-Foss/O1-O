@@ -1,0 +1,87 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "o1-o"
+version = "1.0.0"
+description = "A deterministic code synthesis operator — composes working programs from natural-language intent without any LLM in the loop. 8-color algebraic type system over a 7-pass causal knowledge graph, with a 7-layer verification pipeline and an autonomous 9-phase engagement operator."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [
+  { name = "David Tom Foss", email = "dtfoss-dev@proton.me" }
+]
+keywords = [
+  "deterministic-code-synthesis",
+  "causal-knowledge-graph",
+  "program-synthesis",
+  "algebraic-type-system",
+  "formal-verification",
+  "offensive-security",
+  "red-team",
+  "cryptanalysis",
+  "causal-inference",
+  "knowledge-graph",
+  "zero-llm",
+  "air-gapped",
+  "sovereign-software",
+  "autonomous-agents",
+  "security-research",
+  "post-quantum-cryptography",
+  "mainframe-security",
+  "deterministic-systems",
+  "casi-metric",
+  "dotcausal",
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Security",
+  "Topic :: Security :: Cryptography",
+  "Topic :: Software Development :: Code Generators",
+  "Topic :: Software Development :: Compilers",
+  "Topic :: System :: Systems Administration",
+]
+dependencies = [
+  "msgpack>=1.0",
+  "jellyfish>=1.0",
+  "requests>=2.28",
+  "beautifulsoup4>=4.11",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/DT-Foss/O1-O"
+"Source" = "https://github.com/DT-Foss/O1-O"
+"Issues" = "https://github.com/DT-Foss/O1-O/issues"
+"Documentation" = "https://github.com/DT-Foss/O1-O#readme"
+"Companion (live-casi)" = "https://github.com/DT-Foss/live-casi"
+
+[project.scripts]
+o1o = "o1o_o.o1o_live:main"
+o1-o = "o1o_o.o1o_live:main"
+
+[tool.setuptools.packages.find]
+include = ["o1o_o", "o1o_o.*"]
+exclude = ["o1o_o.sessions*", "o1o_o.__pycache__*", "tests*", "docs*", "examples*"]
+
+[tool.setuptools.package-data]
+"o1o_o" = [
+  "knowledge/**/*",
+  "fragments/**/*",
+  "triplets/**/*",
+]
+
+[tool.setuptools]
+include-package-data = true

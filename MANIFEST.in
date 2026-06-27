@@ -1,0 +1,17 @@
+include LICENSE
+include README.md
+include CITATION.cff
+include requirements.txt
+include pyproject.toml
+
+recursive-include o1o_o/knowledge *.causal *.json *.db
+recursive-include o1o_o/fragments *.json *.py
+recursive-include o1o_o/triplets *.json
+
+prune o1o_o/sessions
+prune o1o_o/__pycache__
+recursive-exclude o1o_o __pycache__
+recursive-exclude o1o_o *.pyc
+recursive-exclude tests *
+recursive-exclude examples *
+recursive-exclude docs *

@@ -207,7 +207,7 @@ flowchart TB
 ```
 
 Every layer is independently auditable: each box in this diagram corresponds to one or more
-files under `src/core/`, every count is verifiable by running `wc`, `grep`, and `find` against
+files under `o1o_o/core/`, every count is verifiable by running `wc`, `grep`, and `find` against
 the committed source. The full architecture totals ~30,000 LOC across 107 modules.
 
 ---
@@ -247,7 +247,7 @@ committed source. No estimates.
 | Metric | Value |
 |---|---|
 | Total Python platform code | ~30,000 LOC |
-| Core modules (`src/core/`) | **107** |
+| Core modules (`o1o_o/core/`) | **107** |
 | Code fragments (`fragments/`, 73 thematic JSON files) | **1,245** |
 | Binary `.causal` knowledge graphs (`knowledge/`) | **132** |
 | Source triplet JSON files (`triplets/`) | **35** |
@@ -279,17 +279,32 @@ the full system runs air-gapped on a Mac mini.
 
 ## How to run it
 
+**Option A — install from PyPI** (recommended):
+
+```bash
+pip install o1-o
+o1o --demo
+```
+
+**Option B — install from source (GitHub):**
+
 ```bash
 git clone https://github.com/DT-Foss/O1-O
 cd O1-O
 pip install -r requirements.txt
-python3 src/o1o_live.py --demo
+python3 -m o1o_o.o1o_live --demo
 ```
+
+Both ship the entire 132-graph `.causal` knowledge substrate, all 1,245 verified code
+fragments, and the full triplet corpus — `o1o --demo` runs offline against the bundled
+knowledge base. No download step, no API key, no rate limit.
 
 Or interactively:
 
 ```bash
-python3 src/o1o_live.py
+o1o
+# or, from source:
+python3 -m o1o_o.o1o_live
 ```
 
 The REPL responds to free-text intent ("build a port scanner with service detection") and
@@ -305,13 +320,13 @@ source paths given.
 
 ### Layer 1 — Intent processing
 
-- **Intent Parser** (`src/core/intent_parser.py`, 412 LOC). NLP without an LLM. Six steps:
+- **Intent Parser** (`o1o_o/core/intent_parser.py`, 412 LOC). NLP without an LLM. Six steps:
   tokenize → stopword-strip → stem → fuzzy-match against the entity index of the knowledge
   graph (Jaro-Winkler) → classify mode (BUILD/CHAT/DEBUG/LEARN/DOMAIN) → extract parameters
   (paths, formats, numbers) → detect multi-step composition. Disambiguation of polysemous
   tokens (`command`, `injection`, `encryption`) is performed by **set intersection of
   context tokens against per-sense keyword sets** — no model, no embedding.
-- **Session Memory** (`src/core/session_memory.py`, 280 LOC). Multi-turn state with pronoun
+- **Session Memory** (`o1o_o/core/session_memory.py`, 280 LOC). Multi-turn state with pronoun
   resolution, topic tracking across 7 domain buckets, incremental-intent markers, slot
   filling, persistent `project.causal` for cross-session learning.
 
@@ -2435,7 +2450,7 @@ sequenceDiagram
     E->>U: Phase 9: full engagement report
 ```
 
-The nine phases are orchestrated in `src/o1o_live.py:7345–7920` (~575 LOC of pure
+The nine phases are orchestrated in `o1o_o/o1o_live.py:7345–7920` (~575 LOC of pure
 orchestration, plus ~1,100 LOC of lazy-loaded subsystems in
 `core/engage_intelligence.py` and `core/engage_v2.py`).
 
@@ -3148,7 +3163,7 @@ with the same configuration produces bit-identical output.
 
 **Reproduce**:
 ```bash
-python3 src/o1o_live.py "build a sigma rule generator from windows event log patterns"
+python3 -m o1o_o.o1o_live "build a sigma rule generator from windows event log patterns"
 ```
 
 **Trace through the pipeline:**
@@ -3182,7 +3197,7 @@ python3 src/o1o_live.py "build a sigma rule generator from windows event log pat
 
 **Reproduce**:
 ```bash
-python3 src/o1o_live.py "create an SSH brute force tool with credential rotation targeting 10.0.0.5"
+python3 -m o1o_o.o1o_live "create an SSH brute force tool with credential rotation targeting 10.0.0.5"
 ```
 
 **Trace through the pipeline:**
@@ -3221,7 +3236,7 @@ python3 src/o1o_live.py "create an SSH brute force tool with credential rotation
 
 **Reproduce** (from within the REPL):
 ```bash
-python3 src/o1o_live.py
+python3 -m o1o_o.o1o_live
 # at the O1-O> prompt:
 /engage 10.0.0.5 --chain --max-tools 8
 ```
@@ -3628,7 +3643,7 @@ git clone <internal-mirror>/O1-O.git    # if internal git mirror exists
 tar xzf O1-O.tar.gz                      # if transferred as archive
 
 cd O1-O
-python3 src/o1o_live.py --demo           # runs offline, no further network needed
+python3 -m o1o_o.o1o_live --demo           # runs offline, no further network needed
 ```
 
 The installation procedure does not require, at any point, the target network to reach
@@ -3890,16 +3905,16 @@ replicate at any scaling budget.
 
 ```bash
 # Boot the platform, run the 5-task showcase:
-python3 src/o1o_live.py --demo
+python3 -m o1o_o.o1o_live --demo
 
 # Run the full 18-task showcase (Red Team + Blue Team + Generalization):
-python3 src/o1o_live.py --demo-full
+python3 -m o1o_o.o1o_live --demo-full
 
 # Drive a single intent and exit:
-python3 src/o1o_live.py "build a port scanner with banner grabbing for 10.0.0.1"
+python3 -m o1o_o.o1o_live "build a port scanner with banner grabbing for 10.0.0.1"
 
 # Interactive REPL:
-python3 src/o1o_live.py
+python3 -m o1o_o.o1o_live
 
 # Run the autonomous self-improvement loop overnight:
 python3 src/self_improve_runner.py --iterations 1000 --hours 12
@@ -4021,8 +4036,8 @@ Validation script:
 
 ```bash
 # Run the same intent twice; outputs must be byte-identical
-python3 src/o1o_live.py --blind "list files in a directory" > /tmp/run1.py
-python3 src/o1o_live.py --blind "list files in a directory" > /tmp/run2.py
+python3 -m o1o_o.o1o_live --blind "list files in a directory" > /tmp/run1.py
+python3 -m o1o_o.o1o_live --blind "list files in a directory" > /tmp/run2.py
 diff /tmp/run1.py /tmp/run2.py
 # (no output — files are identical)
 ```

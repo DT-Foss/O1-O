@@ -1,6 +1,6 @@
 # Examples
 
-This folder contains **real session output** captured by running `python3 src/o1o_live.py --demo`.
+This folder contains **real session output** captured by running `python3 -m o1o_o.o1o_live --demo`.
 
 ## `demo_session_5tasks/`
 
@@ -46,7 +46,7 @@ Each task folder contains the full artifact set (~15 files each):
 **Reproduce**:
 
 ```bash
-python3 src/o1o_live.py --demo
+python3 -m o1o_o.o1o_live --demo
 ```
 
 A new session folder is written to `src/sessions/<timestamp>/`. The output will be
