@@ -282,9 +282,14 @@ the full system runs air-gapped on a Mac mini.
 **Option A — install from PyPI** (recommended):
 
 ```bash
-pip install o1-o
+pip install o1op
 o1o --demo
 ```
+
+> The PyPI package name is `o1op` because PyPI's name-similarity rule rejected
+> `o1-o`. On GitHub the project stays *O1-O*; the Python import is `import o1o_o`;
+> the installed CLI commands are `o1o` and `o1-o`. **PyPI page:**
+> [pypi.org/project/o1op/](https://pypi.org/project/o1op/).
 
 **Option B — install from source (GitHub):**
 
