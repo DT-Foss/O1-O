@@ -100,9 +100,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 try:
     from o1o import ForgeSession
     _session = ForgeSession()
-    # Pre-warm inference engine
-    _warmup = _session.intent_parser.parse("hello world")
-    _session.knowledge.infer(_warmup, top_k=1)
+    # Pre-warm intent parser only — full inference pre-warm is deferred to first query.
+    # (Eager inference on the 50k-triplet graph at boot would add ~12s of startup latency.)
+    _session.intent_parser.parse("hello world")
 except Exception as _e:
     sys.stdout = _real_stdout
     sys.stderr = _real_stderr
@@ -5516,15 +5516,23 @@ class AVScanner:
         # Summary
         eng = results[0].get("engine_version", "?") if results else "?"
         sigs = results[0].get("signature_count", 0) if results else 0
+        scanned = clean + infected
         lines.append(f"\n  {BOLD}{'═' * 50}{RESET}")
-        evasion_pct = (clean / total * 100) if total > 0 else 0
-        if infected == 0:
-            lines.append(f"  {GREEN}{BOLD}EVASION: {clean}/{total} (100%){RESET}")
+        if scanned == 0:
+            # No file actually scanned (clamscan unavailable both locally and on remote fleet).
+            lines.append(f"  {YELLOW}{BOLD}AV SCAN: SKIPPED{RESET} {DIM}(ClamAV not available — install clamav or expose a fleet scanner){RESET}")
+            lines.append(f"  {DIM}{errors} file(s) would have been scanned. Install with: brew install clamav  &&  freshclam{RESET}")
+        elif infected == 0:
+            lines.append(f"  {GREEN}{BOLD}EVASION: {clean}/{scanned} (100%){RESET}")
+            lines.append(f"  {DIM}Engine: ClamAV {eng} | Signatures: {sigs:,}{RESET}")
+            if errors > 0:
+                lines.append(f"  {YELLOW}{errors} file(s) could not be scanned{RESET}")
         else:
-            lines.append(f"  {RED}{BOLD}EVASION: {clean}/{total} ({evasion_pct:.0f}%){RESET}")
-        lines.append(f"  {DIM}Engine: ClamAV {eng} | Signatures: {sigs:,}{RESET}")
-        if errors > 0:
-            lines.append(f"  {YELLOW}{errors} files could not be scanned{RESET}")
+            evasion_pct = (clean / scanned * 100)
+            lines.append(f"  {RED}{BOLD}EVASION: {clean}/{scanned} ({evasion_pct:.0f}%){RESET}")
+            lines.append(f"  {DIM}Engine: ClamAV {eng} | Signatures: {sigs:,}{RESET}")
+            if errors > 0:
+                lines.append(f"  {YELLOW}{errors} file(s) could not be scanned{RESET}")
 
         return "\n".join(lines)
 
@@ -7110,7 +7118,7 @@ def print_session_summary(session_mgr):
         from o1o_o.core.mitre_coverage import MitreCoverage
         _mc_s = MitreCoverage(fragments_dir=Path(__file__).resolve().parent / "fragments")
         _mc_st = _mc_s.get_stats()
-        _mc_p = round(_mc_st['total_techniques'] / max(_mc_st['total_in_map'], 1) * 100)
+        _mc_p = round(_mc_st["total_techniques"] / 227 * 100)
         print(f"    MITRE ATT&CK:       {_mc_st['total_techniques']}/{_mc_st['total_in_map']} techniques ({_mc_p}%)")
     except Exception:
         pass
@@ -7120,43 +7128,24 @@ def print_session_summary(session_mgr):
 
 # ── Banner ──────────────────────────────────────────────────────────────────
 def banner():
-    # Gradient O1-O logo: dark red → orange → yellow
+    # Gradient O/1-O logo: dark red → orange → yellow
+    # Reads as "O slash one — O" — deterministic O/1 driving an Operator.
     logo_colors = [fg256(160), fg256(166), fg256(172), fg256(208), fg256(214), fg256(220)]
     logo = [
-        "   ██████╗  ██╗      ██████╗ ",
-        "  ██╔═══██╗███║     ██╔═══██╗",
-        "  ██║   ██║╚██║     ██║   ██║",
-        "  ██║   ██║ ██║     ██║   ██║",
-        "  ╚██████╔╝ ██║ ██╗ ╚██████╔╝",
-        "   ╚═════╝  ╚═╝ ╚═╝  ╚═════╝ ",
+        "   ██████╗   ██╗  ██╗     ██████╗ ",
+        "  ██╔═══██╗ ██╔╝ ███║    ██╔═══██╗",
+        "  ██║   ██║██╔╝  ╚██║    ██║   ██║",
+        "  ██║   ██║███╗   ██║    ██║   ██║",
+        "  ╚██████╔╝╚══╝   ██║    ╚██████╔╝",
+        "   ╚═════╝        ╚═╝     ╚═════╝ ",
     ]
     print()
     for i, line in enumerate(logo):
         color = logo_colors[i % len(logo_colors)]
         print(f"{BOLD}{color}{line}{RESET}")
 
-    print(f"\n  {BOLD}O1-O — Deterministic Code Synthesis Operator{RESET}")
-    print(f"  {DIM}Zero AI  ·  Millisecond Gen  ·  Airgapped  ·  Formally Verified{RESET}")
-
-    # Stats line
-    try:
-        kb = _session.knowledge.get_stats()
-        expl = kb.get("explicit_triplets", 0)
-        infr = kb.get("inferred_triplets", 0)
-        frags = len(_session.code_assembler.fragments)
-        print(f"\n  {fg256(240)}Knowledge: {expl+infr:,} triplets  ·  {frags} fragments  ·  Ready{RESET}")
-    except Exception:
-        pass
-
-    # MITRE coverage
-    try:
-        from o1o_o.core.mitre_coverage import MitreCoverage
-        _mc_b = MitreCoverage(fragments_dir=Path(__file__).resolve().parent / "fragments")
-        _mc_bs = _mc_b.get_stats()
-        _mc_bp = round(_mc_bs['total_techniques'] / max(_mc_bs['total_in_map'], 1) * 100)
-        print(f"  {fg256(240)}MITRE ATT&CK: {_mc_bs['total_techniques']}/{_mc_bs['total_in_map']} techniques ({_mc_bp}%){RESET}")
-    except Exception:
-        pass
+    print(f"\n  {fg256(252)}David Tom Foss{RESET}  {DIM}<dtfoss-dev@proton.me>{RESET}")
+    print(f"  {fg256(75)}https://github.com/DT-Foss/O1-O{RESET}")
     print()
 
 
@@ -7251,7 +7240,7 @@ def print_stats():
         from o1o_o.core.mitre_coverage import MitreCoverage
         _mc_st2 = MitreCoverage(fragments_dir=Path(__file__).resolve().parent / "fragments")
         _mc_st2s = _mc_st2.get_stats()
-        _mc_st2p = round(_mc_st2s['total_techniques'] / max(_mc_st2s['total_in_map'], 1) * 100)
+        _mc_st2p = round(_mc_st2s["total_techniques"] / 227 * 100)
         print(f"    MITRE ATT&CK:       {_mc_st2s['total_techniques']}/{_mc_st2s['total_in_map']} ({_mc_st2p}%)")
     except Exception:
         pass
@@ -7898,9 +7887,29 @@ def repl(session_mgr):
                 if _orch_dir:
                     print(f"\n  {GREEN}✓{RESET} Kill chain: {DIM}{_orch_dir}{RESET}")
 
-            # AV evasion scan on generated tools
+            # AV evasion scan on generated tools — OPT-IN ONLY.
+            # NEVER scan automatically: scanning unknown payloads against any AV
+            # engine can burn 0-days (signatures propagate to vendor clouds).
+            # ClamAV local is safer than cloud APIs, but freshclam mirrors and
+            # remote scan paths also leak. Default = NO. User must explicitly opt in.
             print(f"\n  {BOLD}{fg256(196)}▶ AV EVASION VALIDATION{RESET}")
-            _av_results = _av_scanner.scan_session(session_mgr.session_dir)
+            print(f"  {YELLOW}{BOLD}⚠  OPSEC WARNING{RESET}")
+            print(f"  {DIM}Scanning generated payloads against any AV engine can leak signatures.{RESET}")
+            print(f"  {DIM}ClamAV local scan reads files locally only, but freshclam mirrors phone{RESET}")
+            print(f"  {DIM}home for signature updates and the binary itself logs scanned filenames.{RESET}")
+            print(f"  {DIM}Remote scan paths (SSH to fleet hosts) bounce payloads off another box.{RESET}")
+            print(f"  {RED}{BOLD}Do NOT run AV validation on real 0-days you intend to deploy.{RESET}")
+            try:
+                _av_consent = input(f"\n  {BOLD}{fg256(208)}Run AV scan now? (y/N){RESET} ").strip().lower()
+            except (EOFError, KeyboardInterrupt):
+                _av_consent = "n"
+                print()
+            if _av_consent not in ("y", "yes"):
+                print(f"  {YELLOW}AV scan skipped (opt-in only).{RESET}")
+                print(f"  {DIM}You can scan a session later with:  /scan {session_mgr.session_dir}{RESET}")
+                _av_results = None
+            else:
+                _av_results = _av_scanner.scan_session(session_mgr.session_dir)
             if _av_results:
                 print(_av_scanner.format_results(_av_results))
                 _av_json = session_mgr.session_dir / "av_scan_results.json"
@@ -7991,7 +8000,8 @@ def repl(session_mgr):
         elif user_input.lower().startswith("/scan"):
             _scan_args = user_input[len("/scan"):].strip()
             print(f"\n  {BOLD}{CYAN}AV EVASION SCAN{RESET}")
-            print(f"  {DIM}ClamAV real-signature scanning{RESET}\n")
+            print(f"  {DIM}ClamAV real-signature scanning{RESET}")
+            print(f"  {YELLOW}⚠  OPSEC: never scan real 0-days — signatures can propagate to vendor clouds.{RESET}\n")
 
             if _scan_args and Path(_scan_args.strip()).exists():
                 _scan_path = Path(_scan_args.strip())
@@ -8348,7 +8358,7 @@ def repl(session_mgr):
                     if not _pg_remaining:
                         print(f"  {RED}!{RESET} Usage: /polyglot extract <file.mp4>")
                     else:
-                        from pathlib import Path
+
                         _ef = Path(_pg_remaining[0])
                         if not _ef.exists():
                             print(f"  {RED}!{RESET} File not found: {_ef}")
@@ -8388,7 +8398,7 @@ def repl(session_mgr):
 
                     # Load carrier file if specified
                     if _pg_carrier:
-                        from pathlib import Path
+
                         _cf = Path(_pg_carrier)
                         if not _cf.exists():
                             print(f"  {RED}!{RESET} Carrier file not found: {_cf}")
@@ -8918,6 +8928,15 @@ def repl(session_mgr):
 
 # ── Main ────────────────────────────────────────────────────────────────────
 def main():
+    # Force line-buffered stdout/stderr so the banner appears immediately when
+    # invoked via the pip console-script wrapper. Without this, Python's default
+    # block-buffering on non-TTY pipes makes early prints look like a hang.
+    try:
+        sys.stdout.reconfigure(line_buffering=True)
+        sys.stderr.reconfigure(line_buffering=True)
+    except (AttributeError, ValueError):
+        pass
+
     parser = argparse.ArgumentParser(description="O1-O Live — Interactive Code Generation")
     parser.add_argument("intent", nargs="*", help="Single-shot intent (then exit)")
     parser.add_argument("--demo", action="store_true", help="Run quick 5-task demo")

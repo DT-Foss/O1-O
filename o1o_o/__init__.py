@@ -11,7 +11,7 @@ Author:        David Tom Foss <dtfoss-dev@proton.me>
 License:       Apache-2.0
 """
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __author__ = "David Tom Foss"
 __email__ = "dtfoss-dev@proton.me"
 __license__ = "Apache-2.0"

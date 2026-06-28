@@ -3,10 +3,10 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "o1-o"
-version = "1.0.0"
+name = "o1op"
+version = "1.1.0"
 description = "A deterministic code synthesis operator — composes working programs from natural-language intent without any LLM in the loop. 8-color algebraic type system over a 7-pass causal knowledge graph, with a 7-layer verification pipeline and an autonomous 9-phase engagement operator."
-readme = "README.md"
+readme = "README_PYPI.md"
 requires-python = ">=3.10"
 license = { text = "Apache-2.0" }
 authors = [
