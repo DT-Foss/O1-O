@@ -67,4 +67,4 @@ Architecture, papers (9 peer-reviewed at 4 IEEE 2026 conferences + IBM z/OS main
 
 ## License
 
-Apache-2.0 · David Tom Foss · dtfoss-dev@proton.me
+PolyForm Noncommercial 1.0.0 · David Tom Foss · commercial licenses: Wirkung Inc. (d.foss@ieee.org)

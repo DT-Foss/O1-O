@@ -2,7 +2,7 @@
 
 **A constant-time program-composition system whose output is structurally hallucination-free, built on an 8-color algebraic type system over a 7-pass causal knowledge graph, with a 7-layer verification pipeline and an autonomous 9-phase engagement operator.**
 
-**Author:** David Tom Foss · **Disclosed:** 2026-06-26 · **License:** Apache-2.0
+**Author:** David Tom Foss · **Disclosed:** 2026-06-26 · **License:** PolyForm Noncommercial 1.0.0
 
 ---
 
@@ -3673,7 +3673,7 @@ GovCloud variants in the US, JFD in Japan) impose constraints O1-O is structural
 compatible with:
 
 - **No third-party SaaS APIs.** O1-O makes zero outbound calls during normal operation.
-- **No proprietary closed-source dependencies.** O1-O is Apache-2.0 throughout; all four
+- **No proprietary closed-source dependencies.** O1-O is source-available under PolyForm Noncommercial 1.0.0; all four
   Python dependencies are permissively licensed open source.
 - **Auditability.** Every line of crypto, every line of binary parsing, every line of NLP
   is in this repository. There is no closed-source library to attest, no native binary to
@@ -3938,7 +3938,7 @@ coverage map. `/stats` prints knowledge-base statistics.
 ```
 O1-O/
 ├── README.md                        this file
-├── LICENSE                          Apache-2.0
+├── LICENSE                          PolyForm Noncommercial 1.0.0
 ├── CITATION.cff                     academic citation metadata
 ├── requirements.txt                 4 external deps (msgpack, jellyfish, requests, bs4)
 ├── src/
